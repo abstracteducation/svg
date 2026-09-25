@@ -1,13 +1,11 @@
 # abstracteducation/svg (jsDelivr)
 
-This package is a thin cloak that embeds the live Abstract. SVG build at:
+Thin SVG/HTML cloak that embeds the live Abstract. build:
 
 https://artemata.it/svg/
 
-jsDelivr cannot host Scramjet service workers, Wisp, or same-origin `/api/*`
-routes. Loading the full Vite app from `cdn.jsdelivr.net` breaks browser,
-music, and games. The iframe keeps the cloak URL on jsDelivr while the real
-app runs on `artemata.it`.
+jsDelivr cannot host Scramjet service workers, Wisp, or same-origin APIs.
+This package keeps a cloak URL on the CDN while the real app runs on artemata.
 
 ## URLs
 
