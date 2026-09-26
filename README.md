@@ -1,7 +1,10 @@
-# abstracteducation/svg
+# singlefile
 
-Lucide-style SVG foreignObject cloak of Abstract.
+One-file Abstract. cloak for jsDelivr.
 
-## URL (prefer commit pin)
+Embeds `https://artemata.it/` so AI / media / music / Wisp / Scramjet all run
+same-origin on artemata (jsDelivr cannot host those backends).
+
+## jsDelivr
 
 https://cdn.jsdelivr.net/gh/abstracteducation/svg@main/index.svg
