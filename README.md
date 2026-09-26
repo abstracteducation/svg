@@ -2,6 +2,6 @@
 
 Lucide-style SVG foreignObject cloak of Abstract.
 
-## URL
+## URL (prefer commit pin)
 
 https://cdn.jsdelivr.net/gh/abstracteducation/svg@main/index.svg
