@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="application/json" id="abulxt-config">{"apiBase":"","paymentLinks":{"plus":"https://buy.stripe.com/cNibIT2ROdPZ6dv5cW8g000","noads":"https://buy.stripe.com/aFafZ99gc7rB31j0WG8g001"},"wispUrl":"wss://mathewteachesalgebra.site/wisp/534141f4509ce83f5bd805d11df1d7ce5d30a6679fd4c27dbf28fc7c2fb4a710/","huGamesBase":"","moviesUrl":"https://ssflix.pro/","mediaApiBase":"/api/media","enableSplash":false,"captchaSitekey":""}</script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstract workspace</title>
+    <style>
+      html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #0a0a0a; }
+      #status {
+        position: absolute; inset: 0; display: grid; place-items: center;
+        color: #888; font: 12px/1.4 ui-sans-serif, system-ui, sans-serif; background: #0b0b0b;
+      }
+      #frame { display: none; width: 100%; height: 100%; border: 0; background: #fff; }
+      body.ready #status { display: none; }
+      body.ready #frame { display: block; }
+    </style>
+    <script type="module" crossorigin src="./assets/config-BqrBy2Ow.js"></script>
+    <script type="module" crossorigin src="./assets/scramjet-Bx2zbn6a.js"></script>
+    <script type="module" crossorigin src="./assets/sj-host-Bg6NXHQo.js"></script>
+  </head>
+  <body>
+        <script>
+      // Kill sticky classroom-2/3 workers before Scramjet boots.
+      (async function () {
+        const FLAG = 'abulxt:sw-c6-retired';
+        try {
+          if (!('serviceWorker' in navigator)) return;
+          const regs = await navigator.serviceWorker.getRegistrations();
+          let killed = false;
+          for (const reg of regs) {
+            const worker = reg.active || reg.waiting || reg.installing;
+            const script = worker ? new URL(worker.scriptURL).pathname : '';
+            if (script.endsWith('/sw-app-c6.js')) continue;
+            await reg.unregister();
+            killed = true;
+          }
+          if ('caches' in window) {
+            const keys = await caches.keys();
+            await Promise.all(keys.map((key) => caches.delete(key)));
+          }
+          if (killed && !sessionStorage.getItem(FLAG)) {
+            sessionStorage.setItem(FLAG, '1');
+            location.reload();
+            return;
+          }
+          sessionStorage.removeItem(FLAG);
+        } catch (e) {}
+      })();
+    </script>
+    <div id="status">Loading workspace…</div>
+    <iframe id="frame" title="Classroom workspace"></iframe>
+  </body>
+</html>

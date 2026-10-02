@@ -284,8 +284,7 @@
                 ? (this.box = e.top[n.pX].box)
                 : e.opener && n.pX in e.opener
                 ? (this.box = e.opener[n.pX].box)
-                : (f.warn("Creating SingletonBox"),
-                  (this.box = new h.SingletonBox(this)))
+                : (this.box = new h.SingletonBox(this))
               : (this.box = new h.SingletonBox(this)),
               this.box.registerClient(this, e),
               d.iswindow
@@ -5148,18 +5147,31 @@ self.WASM = '${r}';`),
           );
         }
         function d(e, t) {
-          let r = new i(e, "bare-mux-worker");
-          return (
-            t &&
-              o.addEventListener("message", (t) => {
-                if ("getPort" === t.data.type && t.data.port) {
+          const attachGetPort = (getPort) => {
+            if (t && o)
+              o.addEventListener("message", (ev) => {
+                if ("getPort" === ev.data?.type && ev.data.port) {
                   console.debug("bare-mux: recieved request for port from sw");
-                  let r = new i(e, "bare-mux-worker");
-                  a.call(t.data.port, r.port, [r.port]);
+                  const p = getPort();
+                  a.call(ev.data.port, p, [p]);
                 }
-              }),
-            r.port
-          );
+              });
+          };
+          let wk = null;
+          const getPort = () => {
+            if (!wk) {
+              if (typeof Worker === "undefined") {
+                const shared = new i(e, "bare-mux-worker");
+                return shared.port;
+              }
+              wk = new Worker(e, { name: "bare-mux-worker" });
+            }
+            const ch = new MessageChannel();
+            wk.postMessage({ type: "bare-mux-init" }, [ch.port2]);
+            return ch.port1;
+          };
+          attachGetPort(getPort);
+          return getPort();
         }
         let h = null;
         class p {

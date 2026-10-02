@@ -69,7 +69,7 @@
               [a, n] = await e();
             (s = new a(...i.client.args)), (o = n);
           }
-          console.log("set transport to ", s, o), e.call(l, { type: "set" });
+          console.debug("set transport to ", s, o), e.call(l, { type: "set" });
         } catch (e) {
           a(l, e, "set");
         }
@@ -131,5 +131,10 @@
     (self.onconnect = (e) => {
       l(e.ports[0]);
     }),
-    console.debug("bare-mux: running v2.1.7 (build c56d286)");
+    (self.onmessage = (e) => {
+      if (e && e.data && e.data.type === "bare-mux-init" && e.ports && e.ports[0]) {
+        l(e.ports[0]);
+      }
+    }),
+    console.debug("bare-mux: running v2.1.7 (build c56d286 + dedicated worker)");
 })();
