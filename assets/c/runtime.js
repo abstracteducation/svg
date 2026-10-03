@@ -5147,30 +5147,49 @@ self.WASM = '${r}';`),
           );
         }
         function d(e, t) {
-          const attachGetPort = (getPort) => {
-            if (t && o)
-              o.addEventListener("message", (ev) => {
-                if ("getPort" === ev.data?.type && ev.data.port) {
-                  console.debug("bare-mux: recieved request for port from sw");
-                  const p = getPort();
-                  a.call(ev.data.port, p, [p]);
-                }
-              });
-          };
+          let shared = null;
           let wk = null;
-          const getPort = () => {
-            if (!wk) {
-              if (typeof Worker === "undefined") {
-                const shared = new i(e, "bare-mux-worker");
-                return shared.port;
+          const createFreshPort = () => {
+            if (i) {
+              try {
+                return new i(e, "bare-mux-worker").port;
+              } catch (err) {}
+            }
+            if (wk) {
+              const ch = new MessageChannel();
+              wk.postMessage({ type: "bare-mux-init" }, [ch.port2]);
+              return ch.port1;
+            }
+            return null;
+          };
+          if (t && o) {
+            o.addEventListener("message", (ev) => {
+              if ("getPort" === ev.data?.type && ev.data.port) {
+                console.debug("bare-mux: recieved request for port from sw");
+                const fresh = createFreshPort();
+                if (fresh) a.call(ev.data.port, fresh, [fresh]);
               }
+            });
+          }
+          const getPort = () => {
+            if (i) {
+              try {
+                if (!shared) shared = new i(e, "bare-mux-worker");
+                return shared.port;
+              } catch (err) {
+                console.warn(
+                  "bare-mux: SharedWorker failed, falling back to dedicated Worker",
+                  err
+                );
+              }
+            }
+            if (!wk) {
               wk = new Worker(e, { name: "bare-mux-worker" });
             }
             const ch = new MessageChannel();
             wk.postMessage({ type: "bare-mux-init" }, [ch.port2]);
             return ch.port1;
           };
-          attachGetPort(getPort);
           return getPort();
         }
         let h = null;
@@ -5187,7 +5206,7 @@ self.WASM = '${r}';`),
                 (this.channel.onmessage = (e) => {
                   "refreshPort" === e.data.type && (this.port = c());
                 });
-            else if (e && SharedWorker) {
+            else if (e && (i || typeof Worker !== "undefined")) {
               if (!e.startsWith("/") && !e.includes("://"))
                 throw Error(
                   "Invalid URL. Must be absolute or start at the root."
@@ -5199,7 +5218,7 @@ self.WASM = '${r}';`),
                 ),
                 (s["bare-mux-path"] = e);
             } else {
-              if (!SharedWorker)
+              if (!i && typeof Worker === "undefined")
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
                 let e = s["bare-mux-path"];
