@@ -90,24 +90,23 @@ function toRegex(pattern) {
   return new RegExp(`^${escaped}$`);
 }
 
-function isBlocked(hostname, pathname) {
-  return CONFIG.blocked.some((pattern) => {
-    if (pattern.startsWith("#")) {
-      pattern = pattern.substring(1);
-    }
-    if (pattern.startsWith("*")) {
-      pattern = pattern.substring(1);
-    }
+// Precompile the blocked list ONCE at module scope. Compiling ~60 RegExp
+// objects on every proxied request was sustained regex churn on the SW thread.
+const COMPILED_BLOCKED = CONFIG.blocked.map((raw) => {
+  let pattern = raw;
+  if (pattern.startsWith("#")) pattern = pattern.substring(1);
+  if (pattern.startsWith("*")) pattern = pattern.substring(1);
+  if (pattern.includes("/")) {
+    const [hostPattern, ...pathParts] = pattern.split("/");
+    return { host: toRegex(hostPattern), path: toRegex(`/${pathParts.join("/")}`) };
+  }
+  return { host: toRegex(pattern), path: null };
+});
 
-    if (pattern.includes("/")) {
-      const [hostPattern, ...pathParts] = pattern.split("/");
-      const pathPattern = pathParts.join("/");
-      const hostRegex = toRegex(hostPattern);
-      const pathRegex = toRegex(`/${pathPattern}`);
-      return hostRegex.test(hostname) && pathRegex.test(pathname);
-    }
-    const hostRegex = toRegex(pattern);
-    return hostRegex.test(hostname);
+function isBlocked(hostname, pathname) {
+  return COMPILED_BLOCKED.some(({ host, path }) => {
+    if (path) return host.test(hostname) && path.test(pathname);
+    return host.test(hostname);
   });
 }
 
