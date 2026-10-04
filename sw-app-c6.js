@@ -5,8 +5,6 @@ if (navigator.userAgent.includes("Firefox")) {
   });
 }
 
-// Read the cache-bust version from this worker's own registration URL (the app
-// registers sw-app-c6.js?v=<buildVersion>), so every rebuild refetches runtime.
 const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
@@ -90,8 +88,6 @@ function toRegex(pattern) {
   return new RegExp(`^${escaped}$`);
 }
 
-// Precompile the blocked list ONCE at module scope. Compiling ~60 RegExp
-// objects on every proxied request was sustained regex churn on the SW thread.
 const COMPILED_BLOCKED = CONFIG.blocked.map((raw) => {
   let pattern = raw;
   if (pattern.startsWith("#")) pattern = pattern.substring(1);
@@ -156,9 +152,7 @@ async function ensureScramjetConfig() {
 }
 
 function scopePathname() {
-  // registration.scope may omit the trailing slash under some absolute-base
-  // deploys (`/canvas-app` vs `/canvas-app/`). Always normalize before joining
-  // so we match `/canvas-app/wscope/...` and not `/canvas-appwscope/...`.
+
   const pathname = new URL(self.registration.scope).pathname
   return pathname.endsWith("/") ? pathname : `${pathname}/`
 }
@@ -167,22 +161,6 @@ function workspacePrefixPath() {
   return `${scopePathname()}wscope/`
 }
 
-/*
- * Recover relative sub-resources the client rewriter missed.
- *
- * The proxy encodes a whole URL into one opaque path segment
- * (encodeURIComponent), so a proxied page lives at /wscope/<encoded full URL>.
- * When a page sets a resource path the rewriter can't see synchronously —
- * Unity/WebGL loaders building "Build/x.loader.js" at runtime, or a game
- * navigating to "level2.html" — the browser resolves it against the /wscope/
- * root and the service worker receives /wscope/Build/x.loader.js: a bare
- * relative path with no origin. The codec then throws
- * "Failed to construct 'URL'". This rebuilds the real target from the
- * referring document (which IS a proper /wscope/<encoded> URL) and hands
- * scramjet a correctly-encoded request. GET/HEAD only, so there is no body to
- * carry. Returns null when the request is already valid or can't be repaired,
- * leaving normal handling untouched.
- */
 function repairRelativeLeak(event) {
   if (event.request.method !== "GET" && event.request.method !== "HEAD") return null;
 
@@ -193,8 +171,7 @@ function repairRelativeLeak(event) {
 
   let decoded;
   try { decoded = decodeURIComponent(reqUrl.pathname.slice(prefixPath.length) + reqUrl.search); } catch { return null; }
-  // A properly-encoded target always decodes to an absolute URL. Anything else
-  // is a relative leak.
+
   if (/^[a-z][a-z0-9+.-]*:\/\//i.test(decoded) || decoded.startsWith("blob:") || decoded.startsWith("data:")) return null;
 
   const ref = event.request.referrer;
@@ -226,8 +203,6 @@ async function handleRequest(event) {
   try {
     await ensureScramjetConfig();
 
-    // scramjet.route/fetch only read { request, clientId }, so a repaired
-    // request can be handed over through a lightweight shim.
     const repaired = repairRelativeLeak(event);
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
@@ -278,10 +253,6 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Hard rule: the workspace proxy must NEVER touch same-origin app/API traffic.
-  // Intercepting /api/* (music, auth, ai, stripe, rt, ads) is what produced
-  // "Unexpected token '<'" JSON errors and signed users out when a transient
-  // SW error returned a text/HTML response instead of the real API JSON.
   if (url.origin === self.location.origin && url.pathname.startsWith("/api/")) {
     return;
   }

@@ -18,14 +18,12 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/main.ts
 var main_exports = {};
 __export(main_exports, {
   default: () => LibcurlClient
 });
 module.exports = __toCommonJS(main_exports);
 
-// node_modules/.pnpm/libcurl.js@0.7.1/node_modules/libcurl.js/libcurl_full.mjs
 var libcurl = function() {
   var Module = typeof Module != "undefined" ? Module : {};
   var moduleOverrides = Object.assign({}, Module);
@@ -261,7 +259,7 @@ var libcurl = function() {
   function addFunction(func, sig) {
     assert(typeof func != "undefined");
     if (!functionsInTableMap) {
-      functionsInTableMap = /* @__PURE__ */ new WeakMap();
+      functionsInTableMap =  new WeakMap();
       updateTableMap(0, wasmTable.length);
     }
     if (functionsInTableMap.has(func)) {
@@ -3964,7 +3962,7 @@ var libcurl = function() {
     HEAP32[tmPtr + 28 >> 2] = yday;
   }
   function _tzset_impl(timezone, daylight, tzname) {
-    var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
+    var currentYear = ( new Date()).getFullYear();
     var winter = new Date(currentYear, 0, 1);
     var summer = new Date(currentYear, 6, 1);
     var winterOffset = winter.getTimezoneOffset();
@@ -5147,14 +5145,14 @@ var libcurl = function() {
         this.send_buffer.push(data);
       }
     }
-    //handle receiving a CONTINUE packet
+
     continue_received(buffer_size) {
       this.buffer_size = buffer_size;
       while (this.buffer_size > 0 && this.send_buffer.length > 0) {
         this.send(this.send_buffer.shift());
       }
     }
-    //construct and send a CLOSE packet
+
     close(reason = 1) {
       if (!this.open) return;
       let payload = array_from_uint(reason, 1);
@@ -5648,7 +5646,7 @@ Several C libraries are used, and their licenses are listed below:
         this.requests_list.splice(request_index, 1);
       }
     }
-    //remove the request on the next iteration of the loop
+
     remove_request(request_ptr) {
       this.assert_ready();
       setTimeout(() => {
@@ -5693,7 +5691,7 @@ Several C libraries are used, and their licenses are listed below:
         this.close_now();
       }, 1);
     }
-    //wrap request callbacks using a readable stream and return the new callbacks
+
     stream_response(url, headers_callback, end_callback, abort_signal) {
       let stream_controller;
       let aborted = false;
@@ -6366,7 +6364,6 @@ Several C libraries are used, and their licenses are listed below:
   return api;
 }();
 
-// src/main.ts
 var LibcurlClient = class {
   wisp;
   proxy;

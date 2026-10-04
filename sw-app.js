@@ -1,4 +1,4 @@
-/* legacy canvas/app SW — self-retire so classroom-7 can take over */
+
 self.addEventListener('install', (event) => {
   event.waitUntil(self.skipWaiting());
 });
@@ -16,5 +16,5 @@ self.addEventListener('activate', (event) => {
   })());
 });
 self.addEventListener('fetch', (event) => {
-  // do not intercept — fall through to network while retiring
+
 });
