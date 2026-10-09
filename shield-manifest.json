@@ -1,207 +1,207 @@
 {
   "shieldVersion": 1,
-  "generatedAt": "2026-10-09T16:26:40.826Z",
+  "generatedAt": "2026-10-09T16:33:01.153Z",
   "mode": "manifest",
-  "seed": 2477043726,
-  "layoutFingerprint": "d8f77509",
+  "seed": 3061466481,
+  "layoutFingerprint": "10594d92",
   "loaderStatus": "manifest: analysis only (no chunks rewritten)",
   "bootViaLoader": false,
-  "entry": "s_eawaaq",
+  "entry": "s_vq3i6j",
   "counts": {
     "total": 25,
     "vm": 25,
     "native": 0
   },
   "modules": {
-    "s_eawaaq": {
-      "file": "assets/main-CD8ByaHn.js",
+    "s_vq3i6j": {
+      "file": "assets/main-BMPBUD9t.js",
       "kind": "native"
     },
-    "s_1hxyzzo": {
-      "file": "assets/AuthGate-CPRuWEUT.js",
+    "s_1xob4zz": {
+      "file": "assets/AuthGate-EjAHYDEo.js",
       "kind": "native"
     },
-    "s_6rpj8a": {
-      "file": "assets/account-D4gIjX3V.js",
+    "s_ddw7f0": {
+      "file": "assets/account-n6jlRjbn.js",
       "kind": "native"
     },
-    "s_3j6tu7": {
-      "file": "assets/admin-DZXebaZf.js",
+    "s_yw0h77": {
+      "file": "assets/admin-CxrLtRZv.js",
       "kind": "native"
     },
-    "s_b8d867": {
-      "file": "assets/ai-BPrXKwMh.js",
+    "s_19rrr1g": {
+      "file": "assets/ai-CHb4clsZ.js",
       "kind": "native"
     },
-    "s_g6osxv": {
-      "file": "assets/avatar-CV6C-OzR.js",
+    "s_146bhuk": {
+      "file": "assets/avatar-CDu4P9Jg.js",
       "kind": "native"
     },
-    "s_b1crck": {
-      "file": "assets/browser-DeO6S-np.js",
+    "s_1ae8in5": {
+      "file": "assets/browser-D7NUCDTE.js",
       "kind": "native"
     },
-    "s_1fozw63": {
-      "file": "assets/chat-C_DCStYB.js",
+    "s_1t1qcs2": {
+      "file": "assets/chat-CbReUilU.js",
       "kind": "native"
     },
-    "s_1jvt02o": {
-      "file": "assets/chat-threads-BhY3fDLB.js",
+    "s_2qj9zl": {
+      "file": "assets/chat-threads-B-MHTumb.js",
       "kind": "native"
     },
-    "s_1gbzohi": {
-      "file": "assets/chatPrefs-BCjr8_1c.js",
+    "s_17pxk9j": {
+      "file": "assets/chatPrefs-CMs4avfd.js",
       "kind": "native"
     },
-    "s_186ldv3": {
+    "s_6thunw": {
       "file": "assets/config-rX51WcFe.js",
       "kind": "native"
     },
-    "s_o3omzw": {
-      "file": "assets/games-DfnqAgl6.js",
+    "s_1of36m4": {
+      "file": "assets/games-17nPh2u-.js",
       "kind": "native"
     },
-    "s_6t6g1k": {
+    "s_1ukvtvj": {
       "file": "assets/hljs-languages-D5XfH2RN.js",
       "kind": "native"
     },
-    "s_4bbwe9": {
-      "file": "assets/music-LoJMx0GC.js",
+    "s_1rqe7yq": {
+      "file": "assets/music-UspLwD-V.js",
       "kind": "native"
     },
-    "s_1yzxsc5": {
-      "file": "assets/premium-success-vtYfU9E0.js",
+    "s_oxlr33": {
+      "file": "assets/premium-success-BLxmE5Gi.js",
       "kind": "native"
     },
-    "s_l4m76a": {
-      "file": "assets/pricing-I-2KUo3F.js",
+    "s_1ljl6nl": {
+      "file": "assets/pricing-CJ_onDu6.js",
       "kind": "native"
     },
-    "s_n98yuc": {
+    "s_p079uj": {
       "file": "assets/rolldown-runtime-tcWNtVWY.js",
       "kind": "native"
     },
-    "s_1q0m3dn": {
-      "file": "assets/scramjet-B17l_2sf.js",
+    "s_ul02nn": {
+      "file": "assets/scramjet-CZgqlqZa.js",
       "kind": "native"
     },
-    "s_pwpgod": {
-      "file": "assets/settings-FYi5Aqts.js",
+    "s_1nrat7i": {
+      "file": "assets/settings-DbkJLny8.js",
       "kind": "native"
     },
-    "s_v6pl0n": {
-      "file": "assets/sj-host-DDY7cM0U.js",
+    "s_1k4au5r": {
+      "file": "assets/sj-host-9pukJV4S.js",
       "kind": "native"
     },
-    "s_1fpyf5m": {
-      "file": "assets/tos-ypjB1qYb.js",
+    "s_ohbpsa": {
+      "file": "assets/tos-BMtJOfCz.js",
       "kind": "native"
     },
-    "s_qph7ki": {
+    "s_1n4gwhd": {
       "file": "assets/vendor-icons-CRsWIl_H.js",
       "kind": "native"
     },
-    "s_1jdhkyg": {
+    "s_uwtfp5": {
       "file": "assets/vendor-markdown-tfAx5pCc.js",
       "kind": "native"
     },
-    "s_1w1v8aw": {
+    "s_8saxjb": {
       "file": "assets/vendor-react-DcsWndwz.js",
       "kind": "native"
     },
-    "s_14m8l09": {
-      "file": "assets/verify-email-iHcywHmH.js",
+    "s_1cgnpc3": {
+      "file": "assets/verify-email-BtaaI9B8.js",
       "kind": "native"
     }
   },
   "chunks": [
     {
-      "fileName": "assets/main-CD8ByaHn.js",
+      "fileName": "assets/main-BMPBUD9t.js",
       "rawBytes": 76226,
       "isEntry": true,
       "decision": "vm",
-      "id": "s_eawaaq",
+      "id": "s_vq3i6j",
       "functions": 446,
       "consts": 1982
     },
     {
-      "fileName": "assets/AuthGate-CPRuWEUT.js",
+      "fileName": "assets/AuthGate-EjAHYDEo.js",
       "rawBytes": 14622,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1hxyzzo",
+      "id": "s_1xob4zz",
       "functions": 42,
       "consts": 318
     },
     {
-      "fileName": "assets/account-D4gIjX3V.js",
+      "fileName": "assets/account-n6jlRjbn.js",
       "rawBytes": 28487,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_6rpj8a",
+      "id": "s_ddw7f0",
       "functions": 126,
       "consts": 612
     },
     {
-      "fileName": "assets/admin-DZXebaZf.js",
+      "fileName": "assets/admin-CxrLtRZv.js",
       "rawBytes": 25756,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_3j6tu7",
+      "id": "s_yw0h77",
       "functions": 103,
       "consts": 610
     },
     {
-      "fileName": "assets/ai-BPrXKwMh.js",
+      "fileName": "assets/ai-CHb4clsZ.js",
       "rawBytes": 54724,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_b8d867",
+      "id": "s_19rrr1g",
       "functions": 354,
       "consts": 1115
     },
     {
-      "fileName": "assets/avatar-CV6C-OzR.js",
+      "fileName": "assets/avatar-CDu4P9Jg.js",
       "rawBytes": 2061,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_g6osxv",
+      "id": "s_146bhuk",
       "functions": 16,
       "consts": 91
     },
     {
-      "fileName": "assets/browser-DeO6S-np.js",
+      "fileName": "assets/browser-D7NUCDTE.js",
       "rawBytes": 4178,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_b1crck",
+      "id": "s_1ae8in5",
       "functions": 27,
       "consts": 147
     },
     {
-      "fileName": "assets/chat-C_DCStYB.js",
+      "fileName": "assets/chat-CbReUilU.js",
       "rawBytes": 653514,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1fozw63",
+      "id": "s_1t1qcs2",
       "functions": 2442,
       "consts": 19665
     },
     {
-      "fileName": "assets/chat-threads-BhY3fDLB.js",
+      "fileName": "assets/chat-threads-B-MHTumb.js",
       "rawBytes": 63,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1jvt02o",
+      "id": "s_2qj9zl",
       "functions": 1,
       "consts": 2
     },
     {
-      "fileName": "assets/chatPrefs-BCjr8_1c.js",
+      "fileName": "assets/chatPrefs-CMs4avfd.js",
       "rawBytes": 6335,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1gbzohi",
+      "id": "s_17pxk9j",
       "functions": 69,
       "consts": 210
     },
@@ -210,16 +210,16 @@
       "rawBytes": 1486,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_186ldv3",
+      "id": "s_6thunw",
       "functions": 10,
       "consts": 55
     },
     {
-      "fileName": "assets/games-DfnqAgl6.js",
+      "fileName": "assets/games-17nPh2u-.js",
       "rawBytes": 324590,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_o3omzw",
+      "id": "s_1of36m4",
       "functions": 125,
       "consts": 3110
     },
@@ -228,34 +228,34 @@
       "rawBytes": 698028,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_6t6g1k",
+      "id": "s_1ukvtvj",
       "functions": 423,
       "consts": 7281
     },
     {
-      "fileName": "assets/music-LoJMx0GC.js",
+      "fileName": "assets/music-UspLwD-V.js",
       "rawBytes": 117032,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_4bbwe9",
+      "id": "s_1rqe7yq",
       "functions": 749,
       "consts": 2222
     },
     {
-      "fileName": "assets/premium-success-vtYfU9E0.js",
+      "fileName": "assets/premium-success-BLxmE5Gi.js",
       "rawBytes": 3154,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1yzxsc5",
+      "id": "s_oxlr33",
       "functions": 9,
       "consts": 107
     },
     {
-      "fileName": "assets/pricing-I-2KUo3F.js",
+      "fileName": "assets/pricing-CJ_onDu6.js",
       "rawBytes": 5979,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_l4m76a",
+      "id": "s_1ljl6nl",
       "functions": 13,
       "consts": 193
     },
@@ -264,43 +264,43 @@
       "rawBytes": 694,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_n98yuc",
+      "id": "s_p079uj",
       "functions": 7,
       "consts": 25
     },
     {
-      "fileName": "assets/scramjet-B17l_2sf.js",
+      "fileName": "assets/scramjet-CZgqlqZa.js",
       "rawBytes": 11691,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1q0m3dn",
+      "id": "s_ul02nn",
       "functions": 60,
       "consts": 323
     },
     {
-      "fileName": "assets/settings-FYi5Aqts.js",
+      "fileName": "assets/settings-DbkJLny8.js",
       "rawBytes": 18666,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_pwpgod",
+      "id": "s_1nrat7i",
       "functions": 68,
       "consts": 491
     },
     {
-      "fileName": "assets/sj-host-DDY7cM0U.js",
+      "fileName": "assets/sj-host-9pukJV4S.js",
       "rawBytes": 1635,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_v6pl0n",
+      "id": "s_1k4au5r",
       "functions": 13,
       "consts": 88
     },
     {
-      "fileName": "assets/tos-ypjB1qYb.js",
+      "fileName": "assets/tos-BMtJOfCz.js",
       "rawBytes": 14087,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1fpyf5m",
+      "id": "s_ohbpsa",
       "functions": 8,
       "consts": 120
     },
@@ -309,7 +309,7 @@
       "rawBytes": 27820,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_qph7ki",
+      "id": "s_1n4gwhd",
       "functions": 21,
       "consts": 803
     },
@@ -318,7 +318,7 @@
       "rawBytes": 1052580,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1jdhkyg",
+      "id": "s_uwtfp5",
       "functions": 2226,
       "consts": 19269
     },
@@ -327,16 +327,16 @@
       "rawBytes": 218923,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1w1v8aw",
+      "id": "s_8saxjb",
       "functions": 877,
       "consts": 3304
     },
     {
-      "fileName": "assets/verify-email-iHcywHmH.js",
+      "fileName": "assets/verify-email-BtaaI9B8.js",
       "rawBytes": 3523,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_14m8l09",
+      "id": "s_1cgnpc3",
       "functions": 17,
       "consts": 105
     }
