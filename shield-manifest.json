@@ -1,0 +1,369 @@
+{
+  "shieldVersion": 1,
+  "generatedAt": "2026-10-09T08:07:17.996Z",
+  "mode": "compile",
+  "seed": 3840793091,
+  "layoutFingerprint": "2a42f949",
+  "loaderStatus": "compile: loader active; entry + VM frontier run as bytecode",
+  "bootViaLoader": true,
+  "entry": "s_1ecpwks",
+  "counts": {
+    "total": 25,
+    "vm": 25,
+    "native": 0
+  },
+  "modules": {
+    "s_1ecpwks": {
+      "file": "assets/s_1ecpwks.js",
+      "kind": "vm"
+    },
+    "s_bq5f4s": {
+      "file": "assets/s_bq5f4s.js",
+      "kind": "vm"
+    },
+    "s_10uqg38": {
+      "file": "assets/s_10uqg38.js",
+      "kind": "vm"
+    },
+    "s_1nohl12": {
+      "file": "assets/s_1nohl12.js",
+      "kind": "vm"
+    },
+    "s_1bexgr": {
+      "file": "assets/s_1bexgr.js",
+      "kind": "vm"
+    },
+    "s_152npwu": {
+      "file": "assets/s_152npwu.js",
+      "kind": "vm"
+    },
+    "s_6yhvbx": {
+      "file": "assets/s_6yhvbx.js",
+      "kind": "vm"
+    },
+    "s_z0gffr": {
+      "file": "assets/s_z0gffr.js",
+      "kind": "vm"
+    },
+    "s_1nt68kp": {
+      "file": "assets/s_1nt68kp.js",
+      "kind": "vm"
+    },
+    "s_1c53jhe": {
+      "file": "assets/s_1c53jhe.js",
+      "kind": "vm"
+    },
+    "s_r6sxhv": {
+      "file": "assets/s_r6sxhv.js",
+      "kind": "vm"
+    },
+    "s_1420h78": {
+      "file": "assets/s_1420h78.js",
+      "kind": "vm"
+    },
+    "s_jxwkt8": {
+      "file": "assets/s_jxwkt8.js",
+      "kind": "vm"
+    },
+    "s_t870tc": {
+      "file": "assets/s_t870tc.js",
+      "kind": "vm"
+    },
+    "s_13sc5xz": {
+      "file": "assets/s_13sc5xz.js",
+      "kind": "vm"
+    },
+    "s_1g846m8": {
+      "file": "assets/s_1g846m8.js",
+      "kind": "vm"
+    },
+    "s_xbau0g": {
+      "file": "assets/s_xbau0g.js",
+      "kind": "vm"
+    },
+    "s_1eal3at": {
+      "file": "assets/s_1eal3at.js",
+      "kind": "vm"
+    },
+    "s_179ttgj": {
+      "file": "assets/s_179ttgj.js",
+      "kind": "vm"
+    },
+    "s_1vcitu3": {
+      "file": "assets/s_1vcitu3.js",
+      "kind": "vm"
+    },
+    "s_1oor8ke": {
+      "file": "assets/s_1oor8ke.js",
+      "kind": "vm"
+    },
+    "s_1z0fmvi": {
+      "file": "assets/s_1z0fmvi.js",
+      "kind": "vm"
+    },
+    "s_1pm3d84": {
+      "file": "assets/s_1pm3d84.js",
+      "kind": "vm"
+    },
+    "s_1oqce1g": {
+      "file": "assets/s_1oqce1g.js",
+      "kind": "vm"
+    },
+    "s_1frag8l": {
+      "file": "assets/s_1frag8l.js",
+      "kind": "vm"
+    }
+  },
+  "chunks": [
+    {
+      "fileName": "assets/main-Cey5KHBp.js",
+      "rawBytes": 73503,
+      "isEntry": true,
+      "decision": "vm",
+      "id": "s_1ecpwks",
+      "functions": 426,
+      "consts": 1905,
+      "encryptedBytes": 185521
+    },
+    {
+      "fileName": "assets/AuthGate-DGhcstYK.js",
+      "rawBytes": 14622,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_bq5f4s",
+      "functions": 42,
+      "consts": 318,
+      "encryptedBytes": 34435
+    },
+    {
+      "fileName": "assets/account-LXAB44Eq.js",
+      "rawBytes": 28486,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_10uqg38",
+      "functions": 126,
+      "consts": 612,
+      "encryptedBytes": 72439
+    },
+    {
+      "fileName": "assets/admin-D9T9m-T3.js",
+      "rawBytes": 25756,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1nohl12",
+      "functions": 103,
+      "consts": 610,
+      "encryptedBytes": 63679
+    },
+    {
+      "fileName": "assets/ai-Ds8YCSK0.js",
+      "rawBytes": 54723,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1bexgr",
+      "functions": 354,
+      "consts": 1115,
+      "encryptedBytes": 136230
+    },
+    {
+      "fileName": "assets/avatar-Dz88iiDS.js",
+      "rawBytes": 2061,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_152npwu",
+      "functions": 16,
+      "consts": 91,
+      "encryptedBytes": 10713
+    },
+    {
+      "fileName": "assets/browser-MhD9cN5O.js",
+      "rawBytes": 4178,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_6yhvbx",
+      "functions": 27,
+      "consts": 147,
+      "encryptedBytes": 15839
+    },
+    {
+      "fileName": "assets/chat-C6d8DXEA.js",
+      "rawBytes": 653513,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_z0gffr",
+      "functions": 2442,
+      "consts": 19665,
+      "encryptedBytes": 1404641
+    },
+    {
+      "fileName": "assets/chat-threads-DNnAgk9_.js",
+      "rawBytes": 63,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1nt68kp",
+      "functions": 1,
+      "consts": 2,
+      "encryptedBytes": 5279
+    },
+    {
+      "fileName": "assets/chatPrefs-BMarqiHR.js",
+      "rawBytes": 6335,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1c53jhe",
+      "functions": 69,
+      "consts": 210,
+      "encryptedBytes": 22707
+    },
+    {
+      "fileName": "assets/config-rX51WcFe.js",
+      "rawBytes": 1486,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_r6sxhv",
+      "functions": 10,
+      "consts": 55,
+      "encryptedBytes": 8307
+    },
+    {
+      "fileName": "assets/games-BBgSWHgM.js",
+      "rawBytes": 324590,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1420h78",
+      "functions": 125,
+      "consts": 3110,
+      "encryptedBytes": 425246
+    },
+    {
+      "fileName": "assets/hljs-languages-D5XfH2RN.js",
+      "rawBytes": 698028,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_jxwkt8",
+      "functions": 423,
+      "consts": 7281,
+      "encryptedBytes": 882104
+    },
+    {
+      "fileName": "assets/music-qcn3h1Sf.js",
+      "rawBytes": 118720,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_t870tc",
+      "functions": 754,
+      "consts": 2237,
+      "encryptedBytes": 289482
+    },
+    {
+      "fileName": "assets/premium-success-DUzvpIoq.js",
+      "rawBytes": 3154,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_13sc5xz",
+      "functions": 9,
+      "consts": 107,
+      "encryptedBytes": 13292
+    },
+    {
+      "fileName": "assets/pricing-f1bPzD45.js",
+      "rawBytes": 5979,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1g846m8",
+      "functions": 13,
+      "consts": 193,
+      "encryptedBytes": 19385
+    },
+    {
+      "fileName": "assets/rolldown-runtime-tcWNtVWY.js",
+      "rawBytes": 694,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_xbau0g",
+      "functions": 7,
+      "consts": 25,
+      "encryptedBytes": 7286
+    },
+    {
+      "fileName": "assets/scramjet-CoHne977.js",
+      "rawBytes": 8052,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1eal3at",
+      "functions": 40,
+      "consts": 230,
+      "encryptedBytes": 23743
+    },
+    {
+      "fileName": "assets/settings-Cv9_4kLJ.js",
+      "rawBytes": 16287,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_179ttgj",
+      "functions": 59,
+      "consts": 434,
+      "encryptedBytes": 38160
+    },
+    {
+      "fileName": "assets/sj-host-CSqCskAr.js",
+      "rawBytes": 1635,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1vcitu3",
+      "functions": 13,
+      "consts": 88,
+      "encryptedBytes": 9293
+    },
+    {
+      "fileName": "assets/tos-BHeSC4mp.js",
+      "rawBytes": 14087,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1oor8ke",
+      "functions": 8,
+      "consts": 120,
+      "encryptedBytes": 23434
+    },
+    {
+      "fileName": "assets/vendor-icons-CRsWIl_H.js",
+      "rawBytes": 27820,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1z0fmvi",
+      "functions": 21,
+      "consts": 803,
+      "encryptedBytes": 57977
+    },
+    {
+      "fileName": "assets/vendor-markdown-tfAx5pCc.js",
+      "rawBytes": 1052580,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1pm3d84",
+      "functions": 2226,
+      "consts": 19269,
+      "encryptedBytes": 2024330
+    },
+    {
+      "fileName": "assets/vendor-react-DcsWndwz.js",
+      "rawBytes": 218923,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1oqce1g",
+      "functions": 877,
+      "consts": 3304,
+      "encryptedBytes": 561122
+    },
+    {
+      "fileName": "assets/verify-email-BetrXVa5.js",
+      "rawBytes": 3522,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1frag8l",
+      "functions": 17,
+      "consts": 105,
+      "encryptedBytes": 15173
+    }
+  ]
+}
