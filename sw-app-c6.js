@@ -1,4 +1,4 @@
-if (navigator.userAgent.includes("Firefox")) {
+/*__ABX_OBF__*/if (navigator.userAgent.includes("Firefox")) {
   Object.defineProperty(globalThis, "crossOriginIsolated", {
     value: true,
     writable: false,
@@ -9,8 +9,8 @@ const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
 
-const { ScramjetServiceWorker } = $scramjetLoadWorker();
-let scramjet = new ScramjetServiceWorker();
+const { GtnessjjServiceWorker } = $gtnessjjLoadWorker();
+let gtnessjj = new GtnessjjServiceWorker();
 
 const CONFIG = {
   blocked: [
@@ -107,7 +107,7 @@ function isBlocked(hostname, pathname) {
 }
 
 function attachRequestHandler() {
-  scramjet.addEventListener("request", (e) => {
+  gtnessjj.addEventListener("request", (e) => {
     if (isBlocked(e.url.hostname, e.url.pathname)) {
       e.response = new Response("Site Blocked", { status: 403 });
       return;
@@ -142,14 +142,32 @@ function attachRequestHandler() {
 
 attachRequestHandler();
 
-async function ensureScramjetConfig() {
+async function ensureGtnessjjConfig() {
   for (let attempt = 0; attempt < 20; attempt++) {
-    await scramjet.loadConfig();
-    if (scramjet.config?.prefix && scramjet.config?.files) return;
+    await gtnessjj.loadConfig();
+    if (gtnessjj.config?.prefix && gtnessjj.config?.files) return;
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
   throw new Error("Workspace configuration is unavailable");
 }
+
+// The page writes a config whose file URLs carry its build `?v=`. This worker's
+// runtime (importScripts above) is pinned to __SW_VERSION, and every build
+// renames the runtime's globals, so rewriting pages with a config from another
+// build produces scripts that reference undefined `$...$prop` globals. Refuse
+// loudly instead; the page detects the mismatch and re-registers.
+function configBuildVersion() {
+  const all = gtnessjj.config?.files?.all;
+  if (typeof all !== "string") return null;
+  try { return new URL(all, self.registration.scope).searchParams.get("v"); } catch { return null; }
+}
+
+function configMatchesWorker() {
+  const v = configBuildVersion();
+  return v === null || v === __SW_VERSION;
+}
+
+const VERSION_MISMATCH_BODY = "Workspace version mismatch: reload the page.";
 
 function scopePathname() {
 
@@ -201,14 +219,21 @@ function repairRelativeLeak(event) {
 
 async function handleRequest(event) {
   try {
-    await ensureScramjetConfig();
+    await ensureGtnessjjConfig();
+    if (!configMatchesWorker()) {
+      return new Response(VERSION_MISMATCH_BODY, {
+        status: 502,
+        statusText: "Workspace version mismatch",
+        headers: { "content-type": "text/plain; charset=utf-8", "x-abulxt-workspace": "stale" },
+      });
+    }
 
     const repaired = repairRelativeLeak(event);
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
 
-    if (scramjet.route(target)) {
-      const response = await scramjet.fetch(target);
+    if (gtnessjj.route(target)) {
+      const response = await gtnessjj.fetch(target);
       const contentType = response.headers.get("content-type") || "";
 
       const htmlDocument = contentType.includes("text/html") ||
@@ -262,14 +287,21 @@ self.addEventListener("fetch", (event) => {
     url.origin === self.location.origin &&
     (url.pathname.startsWith(prefix) ||
       url.pathname === new URL("assets/c/runtime.wasm", self.registration.scope).pathname ||
-      url.pathname === scramjet.config?.files?.wasm)
+      url.pathname === gtnessjj.config?.files?.wasm)
   ) {
     event.respondWith(handleRequest(event));
   }
 });
 
-self.addEventListener("message", ({ data }) => {
+self.addEventListener("message", ({ data, ports }) => {
+  if (!data || typeof data !== "object") return;
   if (data.type === "playgroundData") {
     playgroundData = data;
+    return;
+  }
+  // Plain key on purpose: it must survive the per-build identifier renaming so
+  // a page from any build can ask any worker which build it is.
+  if (data.type === "abulxt:version" && ports && ports[0]) {
+    ports[0].postMessage({ type: "abulxt:version", version: __SW_VERSION });
   }
 });
