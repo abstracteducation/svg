@@ -1,4 +1,4 @@
-/*__ABX_OBF__*/var __abx$511d64=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("JwjxPAvyuKIKhx3QnfhSameAyII1I1nAKaREvfe/GpQ="),P=["gsnx9hATEGXWVDMk+JOrdrdZd+s=","yg05Ny6E++ijUPFJ+f1zW9lGvNs=","T+K/4wagKJlbyL9h+zqeEYbL+yc35A==","/Q+tHRug1jN/8z8V2uvO2viirp11FINUvWxy","0KoWPAPvVGqw/426cyheMvZZLYVGLydBCw==","7oxSARvFcuj5r062ag==","P7SHktTGflppIh4VjuiYuw=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
+/*__ABX_OBF__*/var __abx$388797=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("sPtyVbyxBY7MePWY5xFRiOsqrim6DcBuVycpLhZus8M="),P=["l0wdErd1UYh/GYz778e6cKsnzqA=","qUyd+JxYWCkdMk6GCeEBiAVqXGw=","D1/r4z3yqdj4PgzfzxNKM0ES8q1Y+w==","NdWi32NvPW0AFdzSjVUVwglirBLWw/5DIfrS","3WK98Bzv20Mn80vUZvjz2iL+dZRgAs+ERg==","rafNX9cgxCuLTWZGcg==","WI80N1fOpUkyZ3muZvJMbA=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -245,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { TjzwqdquClient: () => g });
+        r.r(t), r.d(t, { OufjgpfeClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -274,7 +274,7 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a tjzwqdqu client, but one is already loaded - this is very bad"
+                  "attempted to initialize a oufjgpfe client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
@@ -295,8 +295,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$tjzwqdqu$type" in t &&
-                          "qsntchoinit" === t.$tjzwqdqu$type &&
+                          "$oufjgpfe$type" in t &&
+                          "vxldseeinit" === t.$oufjgpfe$type &&
                           e(t.port);
                       });
                     })
@@ -393,7 +393,7 @@
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new TjzwqdquFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new OufjgpfeFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -410,7 +410,7 @@
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new TjzwqdquFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new OufjgpfeFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -421,7 +421,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new TjzwqdquFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new OufjgpfeFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -558,7 +558,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM TJZWQDQU INTERNALS", e);
+                          console.error("ERROR FROM OUFJGPFE INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -663,8 +663,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("tjzwqdqu-attr-") ||
-                          t[r]?.name?.startsWith("tjzwqdqu-attr-")
+                          r.startsWith("oufjgpfe-attr-") ||
+                          t[r]?.name?.startsWith("oufjgpfe-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -697,11 +697,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("tjzwqdqu$type" in t && "cookie" === t.tjzwqdqu$type) {
+            if ("oufjgpfe$type" in t && "cookie" === t.oufjgpfe$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                tjzwqdqu$token: t.tjzwqdqu$token,
-                tjzwqdqu$type: "cookie",
+                oufjgpfe$token: t.oufjgpfe$token,
+                oufjgpfe$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -716,7 +716,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    tjzwqdqu$type: "cookie",
+                    oufjgpfe$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -950,34 +950,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("tjzwqdqu-attr")) return t.return(null);
+                if (r.startsWith("oufjgpfe-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `tjzwqdqu-attr-${r}`
+                    `oufjgpfe-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `tjzwqdqu-attr-${r}`);
+                  let e = t.fn.call(t.this, `oufjgpfe-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("tjzwqdqu-attr"));
+                let t = e.call().filter((e) => !e.startsWith("oufjgpfe-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("tjzwqdqu-attr"))
+                if (e.args[0].startsWith("oufjgpfe-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("tjzwqdqu-attr")) return e.return(!1);
+                if (e.args[0].startsWith("oufjgpfe-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1004,7 +1004,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `tjzwqdqu-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `oufjgpfe-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1026,7 +1026,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `tjzwqdqu-attr-${t.args[1]}`,
+                    `oufjgpfe-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1048,23 +1048,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("tjzwqdqu-attr"))
+                if (t.args[0].startsWith("oufjgpfe-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `tjzwqdqu-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `oufjgpfe-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("tjzwqdqu-attr")) return t.return(!1);
+                if (t.args[0].startsWith("oufjgpfe-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `tjzwqdqu-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `oufjgpfe-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1075,7 +1075,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "tjzwqdqu-attr-script-source-src",
+                      "oufjgpfe-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1097,7 +1097,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "tjzwqdqu-attr-script-source-src"
+                    "oufjgpfe-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1175,7 +1175,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.TjzwqdquClient(t).hook()), t;
+                  return t && (l.pX in t || new c.OufjgpfeClient(t).hook()), t;
                 },
               }
             ),
@@ -1193,7 +1193,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.TjzwqdquClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.OufjgpfeClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1285,7 +1285,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.TjzwqdquClient(r);
+                let e = new n.OufjgpfeClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1406,7 +1406,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    tjzwqdqu$type: "registerServiceWorker",
+                    oufjgpfe$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1506,11 +1506,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing tjzwqdqu client"),
+            l.log("initializing oufjgpfe client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.TjzwqdquClient(globalThis),
+            let e = new s.OufjgpfeClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1520,8 +1520,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.TjzwqdquServiceWorkerRuntime(e).hook();
-            let r = new o.TjzwqdquContextEvent(e.global.window, e);
+              f && new a.OufjgpfeServiceWorkerRuntime(e).hook();
+            let r = new o.OufjgpfeContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1534,8 +1534,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            TjzwqdquContextEvent: () => o,
-            TjzwqdquGlobalDownloadEvent: () => n,
+            OufjgpfeContextEvent: () => o,
+            OufjgpfeGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1578,10 +1578,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            TjzwqdquClient: () => n.TjzwqdquClient,
-            TjzwqdquContextEvent: () => s.TjzwqdquContextEvent,
-            TjzwqdquGlobalDownloadEvent: () => s.TjzwqdquGlobalDownloadEvent,
-            TjzwqdquServiceWorkerRuntime: () => l.TjzwqdquServiceWorkerRuntime,
+            OufjgpfeClient: () => n.OufjgpfeClient,
+            OufjgpfeContextEvent: () => s.OufjgpfeContextEvent,
+            OufjgpfeGlobalDownloadEvent: () => s.OufjgpfeGlobalDownloadEvent,
+            OufjgpfeServiceWorkerRuntime: () => l.OufjgpfeServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1954,14 +1954,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("tjzwqdqu original onevent function");
+        let o = Symbol.for("oufjgpfe original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$tjzwqdqu$type" in this.data)
+                  !("$oufjgpfe$type" in this.data)
                 );
               },
               ports() {
@@ -1972,14 +1972,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$tjzwqdqu$origin" in this.data
-                  ? this.data.$tjzwqdqu$origin
+                  "$oufjgpfe$origin" in this.data
+                  ? this.data.$oufjgpfe$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$tjzwqdqu$data" in this.data
-                  ? this.data.$tjzwqdqu$data
+                  "$oufjgpfe$data" in this.data
+                  ? this.data.$oufjgpfe$data
                   : this.data;
               },
             },
@@ -2238,9 +2238,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $tjzwqdqu$messagetype: "window",
-                  $tjzwqdqu$origin: r.url.origin,
-                  $tjzwqdqu$data: e.args[0],
+                  $oufjgpfe$messagetype: "window",
+                  $oufjgpfe$origin: r.url.origin,
+                  $oufjgpfe$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2254,8 +2254,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $tjzwqdqu$messagetype: "worker",
-                  $tjzwqdqu$data: e.args[0],
+                  $oufjgpfe$messagetype: "worker",
+                  $oufjgpfe$data: e.args[0],
                 };
               },
             });
@@ -2264,7 +2264,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("tjzwqdqu realm pollutant");
+        let i = Symbol.for("oufjgpfe realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2740,7 +2740,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $tjzwqdqu$type: "qsntchoinit", port: t },
+                  { $oufjgpfe$type: "vxldseeinit", port: t },
                   [t]
                 );
               })();
@@ -2766,7 +2766,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $tjzwqdqu$type: "qsntchoinit", port: t },
+                    { $oufjgpfe$type: "vxldseeinit", port: t },
                     [t]
                   );
                 })();
@@ -2901,7 +2901,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes(__abx$511d64(0)),
+                "string" == typeof e && e.includes(__abx$388797(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2938,7 +2938,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { TjzwqdquServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { OufjgpfeServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2951,11 +2951,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "tjzwqdqu$type" in t.data &&
-                        ("init" === t.data.tjzwqdqu$type
-                          ? ((this.recvport = t.data.tjzwqdqu$port),
+                      "oufjgpfe$type" in t.data &&
+                        ("init" === t.data.oufjgpfe$type
+                          ? ((this.recvport = t.data.oufjgpfe$port),
                             this.recvport.postMessage({
-                              tjzwqdqu$type: "init",
+                              oufjgpfe$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -2987,15 +2987,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.tjzwqdqu$type,
-            o = t.tjzwqdqu$token,
+            s = t.oufjgpfe$type,
+            o = t.oufjgpfe$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.tjzwqdqu$request,
+              let s = t.oufjgpfe$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3012,9 +3012,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      tjzwqdqu$type: "fetch",
-                      tjzwqdqu$token: o,
-                      tjzwqdqu$response: {
+                      oufjgpfe$type: "fetch",
+                      oufjgpfe$token: o,
+                      oufjgpfe$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3033,9 +3033,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    tjzwqdqu$type: "fetch",
-                    tjzwqdqu$token: o,
-                    tjzwqdqu$response: !1,
+                    oufjgpfe$type: "fetch",
+                    oufjgpfe$token: o,
+                    oufjgpfe$response: !1,
                   }));
             }
           }
@@ -3071,20 +3071,20 @@
               },
               r = t(
                 {
-                  prefix: "/tjzwqdqu/",
+                  prefix: "/oufjgpfe/",
                   globals: {
-                    wrapfn: "$tjzwqdqu$wrap",
-                    wrappropertybase: "$tjzwqdqu__",
-                    wrappropertyfn: "$tjzwqdqu$prop",
-                    cleanrestfn: "$tjzwqdqu$clean",
-                    importfn: "$tjzwqdqu$import",
-                    rewritefn: "$tjzwqdqu$rewrite",
-                    metafn: "$tjzwqdqu$meta",
-                    setrealmfn: "$tjzwqdqu$setrealm",
-                    pushsourcemapfn: "$tjzwqdqu$pushsourcemap",
-                    trysetfn: "$tjzwqdqu$tryset",
-                    templocid: "$tjzwqdqu$temploc",
-                    tempunusedid: "$tjzwqdqu$tempunused",
+                    wrapfn: "$oufjgpfe$wrap",
+                    wrappropertybase: "$oufjgpfe__",
+                    wrappropertyfn: "$oufjgpfe$prop",
+                    cleanrestfn: "$oufjgpfe$clean",
+                    importfn: "$oufjgpfe$import",
+                    rewritefn: "$oufjgpfe$rewrite",
+                    metafn: "$oufjgpfe$meta",
+                    setrealmfn: "$oufjgpfe$setrealm",
+                    pushsourcemapfn: "$oufjgpfe$pushsourcemap",
+                    trysetfn: "$oufjgpfe$tryset",
+                    templocid: "$oufjgpfe$temploc",
+                    tempunusedid: "$oufjgpfe$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3120,16 +3120,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                tjzwqdqu$type: "loadConfig",
+                oufjgpfe$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("tjzwqdqu$type" in e.data)) return;
+                if (!("oufjgpfe$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.tjzwqdqu$type &&
+                "download" === t.oufjgpfe$type &&
                   this.dispatchEvent(
-                    new s.TjzwqdquGlobalDownloadEvent(t.download)
+                    new s.OufjgpfeGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3156,7 +3156,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open("$abulxt-tjzwqdqu", 2);
+            let e = indexedDB.open("$abulxt-oufjgpfe", 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3192,7 +3192,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                tjzwqdqu$type: "loadConfig",
+                oufjgpfe$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3245,7 +3245,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { [__abx$511d64(1)+__abx$511d64(2)]: () => i.q, TjzwqdquFrame: () => n.X });
+          r.d(t, { [__abx$388797(1)+__abx$388797(2)]: () => i.q, OufjgpfeFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3605,7 +3605,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$tjzwqdquLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$oufjgpfeLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3644,12 +3644,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`tjzwqdqu-attr-${i}`] = s);
+                            (t.attribs[`oufjgpfe-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`tjzwqdqu-attr-${e}`] = r),
+                        ((t.attribs[`oufjgpfe-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3691,7 +3691,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["tjzwqdqu-attr-script-source-src"] = y(
+                    (t.attribs["oufjgpfe-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3755,13 +3755,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("tjzwqdqu-attr-script-source-src" == e) {
+                  if ("oufjgpfe-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("tjzwqdqu-attr-") &&
+                  e.startsWith("oufjgpfe-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4116,7 +4116,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$tjzwqdquLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$oufjgpfeLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4137,7 +4137,7 @@ ${l}`;
         });
         let n = { none: 0, "same-origin": 1, "same-site": 2, "cross-site": 3 };
         async function i() {
-          let e = indexedDB.open("$abulxt-tjzwqdqu", 2);
+          let e = indexedDB.open("$abulxt-oufjgpfe", 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4227,7 +4227,7 @@ e.onupgradeneeded = () => {
         r.d(t, { ps: () => a });
         let n = "publicSuffixList";
         async function i() {
-          let e = indexedDB.open("$abulxt-tjzwqdqu", 2);
+          let e = indexedDB.open("$abulxt-oufjgpfe", 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4324,8 +4324,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("tjzwqdqu client global"),
-          i = Symbol.for("tjzwqdqu frame handle");
+        let n = Symbol.for("oufjgpfe client global"),
+          i = Symbol.for("oufjgpfe frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4337,9 +4337,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $tjzwqdquVersion.version
+                  $oufjgpfeVersion.version
                 )};
-                build.textContent = ${JSON.stringify($tjzwqdquVersion.build)};
+                build.textContent = ${JSON.stringify($oufjgpfeVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4353,7 +4353,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Tjzwqdqu</title>
+                    <title>Oufjgpfe</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4501,8 +4501,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Tjzwqdqu</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/tjzwqdqu"
+                <li>Updating Oufjgpfe</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/oufjgpfe"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4510,7 +4510,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Tjzwqdqu v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Oufjgpfe v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4541,30 +4541,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "tjzwqdqu$type" in e.data &&
-                  ("init" === e.data.tjzwqdqu$type
+                "oufjgpfe$type" in e.data &&
+                  ("init" === e.data.oufjgpfe$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  tjzwqdqu$type: "init",
-                  tjzwqdqu$port: this.messageChannel.port2,
+                  oufjgpfe$type: "init",
+                  oufjgpfe$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.tjzwqdqu$token];
-            t && (t(e), delete this.promises[e.tjzwqdqu$token]);
+            let t = this.promises[e.oufjgpfe$token];
+            t && (t(e), delete this.promises[e.oufjgpfe$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                tjzwqdqu$type: "fetch",
-                tjzwqdqu$token: t,
-                tjzwqdqu$request: {
+                oufjgpfe$type: "fetch",
+                oufjgpfe$token: t,
+                oufjgpfe$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4575,7 +4575,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { tjzwqdqu$response: i } = await new Promise((e) => {
+            let { oufjgpfe$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4817,7 +4817,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                tjzwqdqu$type: "cookie",
+                oufjgpfe$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4882,7 +4882,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ tjzwqdqu$type: "download", download: s }, [
+              i[0].postMessage({ oufjgpfe$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -4994,9 +4994,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            TjzwqdquHandleResponseEvent: () => i.dT,
-            TjzwqdquRequestEvent: () => i.V3,
-            TjzwqdquServiceWorker: () => u,
+            OufjgpfeHandleResponseEvent: () => i.dT,
+            OufjgpfeRequestEvent: () => i.V3,
+            OufjgpfeServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5017,7 +5017,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open("$abulxt-tjzwqdqu", 2);
+            let e = indexedDB.open("$abulxt-oufjgpfe", 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5036,23 +5036,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("tjzwqdqu$type" in t) {
-                  if ("tjzwqdqu$token" in t) {
-                    let e = this.syncPool[t.tjzwqdqu$token];
-                    delete this.syncPool[t.tjzwqdqu$token], e(t);
+                if ("oufjgpfe$type" in t) {
+                  if ("oufjgpfe$token" in t) {
+                    let e = this.syncPool[t.oufjgpfe$token];
+                    delete this.syncPool[t.oufjgpfe$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.tjzwqdqu$type)
+                  if ("registerServiceWorker" === t.oufjgpfe$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.tjzwqdqu$type &&
+                  "cookie" === t.oufjgpfe$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.tjzwqdqu$type &&
+                    "loadConfig" === t.oufjgpfe$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5065,14 +5065,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.tjzwqdqu$token = n),
+              (t.oufjgpfe$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open("$abulxt-tjzwqdqu", 2);
+            let e = indexedDB.open("$abulxt-oufjgpfe", 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5154,7 +5154,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("vjljyfbz: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("lpmdhctx: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5193,13 +5193,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "vjljyfbz: failed to get a vjljyfbz SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "lpmdhctx: failed to get a lpmdhctx SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "vjljyfbz: failed to get a vjljyfbz SharedWorker MessagePort within 1s, retrying"
+                "lpmdhctx: failed to get a lpmdhctx SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5219,13 +5219,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, __abx$511d64(3));
+          let r = new i(e, __abx$388797(3));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("vjljyfbz: recieved request for port from sw");
-                  let r = new i(e, __abx$511d64(3));
+                  console.debug("lpmdhctx: recieved request for port from sw");
+                  let r = new i(e, __abx$388797(3));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5235,7 +5235,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("vjljyfbz")),
+            (this.channel = new BroadcastChannel("lpmdhctx")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5253,24 +5253,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "vjljyfbz: setting localStorage vjljyfbz-path to",
+                  "lpmdhctx: setting localStorage lpmdhctx-path to",
                   e
                 ),
-                (s[__abx$511d64(4)] = e);
+                (s[__abx$388797(4)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s[__abx$511d64(4)];
+                let e = s[__abx$388797(4)];
                 if (
                   (console.debug(
-                    "vjljyfbz: got localStorage vjljyfbz-path:",
+                    "lpmdhctx: got localStorage lpmdhctx-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get vjljyfbz workerPath from localStorage."
+                    "Unable to get lpmdhctx workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5284,7 +5284,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "vjljyfbz: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "lpmdhctx: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5397,7 +5397,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("vjljyfbz-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("lpmdhctx-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5501,7 +5501,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "vjljyfbz-remote", args: [r.port2, t] },
+                  client: { function: "lpmdhctx-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5599,7 +5599,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("vjljyfbz: running v2.1.7 (build c56d286)");
+        console.debug("lpmdhctx: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -7961,19 +7961,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$tjzwqdquRequire = function (e) {
+    (globalThis.$oufjgpfeRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis[__abx$511d64(5)+__abx$511d64(0)+__abx$511d64(6)+__abx$511d64(2)] = function () {
+    (globalThis[__abx$388797(5)+__abx$388797(0)+__abx$388797(6)+__abx$388797(2)] = function () {
       return r(9052);
     }),
-    (globalThis.$tjzwqdquLoadClient = function () {
+    (globalThis.$oufjgpfeLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$tjzwqdquLoadWorker = function () {
+    (globalThis.$oufjgpfeLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$tjzwqdquVersion = {
+    (globalThis.$oufjgpfeVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),
