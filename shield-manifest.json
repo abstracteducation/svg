@@ -1,132 +1,132 @@
 {
   "shieldVersion": 1,
-  "generatedAt": "2026-10-10T09:34:51.484Z",
+  "generatedAt": "2026-10-10T18:09:19.847Z",
   "mode": "compile",
-  "seed": 1847045356,
-  "layoutFingerprint": "8955bf18",
+  "seed": 97060534,
+  "layoutFingerprint": "bda47fc5",
   "loaderStatus": "compile: loader active; entry + VM frontier run as bytecode",
   "bootViaLoader": true,
-  "entry": "s_ogl44d",
+  "entry": "s_19se8t8",
   "counts": {
     "total": 29,
     "vm": 29,
     "native": 0
   },
   "modules": {
-    "s_ogl44d": {
-      "file": "assets/s_ogl44d.js",
+    "s_19se8t8": {
+      "file": "assets/s_19se8t8.js",
       "kind": "vm"
     },
-    "s_1oml3g1": {
-      "file": "assets/s_1oml3g1.js",
+    "s_a074or": {
+      "file": "assets/s_a074or.js",
       "kind": "vm"
     },
-    "s_v36f96": {
-      "file": "assets/s_v36f96.js",
+    "s_f20u8n": {
+      "file": "assets/s_f20u8n.js",
       "kind": "vm"
     },
-    "s_xk1mwk": {
-      "file": "assets/s_xk1mwk.js",
+    "s_n3xllz": {
+      "file": "assets/s_n3xllz.js",
       "kind": "vm"
     },
-    "s_1sficww": {
-      "file": "assets/s_1sficww.js",
+    "s_ynmbmy": {
+      "file": "assets/s_ynmbmy.js",
       "kind": "vm"
     },
-    "s_174zlyy": {
-      "file": "assets/s_174zlyy.js",
+    "s_1mklzpg": {
+      "file": "assets/s_1mklzpg.js",
       "kind": "vm"
     },
-    "s_nhshgd": {
-      "file": "assets/s_nhshgd.js",
+    "s_1fp2vvq": {
+      "file": "assets/s_1fp2vvq.js",
       "kind": "vm"
     },
-    "s_anquef": {
-      "file": "assets/s_anquef.js",
+    "s_dghycf": {
+      "file": "assets/s_dghycf.js",
       "kind": "vm"
     },
-    "s_14z95t4": {
-      "file": "assets/s_14z95t4.js",
+    "s_ozjjcp": {
+      "file": "assets/s_ozjjcp.js",
       "kind": "vm"
     },
-    "s_1epwr9l": {
-      "file": "assets/s_1epwr9l.js",
+    "s_1y9kk1m": {
+      "file": "assets/s_1y9kk1m.js",
       "kind": "vm"
     },
-    "s_gdvia5": {
-      "file": "assets/s_gdvia5.js",
+    "s_1778ytm": {
+      "file": "assets/s_1778ytm.js",
       "kind": "vm"
     },
-    "s_adjrgq": {
-      "file": "assets/s_adjrgq.js",
+    "s_zweihn": {
+      "file": "assets/s_zweihn.js",
       "kind": "vm"
     },
-    "s_13udtun": {
-      "file": "assets/s_13udtun.js",
+    "s_4hog68": {
+      "file": "assets/s_4hog68.js",
       "kind": "vm"
     },
-    "s_ob567a": {
-      "file": "assets/s_ob567a.js",
+    "s_afrrtc": {
+      "file": "assets/s_afrrtc.js",
       "kind": "vm"
     },
-    "s_1fphej3": {
-      "file": "assets/s_1fphej3.js",
+    "s_8wip5q": {
+      "file": "assets/s_8wip5q.js",
       "kind": "vm"
     },
-    "s_jnwt3c": {
-      "file": "assets/s_jnwt3c.js",
+    "s_8biggr": {
+      "file": "assets/s_8biggr.js",
       "kind": "vm"
     },
-    "s_jgc6v1": {
-      "file": "assets/s_jgc6v1.js",
+    "s_985zpt": {
+      "file": "assets/s_985zpt.js",
       "kind": "vm"
     },
-    "s_dlnnli": {
-      "file": "assets/s_dlnnli.js",
+    "s_1vma5f1": {
+      "file": "assets/s_1vma5f1.js",
       "kind": "vm"
     },
-    "s_jmaun8": {
-      "file": "assets/s_jmaun8.js",
+    "s_1bm52gq": {
+      "file": "assets/s_1bm52gq.js",
       "kind": "vm"
     },
-    "s_4y7a2z": {
-      "file": "assets/s_4y7a2z.js",
+    "s_1uxqz5o": {
+      "file": "assets/s_1uxqz5o.js",
       "kind": "vm"
     },
-    "s_dnyac2": {
-      "file": "assets/s_dnyac2.js",
+    "s_1yqjdot": {
+      "file": "assets/s_1yqjdot.js",
       "kind": "vm"
     },
-    "s_thxqr4": {
-      "file": "assets/s_thxqr4.js",
+    "s_c1ryqu": {
+      "file": "assets/s_c1ryqu.js",
       "kind": "vm"
     },
-    "s_145zgqt": {
-      "file": "assets/s_145zgqt.js",
+    "s_zbuoq7": {
+      "file": "assets/s_zbuoq7.js",
       "kind": "vm"
     },
-    "s_1mvjzt3": {
-      "file": "assets/s_1mvjzt3.js",
+    "s_1l4uwa5": {
+      "file": "assets/s_1l4uwa5.js",
       "kind": "vm"
     },
-    "s_16sqnet": {
-      "file": "assets/s_16sqnet.js",
+    "s_1j5co5g": {
+      "file": "assets/s_1j5co5g.js",
       "kind": "vm"
     },
-    "s_xsrdfd": {
-      "file": "assets/s_xsrdfd.js",
+    "s_xcyv83": {
+      "file": "assets/s_xcyv83.js",
       "kind": "vm"
     },
-    "s_6wce82": {
-      "file": "assets/s_6wce82.js",
+    "s_1esjxnx": {
+      "file": "assets/s_1esjxnx.js",
       "kind": "vm"
     },
-    "s_w3g5m2": {
-      "file": "assets/s_w3g5m2.js",
+    "s_1ka7qix": {
+      "file": "assets/s_1ka7qix.js",
       "kind": "vm"
     },
-    "s_15rs8p6": {
-      "file": "assets/s_15rs8p6.js",
+    "s_1vzxp28": {
+      "file": "assets/s_1vzxp28.js",
       "kind": "vm"
     }
   },
@@ -135,262 +135,262 @@
       "rawBytes": 90662,
       "isEntry": true,
       "decision": "vm",
-      "id": "s_ogl44d",
+      "id": "s_19se8t8",
       "functions": 525,
       "consts": 2243,
-      "encryptedBytes": 244564
-    },
-    {
-      "rawBytes": 3359,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1oml3g1",
-      "functions": 9,
-      "consts": 111,
-      "encryptedBytes": 13761
-    },
-    {
-      "rawBytes": 654515,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_v36f96",
-      "functions": 2443,
-      "consts": 19677,
-      "encryptedBytes": 1394431
-    },
-    {
-      "rawBytes": 3601,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_xk1mwk",
-      "functions": 32,
-      "consts": 102,
-      "encryptedBytes": 14493
-    },
-    {
-      "rawBytes": 14617,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1sficww",
-      "functions": 8,
-      "consts": 122,
-      "encryptedBytes": 24884
-    },
-    {
-      "rawBytes": 28334,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_174zlyy",
-      "functions": 103,
-      "consts": 608,
-      "encryptedBytes": 68152
-    },
-    {
-      "rawBytes": 696,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_nhshgd",
-      "functions": 3,
-      "consts": 40,
-      "encryptedBytes": 7807
+      "encryptedBytes": 241794
     },
     {
       "rawBytes": 2056,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_anquef",
+      "id": "s_a074or",
       "functions": 16,
       "consts": 91,
-      "encryptedBytes": 10565
+      "encryptedBytes": 10479
     },
     {
-      "rawBytes": 1052550,
+      "rawBytes": 3601,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_14z95t4",
-      "functions": 2226,
-      "consts": 19269,
-      "encryptedBytes": 1990187
-    },
-    {
-      "rawBytes": 482,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1epwr9l",
-      "functions": 4,
-      "consts": 24,
-      "encryptedBytes": 7019
-    },
-    {
-      "rawBytes": 6300,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_gdvia5",
-      "functions": 69,
-      "consts": 210,
-      "encryptedBytes": 22343
-    },
-    {
-      "rawBytes": 326779,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_adjrgq",
-      "functions": 133,
-      "consts": 3181,
-      "encryptedBytes": 429970
-    },
-    {
-      "rawBytes": 1486,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_13udtun",
-      "functions": 10,
-      "consts": 55,
-      "encryptedBytes": 8246
+      "id": "s_f20u8n",
+      "functions": 32,
+      "consts": 102,
+      "encryptedBytes": 14419
     },
     {
       "rawBytes": 19879,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_ob567a",
+      "id": "s_n3xllz",
       "functions": 68,
       "consts": 502,
-      "encryptedBytes": 46421
-    },
-    {
-      "rawBytes": 118632,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1fphej3",
-      "functions": 758,
-      "consts": 2268,
-      "encryptedBytes": 289234
-    },
-    {
-      "rawBytes": 4610,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_jnwt3c",
-      "functions": 28,
-      "consts": 162,
-      "encryptedBytes": 17272
-    },
-    {
-      "rawBytes": 218906,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_jgc6v1",
-      "functions": 877,
-      "consts": 3304,
-      "encryptedBytes": 546379
-    },
-    {
-      "rawBytes": 57493,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_dlnnli",
-      "functions": 366,
-      "consts": 1150,
-      "encryptedBytes": 140484
-    },
-    {
-      "rawBytes": 14574,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_jmaun8",
-      "functions": 42,
-      "consts": 318,
-      "encryptedBytes": 33630
-    },
-    {
-      "rawBytes": 698011,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_4y7a2z",
-      "functions": 423,
-      "consts": 7281,
-      "encryptedBytes": 873736
-    },
-    {
-      "rawBytes": 6762,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_dnyac2",
-      "functions": 39,
-      "consts": 184,
-      "encryptedBytes": 29707
-    },
-    {
-      "rawBytes": 6030,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_thxqr4",
-      "functions": 13,
-      "consts": 193,
-      "encryptedBytes": 19122
-    },
-    {
-      "rawBytes": 694,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_145zgqt",
-      "functions": 7,
-      "consts": 25,
-      "encryptedBytes": 7202
-    },
-    {
-      "rawBytes": 60,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1mvjzt3",
-      "functions": 1,
-      "consts": 2,
-      "encryptedBytes": 5259
-    },
-    {
-      "rawBytes": 30388,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_16sqnet",
-      "functions": 126,
-      "consts": 618,
-      "encryptedBytes": 75879
-    },
-    {
-      "rawBytes": 3689,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_xsrdfd",
-      "functions": 17,
-      "consts": 107,
-      "encryptedBytes": 15515
-    },
-    {
-      "rawBytes": 27790,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_6wce82",
-      "functions": 21,
-      "consts": 803,
-      "encryptedBytes": 57244
-    },
-    {
-      "rawBytes": 12523,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_w3g5m2",
-      "functions": 84,
-      "consts": 335,
-      "encryptedBytes": 33740
+      "encryptedBytes": 45357
     },
     {
       "rawBytes": 1626,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_15rs8p6",
+      "id": "s_ynmbmy",
       "functions": 13,
       "consts": 88,
-      "encryptedBytes": 9201
+      "encryptedBytes": 9127
+    },
+    {
+      "rawBytes": 6030,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1mklzpg",
+      "functions": 13,
+      "consts": 193,
+      "encryptedBytes": 18801
+    },
+    {
+      "rawBytes": 696,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1fp2vvq",
+      "functions": 3,
+      "consts": 40,
+      "encryptedBytes": 7767
+    },
+    {
+      "rawBytes": 1052550,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_dghycf",
+      "functions": 2226,
+      "consts": 19269,
+      "encryptedBytes": 1955983
+    },
+    {
+      "rawBytes": 3359,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_ozjjcp",
+      "functions": 9,
+      "consts": 111,
+      "encryptedBytes": 13587
+    },
+    {
+      "rawBytes": 482,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1y9kk1m",
+      "functions": 4,
+      "consts": 24,
+      "encryptedBytes": 6985
+    },
+    {
+      "rawBytes": 326779,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1778ytm",
+      "functions": 133,
+      "consts": 3181,
+      "encryptedBytes": 426322
+    },
+    {
+      "rawBytes": 3689,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_zweihn",
+      "functions": 17,
+      "consts": 107,
+      "encryptedBytes": 15321
+    },
+    {
+      "rawBytes": 14617,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_4hog68",
+      "functions": 8,
+      "consts": 122,
+      "encryptedBytes": 24493
+    },
+    {
+      "rawBytes": 1486,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_afrrtc",
+      "functions": 10,
+      "consts": 55,
+      "encryptedBytes": 8194
+    },
+    {
+      "rawBytes": 218906,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_8wip5q",
+      "functions": 877,
+      "consts": 3304,
+      "encryptedBytes": 534145
+    },
+    {
+      "rawBytes": 14574,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_8biggr",
+      "functions": 42,
+      "consts": 318,
+      "encryptedBytes": 33159
+    },
+    {
+      "rawBytes": 118632,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_985zpt",
+      "functions": 758,
+      "consts": 2268,
+      "encryptedBytes": 282192
+    },
+    {
+      "rawBytes": 28334,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1vma5f1",
+      "functions": 103,
+      "consts": 608,
+      "encryptedBytes": 66347
+    },
+    {
+      "rawBytes": 12523,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1bm52gq",
+      "functions": 84,
+      "consts": 335,
+      "encryptedBytes": 33454
+    },
+    {
+      "rawBytes": 698011,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1uxqz5o",
+      "functions": 423,
+      "consts": 7281,
+      "encryptedBytes": 863699
+    },
+    {
+      "rawBytes": 6762,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1yqjdot",
+      "functions": 39,
+      "consts": 184,
+      "encryptedBytes": 29675
+    },
+    {
+      "rawBytes": 694,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_c1ryqu",
+      "functions": 7,
+      "consts": 25,
+      "encryptedBytes": 7165
+    },
+    {
+      "rawBytes": 4610,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_zbuoq7",
+      "functions": 28,
+      "consts": 162,
+      "encryptedBytes": 17058
+    },
+    {
+      "rawBytes": 30388,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1l4uwa5",
+      "functions": 126,
+      "consts": 618,
+      "encryptedBytes": 74130
+    },
+    {
+      "rawBytes": 57493,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1j5co5g",
+      "functions": 366,
+      "consts": 1150,
+      "encryptedBytes": 137400
+    },
+    {
+      "rawBytes": 654515,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_xcyv83",
+      "functions": 2443,
+      "consts": 19677,
+      "encryptedBytes": 1350329
+    },
+    {
+      "rawBytes": 60,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1esjxnx",
+      "functions": 1,
+      "consts": 2,
+      "encryptedBytes": 5244
+    },
+    {
+      "rawBytes": 27790,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1ka7qix",
+      "functions": 21,
+      "consts": 803,
+      "encryptedBytes": 55573
+    },
+    {
+      "rawBytes": 6300,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1vzxp28",
+      "functions": 69,
+      "consts": 210,
+      "encryptedBytes": 22079
     }
   ]
 }
