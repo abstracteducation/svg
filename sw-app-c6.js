@@ -9,8 +9,8 @@ const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
 
-const { HxhazlweServiceWorker } = $hxhazlweLoadWorker();
-let hxhazlwe = new HxhazlweServiceWorker();
+const { PwybayzeServiceWorker } = $pwybayzeLoadWorker();
+let pwybayze = new PwybayzeServiceWorker();
 
 const CONFIG = {
   blocked: [
@@ -107,7 +107,7 @@ function isBlocked(hostname, pathname) {
 }
 
 function attachRequestHandler() {
-  hxhazlwe.addEventListener("request", (e) => {
+  pwybayze.addEventListener("request", (e) => {
     if (isBlocked(e.url.hostname, e.url.pathname)) {
       e.response = new Response("Site Blocked", { status: 403 });
       return;
@@ -142,10 +142,10 @@ function attachRequestHandler() {
 
 attachRequestHandler();
 
-async function ensureHxhazlweConfig() {
+async function ensurePwybayzeConfig() {
   for (let attempt = 0; attempt < 20; attempt++) {
-    await hxhazlwe.loadConfig();
-    if (hxhazlwe.config?.prefix && hxhazlwe.config?.files) return;
+    await pwybayze.loadConfig();
+    if (pwybayze.config?.prefix && pwybayze.config?.files) return;
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
   throw new Error("Workspace configuration is unavailable");
@@ -157,7 +157,7 @@ async function ensureHxhazlweConfig() {
 // build produces scripts that reference undefined `$...$prop` globals. Refuse
 // loudly instead; the page detects the mismatch and re-registers.
 function configBuildVersion() {
-  const all = hxhazlwe.config?.files?.all;
+  const all = pwybayze.config?.files?.all;
   if (typeof all !== "string") return null;
   try { return new URL(all, self.registration.scope).searchParams.get("v"); } catch { return null; }
 }
@@ -219,7 +219,7 @@ function repairRelativeLeak(event) {
 
 async function handleRequest(event) {
   try {
-    await ensureHxhazlweConfig();
+    await ensurePwybayzeConfig();
     if (!configMatchesWorker()) {
       return new Response(VERSION_MISMATCH_BODY, {
         status: 502,
@@ -232,8 +232,8 @@ async function handleRequest(event) {
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
 
-    if (hxhazlwe.route(target)) {
-      const response = await hxhazlwe.fetch(target);
+    if (pwybayze.route(target)) {
+      const response = await pwybayze.fetch(target);
       const contentType = response.headers.get("content-type") || "";
 
       const htmlDocument = contentType.includes("text/html") ||
@@ -287,7 +287,7 @@ self.addEventListener("fetch", (event) => {
     url.origin === self.location.origin &&
     (url.pathname.startsWith(prefix) ||
       url.pathname === new URL("assets/c/runtime.wasm", self.registration.scope).pathname ||
-      url.pathname === hxhazlwe.config?.files?.wasm)
+      url.pathname === pwybayze.config?.files?.wasm)
   ) {
     event.respondWith(handleRequest(event));
   }
