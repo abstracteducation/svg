@@ -1,4 +1,4 @@
-/*__ABX_OBF__*/var __abx$65cc06=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("7fof/+1o1uQlRfxeFkj2lMF32yiymgl783xfQ4eDYTE="),P=["qR9dZ6EqoYnE7xL5ebN1LU+lobw=","pvnjXE9ecdNq4ZFG3bpDkaCCIpGTBALaPi7nIg==","2OTuYuGq7IkMXYSyoRtOvfTX9sE=","IMeDpcQ/4NFhW5FhTYmtiAA/SE9Sew==","mZg+qBQx7Ulg9oe7pISjcpZZRM3Q24vgyrv6","noc6axkNhxi+Vo8lOfH8w3nkXb+JG+W0kw==","e0UFhZNMRe/4PoEaYA==","LIt8aX3jzXWGGlSZeAmGmA=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
+/*__ABX_OBF__*/var __abx$57d132=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("d18j7kYquUj9zgId7oyXu+lYWK5N07nLn3MkYDjIJqA="),P=["ao51FDDKWo/mOmN1zpEAbhkBxNY=","5akKj3xesN52/nLciUtPAyqvkZXDA7Ek2x23zQ==","4bdNNoyIQUHKkLY9ULPPDrTP3tU=","+jREKXFhaJ8T2LYGL7asePW7jNNCQQ==","Vp6a9+fDWNQ+Roj2WIRcyThb6XC0njLFzX08","5/5yVXua68I3sGcSEYAuGu1Rj058UVOx4g==","eiXh74oY4tOWo7xy6g==","q4QZghHOD9yT2eYgqIrzRQ=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -245,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { OhhtrxvsClient: () => g });
+        r.r(t), r.d(t, { HxhazlweClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -274,7 +274,7 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a ohhtrxvs client, but one is already loaded - this is very bad"
+                  "attempted to initialize a hxhazlwe client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
@@ -295,8 +295,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$ohhtrxvs$type" in t &&
-                          "bxlalpqinit" === t.$ohhtrxvs$type &&
+                          "$hxhazlwe$type" in t &&
+                          "qpflcvdinit" === t.$hxhazlwe$type &&
                           e(t.port);
                       });
                     })
@@ -393,7 +393,7 @@
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new OhhtrxvsFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new HxhazlweFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -410,7 +410,7 @@
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new OhhtrxvsFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new HxhazlweFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -421,7 +421,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new OhhtrxvsFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new HxhazlweFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -558,7 +558,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM OHHTRXVS INTERNALS", e);
+                          console.error("ERROR FROM HXHAZLWE INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -663,8 +663,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("ohhtrxvs-attr-") ||
-                          t[r]?.name?.startsWith("ohhtrxvs-attr-")
+                          r.startsWith("hxhazlwe-attr-") ||
+                          t[r]?.name?.startsWith("hxhazlwe-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -697,11 +697,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("ohhtrxvs$type" in t && "cookie" === t.ohhtrxvs$type) {
+            if ("hxhazlwe$type" in t && "cookie" === t.hxhazlwe$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                ohhtrxvs$token: t.ohhtrxvs$token,
-                ohhtrxvs$type: "cookie",
+                hxhazlwe$token: t.hxhazlwe$token,
+                hxhazlwe$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -716,7 +716,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    ohhtrxvs$type: "cookie",
+                    hxhazlwe$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -950,34 +950,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("ohhtrxvs-attr")) return t.return(null);
+                if (r.startsWith("hxhazlwe-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `ohhtrxvs-attr-${r}`
+                    `hxhazlwe-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `ohhtrxvs-attr-${r}`);
+                  let e = t.fn.call(t.this, `hxhazlwe-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("ohhtrxvs-attr"));
+                let t = e.call().filter((e) => !e.startsWith("hxhazlwe-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("ohhtrxvs-attr"))
+                if (e.args[0].startsWith("hxhazlwe-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("ohhtrxvs-attr")) return e.return(!1);
+                if (e.args[0].startsWith("hxhazlwe-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1004,7 +1004,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `ohhtrxvs-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `hxhazlwe-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1026,7 +1026,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `ohhtrxvs-attr-${t.args[1]}`,
+                    `hxhazlwe-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1048,23 +1048,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("ohhtrxvs-attr"))
+                if (t.args[0].startsWith("hxhazlwe-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `ohhtrxvs-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `hxhazlwe-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("ohhtrxvs-attr")) return t.return(!1);
+                if (t.args[0].startsWith("hxhazlwe-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `ohhtrxvs-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `hxhazlwe-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1075,7 +1075,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "ohhtrxvs-attr-script-source-src",
+                      "hxhazlwe-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1097,7 +1097,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "ohhtrxvs-attr-script-source-src"
+                    "hxhazlwe-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1175,7 +1175,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.OhhtrxvsClient(t).hook()), t;
+                  return t && (l.pX in t || new c.HxhazlweClient(t).hook()), t;
                 },
               }
             ),
@@ -1193,7 +1193,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.OhhtrxvsClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.HxhazlweClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1285,7 +1285,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.OhhtrxvsClient(r);
+                let e = new n.HxhazlweClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1406,7 +1406,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    ohhtrxvs$type: "registerServiceWorker",
+                    hxhazlwe$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1506,11 +1506,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing ohhtrxvs client"),
+            l.log("initializing hxhazlwe client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.OhhtrxvsClient(globalThis),
+            let e = new s.HxhazlweClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1520,8 +1520,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.OhhtrxvsServiceWorkerRuntime(e).hook();
-            let r = new o.OhhtrxvsContextEvent(e.global.window, e);
+              f && new a.HxhazlweServiceWorkerRuntime(e).hook();
+            let r = new o.HxhazlweContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1534,8 +1534,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            OhhtrxvsContextEvent: () => o,
-            OhhtrxvsGlobalDownloadEvent: () => n,
+            HxhazlweContextEvent: () => o,
+            HxhazlweGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1578,10 +1578,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            OhhtrxvsClient: () => n.OhhtrxvsClient,
-            OhhtrxvsContextEvent: () => s.OhhtrxvsContextEvent,
-            OhhtrxvsGlobalDownloadEvent: () => s.OhhtrxvsGlobalDownloadEvent,
-            OhhtrxvsServiceWorkerRuntime: () => l.OhhtrxvsServiceWorkerRuntime,
+            HxhazlweClient: () => n.HxhazlweClient,
+            HxhazlweContextEvent: () => s.HxhazlweContextEvent,
+            HxhazlweGlobalDownloadEvent: () => s.HxhazlweGlobalDownloadEvent,
+            HxhazlweServiceWorkerRuntime: () => l.HxhazlweServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1954,14 +1954,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("ohhtrxvs original onevent function");
+        let o = Symbol.for("hxhazlwe original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$ohhtrxvs$type" in this.data)
+                  !("$hxhazlwe$type" in this.data)
                 );
               },
               ports() {
@@ -1972,14 +1972,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$ohhtrxvs$origin" in this.data
-                  ? this.data.$ohhtrxvs$origin
+                  "$hxhazlwe$origin" in this.data
+                  ? this.data.$hxhazlwe$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$ohhtrxvs$data" in this.data
-                  ? this.data.$ohhtrxvs$data
+                  "$hxhazlwe$data" in this.data
+                  ? this.data.$hxhazlwe$data
                   : this.data;
               },
             },
@@ -2238,9 +2238,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $ohhtrxvs$messagetype: "window",
-                  $ohhtrxvs$origin: r.url.origin,
-                  $ohhtrxvs$data: e.args[0],
+                  $hxhazlwe$messagetype: "window",
+                  $hxhazlwe$origin: r.url.origin,
+                  $hxhazlwe$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2254,8 +2254,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $ohhtrxvs$messagetype: "worker",
-                  $ohhtrxvs$data: e.args[0],
+                  $hxhazlwe$messagetype: "worker",
+                  $hxhazlwe$data: e.args[0],
                 };
               },
             });
@@ -2264,7 +2264,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("ohhtrxvs realm pollutant");
+        let i = Symbol.for("hxhazlwe realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2740,7 +2740,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $ohhtrxvs$type: "bxlalpqinit", port: t },
+                  { $hxhazlwe$type: "qpflcvdinit", port: t },
                   [t]
                 );
               })();
@@ -2766,7 +2766,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $ohhtrxvs$type: "bxlalpqinit", port: t },
+                    { $hxhazlwe$type: "qpflcvdinit", port: t },
                     [t]
                   );
                 })();
@@ -2901,7 +2901,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes(__abx$65cc06(0)),
+                "string" == typeof e && e.includes(__abx$57d132(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2938,7 +2938,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { OhhtrxvsServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { HxhazlweServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2951,11 +2951,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "ohhtrxvs$type" in t.data &&
-                        ("init" === t.data.ohhtrxvs$type
-                          ? ((this.recvport = t.data.ohhtrxvs$port),
+                      "hxhazlwe$type" in t.data &&
+                        ("init" === t.data.hxhazlwe$type
+                          ? ((this.recvport = t.data.hxhazlwe$port),
                             this.recvport.postMessage({
-                              ohhtrxvs$type: "init",
+                              hxhazlwe$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -2987,15 +2987,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.ohhtrxvs$type,
-            o = t.ohhtrxvs$token,
+            s = t.hxhazlwe$type,
+            o = t.hxhazlwe$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.ohhtrxvs$request,
+              let s = t.hxhazlwe$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3012,9 +3012,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      ohhtrxvs$type: "fetch",
-                      ohhtrxvs$token: o,
-                      ohhtrxvs$response: {
+                      hxhazlwe$type: "fetch",
+                      hxhazlwe$token: o,
+                      hxhazlwe$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3033,9 +3033,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    ohhtrxvs$type: "fetch",
-                    ohhtrxvs$token: o,
-                    ohhtrxvs$response: !1,
+                    hxhazlwe$type: "fetch",
+                    hxhazlwe$token: o,
+                    hxhazlwe$response: !1,
                   }));
             }
           }
@@ -3071,20 +3071,20 @@
               },
               r = t(
                 {
-                  prefix: "/ohhtrxvs/",
+                  prefix: "/hxhazlwe/",
                   globals: {
-                    wrapfn: "$ohhtrxvs$wrap",
-                    wrappropertybase: "$ohhtrxvs__",
-                    wrappropertyfn: "$ohhtrxvs$prop",
-                    cleanrestfn: "$ohhtrxvs$clean",
-                    importfn: "$ohhtrxvs$import",
-                    rewritefn: "$ohhtrxvs$rewrite",
-                    metafn: "$ohhtrxvs$meta",
-                    setrealmfn: "$ohhtrxvs$setrealm",
-                    pushsourcemapfn: "$ohhtrxvs$pushsourcemap",
-                    trysetfn: "$ohhtrxvs$tryset",
-                    templocid: "$ohhtrxvs$temploc",
-                    tempunusedid: "$ohhtrxvs$tempunused",
+                    wrapfn: "$hxhazlwe$wrap",
+                    wrappropertybase: "$hxhazlwe__",
+                    wrappropertyfn: "$hxhazlwe$prop",
+                    cleanrestfn: "$hxhazlwe$clean",
+                    importfn: "$hxhazlwe$import",
+                    rewritefn: "$hxhazlwe$rewrite",
+                    metafn: "$hxhazlwe$meta",
+                    setrealmfn: "$hxhazlwe$setrealm",
+                    pushsourcemapfn: "$hxhazlwe$pushsourcemap",
+                    trysetfn: "$hxhazlwe$tryset",
+                    templocid: "$hxhazlwe$temploc",
+                    tempunusedid: "$hxhazlwe$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3120,16 +3120,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                ohhtrxvs$type: "loadConfig",
+                hxhazlwe$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("ohhtrxvs$type" in e.data)) return;
+                if (!("hxhazlwe$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.ohhtrxvs$type &&
+                "download" === t.hxhazlwe$type &&
                   this.dispatchEvent(
-                    new s.OhhtrxvsGlobalDownloadEvent(t.download)
+                    new s.HxhazlweGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3156,7 +3156,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open(__abx$65cc06(1), 2);
+            let e = indexedDB.open(__abx$57d132(1), 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3192,7 +3192,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                ohhtrxvs$type: "loadConfig",
+                hxhazlwe$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3245,7 +3245,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { [__abx$65cc06(2)+__abx$65cc06(3)]: () => i.q, OhhtrxvsFrame: () => n.X });
+          r.d(t, { [__abx$57d132(2)+__abx$57d132(3)]: () => i.q, HxhazlweFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3605,7 +3605,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$ohhtrxvsLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$hxhazlweLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3644,12 +3644,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`ohhtrxvs-attr-${i}`] = s);
+                            (t.attribs[`hxhazlwe-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`ohhtrxvs-attr-${e}`] = r),
+                        ((t.attribs[`hxhazlwe-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3691,7 +3691,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["ohhtrxvs-attr-script-source-src"] = y(
+                    (t.attribs["hxhazlwe-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3755,13 +3755,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("ohhtrxvs-attr-script-source-src" == e) {
+                  if ("hxhazlwe-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("ohhtrxvs-attr-") &&
+                  e.startsWith("hxhazlwe-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4116,7 +4116,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$ohhtrxvsLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$hxhazlweLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4137,7 +4137,7 @@ ${l}`;
         });
         let n = { none: 0, "same-origin": 1, "same-site": 2, "cross-site": 3 };
         async function i() {
-          let e = indexedDB.open(__abx$65cc06(1), 2);
+          let e = indexedDB.open(__abx$57d132(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4227,7 +4227,7 @@ e.onupgradeneeded = () => {
         r.d(t, { ps: () => a });
         let n = "publicSuffixList";
         async function i() {
-          let e = indexedDB.open(__abx$65cc06(1), 2);
+          let e = indexedDB.open(__abx$57d132(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4324,8 +4324,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("ohhtrxvs client global"),
-          i = Symbol.for("ohhtrxvs frame handle");
+        let n = Symbol.for("hxhazlwe client global"),
+          i = Symbol.for("hxhazlwe frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4337,9 +4337,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $ohhtrxvsVersion.version
+                  $hxhazlweVersion.version
                 )};
-                build.textContent = ${JSON.stringify($ohhtrxvsVersion.build)};
+                build.textContent = ${JSON.stringify($hxhazlweVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4353,7 +4353,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Ohhtrxvs</title>
+                    <title>Hxhazlwe</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4501,8 +4501,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Ohhtrxvs</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/ohhtrxvs"
+                <li>Updating Hxhazlwe</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/hxhazlwe"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4510,7 +4510,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Ohhtrxvs v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Hxhazlwe v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4541,30 +4541,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "ohhtrxvs$type" in e.data &&
-                  ("init" === e.data.ohhtrxvs$type
+                "hxhazlwe$type" in e.data &&
+                  ("init" === e.data.hxhazlwe$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  ohhtrxvs$type: "init",
-                  ohhtrxvs$port: this.messageChannel.port2,
+                  hxhazlwe$type: "init",
+                  hxhazlwe$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.ohhtrxvs$token];
-            t && (t(e), delete this.promises[e.ohhtrxvs$token]);
+            let t = this.promises[e.hxhazlwe$token];
+            t && (t(e), delete this.promises[e.hxhazlwe$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                ohhtrxvs$type: "fetch",
-                ohhtrxvs$token: t,
-                ohhtrxvs$request: {
+                hxhazlwe$type: "fetch",
+                hxhazlwe$token: t,
+                hxhazlwe$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4575,7 +4575,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { ohhtrxvs$response: i } = await new Promise((e) => {
+            let { hxhazlwe$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4817,7 +4817,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                ohhtrxvs$type: "cookie",
+                hxhazlwe$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4882,7 +4882,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ ohhtrxvs$type: "download", download: s }, [
+              i[0].postMessage({ hxhazlwe$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -4994,9 +4994,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            OhhtrxvsHandleResponseEvent: () => i.dT,
-            OhhtrxvsRequestEvent: () => i.V3,
-            OhhtrxvsServiceWorker: () => u,
+            HxhazlweHandleResponseEvent: () => i.dT,
+            HxhazlweRequestEvent: () => i.V3,
+            HxhazlweServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5017,7 +5017,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open(__abx$65cc06(1), 2);
+            let e = indexedDB.open(__abx$57d132(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5036,23 +5036,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("ohhtrxvs$type" in t) {
-                  if ("ohhtrxvs$token" in t) {
-                    let e = this.syncPool[t.ohhtrxvs$token];
-                    delete this.syncPool[t.ohhtrxvs$token], e(t);
+                if ("hxhazlwe$type" in t) {
+                  if ("hxhazlwe$token" in t) {
+                    let e = this.syncPool[t.hxhazlwe$token];
+                    delete this.syncPool[t.hxhazlwe$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.ohhtrxvs$type)
+                  if ("registerServiceWorker" === t.hxhazlwe$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.ohhtrxvs$type &&
+                  "cookie" === t.hxhazlwe$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.ohhtrxvs$type &&
+                    "loadConfig" === t.hxhazlwe$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5065,14 +5065,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.ohhtrxvs$token = n),
+              (t.hxhazlwe$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open(__abx$65cc06(1), 2);
+            let e = indexedDB.open(__abx$57d132(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5154,7 +5154,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("tcmyfcwd: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("gvjzizcf: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5193,13 +5193,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "tcmyfcwd: failed to get a tcmyfcwd SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "gvjzizcf: failed to get a gvjzizcf SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "tcmyfcwd: failed to get a tcmyfcwd SharedWorker MessagePort within 1s, retrying"
+                "gvjzizcf: failed to get a gvjzizcf SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5219,13 +5219,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, __abx$65cc06(4));
+          let r = new i(e, __abx$57d132(4));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("tcmyfcwd: recieved request for port from sw");
-                  let r = new i(e, __abx$65cc06(4));
+                  console.debug("gvjzizcf: recieved request for port from sw");
+                  let r = new i(e, __abx$57d132(4));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5235,7 +5235,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("tcmyfcwd")),
+            (this.channel = new BroadcastChannel("gvjzizcf")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5253,24 +5253,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "tcmyfcwd: setting localStorage tcmyfcwd-path to",
+                  "gvjzizcf: setting localStorage gvjzizcf-path to",
                   e
                 ),
-                (s[__abx$65cc06(5)] = e);
+                (s[__abx$57d132(5)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s[__abx$65cc06(5)];
+                let e = s[__abx$57d132(5)];
                 if (
                   (console.debug(
-                    "tcmyfcwd: got localStorage tcmyfcwd-path:",
+                    "gvjzizcf: got localStorage gvjzizcf-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get tcmyfcwd workerPath from localStorage."
+                    "Unable to get gvjzizcf workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5284,7 +5284,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "tcmyfcwd: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "gvjzizcf: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5397,7 +5397,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("tcmyfcwd-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("gvjzizcf-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5501,7 +5501,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "tcmyfcwd-remote", args: [r.port2, t] },
+                  client: { function: "gvjzizcf-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5599,7 +5599,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("tcmyfcwd: running v2.1.7 (build c56d286)");
+        console.debug("gvjzizcf: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -7961,19 +7961,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$ohhtrxvsRequire = function (e) {
+    (globalThis.$hxhazlweRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis[__abx$65cc06(6)+__abx$65cc06(0)+__abx$65cc06(7)+__abx$65cc06(3)] = function () {
+    (globalThis[__abx$57d132(6)+__abx$57d132(0)+__abx$57d132(7)+__abx$57d132(3)] = function () {
       return r(9052);
     }),
-    (globalThis.$ohhtrxvsLoadClient = function () {
+    (globalThis.$hxhazlweLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$ohhtrxvsLoadWorker = function () {
+    (globalThis.$hxhazlweLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$ohhtrxvsVersion = {
+    (globalThis.$hxhazlweVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),
