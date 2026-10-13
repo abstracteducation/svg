@@ -1,4 +1,4 @@
-/*__ABX_OBF__*/var __abx$13638f=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("oSqprB8NWDf5VGrFDVXdtjJwBP85/Gk3Xnygtn/9Zco="),P=["jw7d3o0fEySlE0AGybhfHc9CIMc=","oxCkayfEgOZ+K1QAx6oODpkiH36egEpzfUlBAQ==","CThwFCCN240osJ0HII+3eWuBow8=","20dIVkUW64TtyFLbUlc7T+pWTqnR5A==","oKVKkS+ZRy3fZ75gLOhf17vhyqzLznslxcbp","7Npn6EssNi9RPhodB+X2AJ4t9bXqmGlHKw==","sqtSQKLyBB/vMlqK/A==","igCtSWDsDSzLGxRMMnbdZw=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
+/*__ABX_OBF__*/var __abx$65cc06=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("7fof/+1o1uQlRfxeFkj2lMF32yiymgl783xfQ4eDYTE="),P=["qR9dZ6EqoYnE7xL5ebN1LU+lobw=","pvnjXE9ecdNq4ZFG3bpDkaCCIpGTBALaPi7nIg==","2OTuYuGq7IkMXYSyoRtOvfTX9sE=","IMeDpcQ/4NFhW5FhTYmtiAA/SE9Sew==","mZg+qBQx7Ulg9oe7pISjcpZZRM3Q24vgyrv6","noc6axkNhxi+Vo8lOfH8w3nkXb+JG+W0kw==","e0UFhZNMRe/4PoEaYA==","LIt8aX3jzXWGGlSZeAmGmA=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -245,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { QwkxzumlClient: () => g });
+        r.r(t), r.d(t, { OhhtrxvsClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -274,7 +274,7 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a qwkxzuml client, but one is already loaded - this is very bad"
+                  "attempted to initialize a ohhtrxvs client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
@@ -295,8 +295,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$qwkxzuml$type" in t &&
-                          "ufzspwjinit" === t.$qwkxzuml$type &&
+                          "$ohhtrxvs$type" in t &&
+                          "bxlalpqinit" === t.$ohhtrxvs$type &&
                           e(t.port);
                       });
                     })
@@ -393,7 +393,7 @@
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new QwkxzumlFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new OhhtrxvsFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -410,7 +410,7 @@
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new QwkxzumlFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new OhhtrxvsFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -421,7 +421,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new QwkxzumlFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new OhhtrxvsFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -558,7 +558,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM QWKXZUML INTERNALS", e);
+                          console.error("ERROR FROM OHHTRXVS INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -663,8 +663,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("qwkxzuml-attr-") ||
-                          t[r]?.name?.startsWith("qwkxzuml-attr-")
+                          r.startsWith("ohhtrxvs-attr-") ||
+                          t[r]?.name?.startsWith("ohhtrxvs-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -697,11 +697,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("qwkxzuml$type" in t && "cookie" === t.qwkxzuml$type) {
+            if ("ohhtrxvs$type" in t && "cookie" === t.ohhtrxvs$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                qwkxzuml$token: t.qwkxzuml$token,
-                qwkxzuml$type: "cookie",
+                ohhtrxvs$token: t.ohhtrxvs$token,
+                ohhtrxvs$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -716,7 +716,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    qwkxzuml$type: "cookie",
+                    ohhtrxvs$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -950,34 +950,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("qwkxzuml-attr")) return t.return(null);
+                if (r.startsWith("ohhtrxvs-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `qwkxzuml-attr-${r}`
+                    `ohhtrxvs-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `qwkxzuml-attr-${r}`);
+                  let e = t.fn.call(t.this, `ohhtrxvs-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("qwkxzuml-attr"));
+                let t = e.call().filter((e) => !e.startsWith("ohhtrxvs-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("qwkxzuml-attr"))
+                if (e.args[0].startsWith("ohhtrxvs-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("qwkxzuml-attr")) return e.return(!1);
+                if (e.args[0].startsWith("ohhtrxvs-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1004,7 +1004,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `qwkxzuml-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `ohhtrxvs-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1026,7 +1026,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `qwkxzuml-attr-${t.args[1]}`,
+                    `ohhtrxvs-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1048,23 +1048,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("qwkxzuml-attr"))
+                if (t.args[0].startsWith("ohhtrxvs-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `qwkxzuml-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `ohhtrxvs-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("qwkxzuml-attr")) return t.return(!1);
+                if (t.args[0].startsWith("ohhtrxvs-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `qwkxzuml-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `ohhtrxvs-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1075,7 +1075,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "qwkxzuml-attr-script-source-src",
+                      "ohhtrxvs-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1097,7 +1097,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "qwkxzuml-attr-script-source-src"
+                    "ohhtrxvs-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1175,7 +1175,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.QwkxzumlClient(t).hook()), t;
+                  return t && (l.pX in t || new c.OhhtrxvsClient(t).hook()), t;
                 },
               }
             ),
@@ -1193,7 +1193,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.QwkxzumlClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.OhhtrxvsClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1285,7 +1285,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.QwkxzumlClient(r);
+                let e = new n.OhhtrxvsClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1406,7 +1406,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    qwkxzuml$type: "registerServiceWorker",
+                    ohhtrxvs$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1506,11 +1506,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing qwkxzuml client"),
+            l.log("initializing ohhtrxvs client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.QwkxzumlClient(globalThis),
+            let e = new s.OhhtrxvsClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1520,8 +1520,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.QwkxzumlServiceWorkerRuntime(e).hook();
-            let r = new o.QwkxzumlContextEvent(e.global.window, e);
+              f && new a.OhhtrxvsServiceWorkerRuntime(e).hook();
+            let r = new o.OhhtrxvsContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1534,8 +1534,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            QwkxzumlContextEvent: () => o,
-            QwkxzumlGlobalDownloadEvent: () => n,
+            OhhtrxvsContextEvent: () => o,
+            OhhtrxvsGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1578,10 +1578,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            QwkxzumlClient: () => n.QwkxzumlClient,
-            QwkxzumlContextEvent: () => s.QwkxzumlContextEvent,
-            QwkxzumlGlobalDownloadEvent: () => s.QwkxzumlGlobalDownloadEvent,
-            QwkxzumlServiceWorkerRuntime: () => l.QwkxzumlServiceWorkerRuntime,
+            OhhtrxvsClient: () => n.OhhtrxvsClient,
+            OhhtrxvsContextEvent: () => s.OhhtrxvsContextEvent,
+            OhhtrxvsGlobalDownloadEvent: () => s.OhhtrxvsGlobalDownloadEvent,
+            OhhtrxvsServiceWorkerRuntime: () => l.OhhtrxvsServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1954,14 +1954,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("qwkxzuml original onevent function");
+        let o = Symbol.for("ohhtrxvs original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$qwkxzuml$type" in this.data)
+                  !("$ohhtrxvs$type" in this.data)
                 );
               },
               ports() {
@@ -1972,14 +1972,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$qwkxzuml$origin" in this.data
-                  ? this.data.$qwkxzuml$origin
+                  "$ohhtrxvs$origin" in this.data
+                  ? this.data.$ohhtrxvs$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$qwkxzuml$data" in this.data
-                  ? this.data.$qwkxzuml$data
+                  "$ohhtrxvs$data" in this.data
+                  ? this.data.$ohhtrxvs$data
                   : this.data;
               },
             },
@@ -2238,9 +2238,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $qwkxzuml$messagetype: "window",
-                  $qwkxzuml$origin: r.url.origin,
-                  $qwkxzuml$data: e.args[0],
+                  $ohhtrxvs$messagetype: "window",
+                  $ohhtrxvs$origin: r.url.origin,
+                  $ohhtrxvs$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2254,8 +2254,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $qwkxzuml$messagetype: "worker",
-                  $qwkxzuml$data: e.args[0],
+                  $ohhtrxvs$messagetype: "worker",
+                  $ohhtrxvs$data: e.args[0],
                 };
               },
             });
@@ -2264,7 +2264,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("qwkxzuml realm pollutant");
+        let i = Symbol.for("ohhtrxvs realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2740,7 +2740,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $qwkxzuml$type: "ufzspwjinit", port: t },
+                  { $ohhtrxvs$type: "bxlalpqinit", port: t },
                   [t]
                 );
               })();
@@ -2766,7 +2766,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $qwkxzuml$type: "ufzspwjinit", port: t },
+                    { $ohhtrxvs$type: "bxlalpqinit", port: t },
                     [t]
                   );
                 })();
@@ -2901,7 +2901,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes(__abx$13638f(0)),
+                "string" == typeof e && e.includes(__abx$65cc06(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2938,7 +2938,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { QwkxzumlServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { OhhtrxvsServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2951,11 +2951,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "qwkxzuml$type" in t.data &&
-                        ("init" === t.data.qwkxzuml$type
-                          ? ((this.recvport = t.data.qwkxzuml$port),
+                      "ohhtrxvs$type" in t.data &&
+                        ("init" === t.data.ohhtrxvs$type
+                          ? ((this.recvport = t.data.ohhtrxvs$port),
                             this.recvport.postMessage({
-                              qwkxzuml$type: "init",
+                              ohhtrxvs$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -2987,15 +2987,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.qwkxzuml$type,
-            o = t.qwkxzuml$token,
+            s = t.ohhtrxvs$type,
+            o = t.ohhtrxvs$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.qwkxzuml$request,
+              let s = t.ohhtrxvs$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3012,9 +3012,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      qwkxzuml$type: "fetch",
-                      qwkxzuml$token: o,
-                      qwkxzuml$response: {
+                      ohhtrxvs$type: "fetch",
+                      ohhtrxvs$token: o,
+                      ohhtrxvs$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3033,9 +3033,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    qwkxzuml$type: "fetch",
-                    qwkxzuml$token: o,
-                    qwkxzuml$response: !1,
+                    ohhtrxvs$type: "fetch",
+                    ohhtrxvs$token: o,
+                    ohhtrxvs$response: !1,
                   }));
             }
           }
@@ -3071,20 +3071,20 @@
               },
               r = t(
                 {
-                  prefix: "/qwkxzuml/",
+                  prefix: "/ohhtrxvs/",
                   globals: {
-                    wrapfn: "$qwkxzuml$wrap",
-                    wrappropertybase: "$qwkxzuml__",
-                    wrappropertyfn: "$qwkxzuml$prop",
-                    cleanrestfn: "$qwkxzuml$clean",
-                    importfn: "$qwkxzuml$import",
-                    rewritefn: "$qwkxzuml$rewrite",
-                    metafn: "$qwkxzuml$meta",
-                    setrealmfn: "$qwkxzuml$setrealm",
-                    pushsourcemapfn: "$qwkxzuml$pushsourcemap",
-                    trysetfn: "$qwkxzuml$tryset",
-                    templocid: "$qwkxzuml$temploc",
-                    tempunusedid: "$qwkxzuml$tempunused",
+                    wrapfn: "$ohhtrxvs$wrap",
+                    wrappropertybase: "$ohhtrxvs__",
+                    wrappropertyfn: "$ohhtrxvs$prop",
+                    cleanrestfn: "$ohhtrxvs$clean",
+                    importfn: "$ohhtrxvs$import",
+                    rewritefn: "$ohhtrxvs$rewrite",
+                    metafn: "$ohhtrxvs$meta",
+                    setrealmfn: "$ohhtrxvs$setrealm",
+                    pushsourcemapfn: "$ohhtrxvs$pushsourcemap",
+                    trysetfn: "$ohhtrxvs$tryset",
+                    templocid: "$ohhtrxvs$temploc",
+                    tempunusedid: "$ohhtrxvs$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3120,16 +3120,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                qwkxzuml$type: "loadConfig",
+                ohhtrxvs$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("qwkxzuml$type" in e.data)) return;
+                if (!("ohhtrxvs$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.qwkxzuml$type &&
+                "download" === t.ohhtrxvs$type &&
                   this.dispatchEvent(
-                    new s.QwkxzumlGlobalDownloadEvent(t.download)
+                    new s.OhhtrxvsGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3156,7 +3156,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open(__abx$13638f(1), 2);
+            let e = indexedDB.open(__abx$65cc06(1), 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3192,7 +3192,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                qwkxzuml$type: "loadConfig",
+                ohhtrxvs$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3245,7 +3245,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { [__abx$13638f(2)+__abx$13638f(3)]: () => i.q, QwkxzumlFrame: () => n.X });
+          r.d(t, { [__abx$65cc06(2)+__abx$65cc06(3)]: () => i.q, OhhtrxvsFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3605,7 +3605,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$qwkxzumlLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$ohhtrxvsLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3644,12 +3644,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`qwkxzuml-attr-${i}`] = s);
+                            (t.attribs[`ohhtrxvs-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`qwkxzuml-attr-${e}`] = r),
+                        ((t.attribs[`ohhtrxvs-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3691,7 +3691,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["qwkxzuml-attr-script-source-src"] = y(
+                    (t.attribs["ohhtrxvs-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3755,13 +3755,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("qwkxzuml-attr-script-source-src" == e) {
+                  if ("ohhtrxvs-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("qwkxzuml-attr-") &&
+                  e.startsWith("ohhtrxvs-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4116,7 +4116,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$qwkxzumlLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$ohhtrxvsLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4137,7 +4137,7 @@ ${l}`;
         });
         let n = { none: 0, "same-origin": 1, "same-site": 2, "cross-site": 3 };
         async function i() {
-          let e = indexedDB.open(__abx$13638f(1), 2);
+          let e = indexedDB.open(__abx$65cc06(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4227,7 +4227,7 @@ e.onupgradeneeded = () => {
         r.d(t, { ps: () => a });
         let n = "publicSuffixList";
         async function i() {
-          let e = indexedDB.open(__abx$13638f(1), 2);
+          let e = indexedDB.open(__abx$65cc06(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4324,8 +4324,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("qwkxzuml client global"),
-          i = Symbol.for("qwkxzuml frame handle");
+        let n = Symbol.for("ohhtrxvs client global"),
+          i = Symbol.for("ohhtrxvs frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4337,9 +4337,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $qwkxzumlVersion.version
+                  $ohhtrxvsVersion.version
                 )};
-                build.textContent = ${JSON.stringify($qwkxzumlVersion.build)};
+                build.textContent = ${JSON.stringify($ohhtrxvsVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4353,7 +4353,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Qwkxzuml</title>
+                    <title>Ohhtrxvs</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4501,8 +4501,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Qwkxzuml</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/qwkxzuml"
+                <li>Updating Ohhtrxvs</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/ohhtrxvs"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4510,7 +4510,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Qwkxzuml v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Ohhtrxvs v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4541,30 +4541,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "qwkxzuml$type" in e.data &&
-                  ("init" === e.data.qwkxzuml$type
+                "ohhtrxvs$type" in e.data &&
+                  ("init" === e.data.ohhtrxvs$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  qwkxzuml$type: "init",
-                  qwkxzuml$port: this.messageChannel.port2,
+                  ohhtrxvs$type: "init",
+                  ohhtrxvs$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.qwkxzuml$token];
-            t && (t(e), delete this.promises[e.qwkxzuml$token]);
+            let t = this.promises[e.ohhtrxvs$token];
+            t && (t(e), delete this.promises[e.ohhtrxvs$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                qwkxzuml$type: "fetch",
-                qwkxzuml$token: t,
-                qwkxzuml$request: {
+                ohhtrxvs$type: "fetch",
+                ohhtrxvs$token: t,
+                ohhtrxvs$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4575,7 +4575,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { qwkxzuml$response: i } = await new Promise((e) => {
+            let { ohhtrxvs$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4817,7 +4817,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                qwkxzuml$type: "cookie",
+                ohhtrxvs$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4882,7 +4882,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ qwkxzuml$type: "download", download: s }, [
+              i[0].postMessage({ ohhtrxvs$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -4994,9 +4994,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            QwkxzumlHandleResponseEvent: () => i.dT,
-            QwkxzumlRequestEvent: () => i.V3,
-            QwkxzumlServiceWorker: () => u,
+            OhhtrxvsHandleResponseEvent: () => i.dT,
+            OhhtrxvsRequestEvent: () => i.V3,
+            OhhtrxvsServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5017,7 +5017,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open(__abx$13638f(1), 2);
+            let e = indexedDB.open(__abx$65cc06(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5036,23 +5036,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("qwkxzuml$type" in t) {
-                  if ("qwkxzuml$token" in t) {
-                    let e = this.syncPool[t.qwkxzuml$token];
-                    delete this.syncPool[t.qwkxzuml$token], e(t);
+                if ("ohhtrxvs$type" in t) {
+                  if ("ohhtrxvs$token" in t) {
+                    let e = this.syncPool[t.ohhtrxvs$token];
+                    delete this.syncPool[t.ohhtrxvs$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.qwkxzuml$type)
+                  if ("registerServiceWorker" === t.ohhtrxvs$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.qwkxzuml$type &&
+                  "cookie" === t.ohhtrxvs$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.qwkxzuml$type &&
+                    "loadConfig" === t.ohhtrxvs$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5065,14 +5065,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.qwkxzuml$token = n),
+              (t.ohhtrxvs$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open(__abx$13638f(1), 2);
+            let e = indexedDB.open(__abx$65cc06(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5154,7 +5154,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("zlproabf: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("tcmyfcwd: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5193,13 +5193,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "zlproabf: failed to get a zlproabf SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "tcmyfcwd: failed to get a tcmyfcwd SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "zlproabf: failed to get a zlproabf SharedWorker MessagePort within 1s, retrying"
+                "tcmyfcwd: failed to get a tcmyfcwd SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5219,13 +5219,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, __abx$13638f(4));
+          let r = new i(e, __abx$65cc06(4));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("zlproabf: recieved request for port from sw");
-                  let r = new i(e, __abx$13638f(4));
+                  console.debug("tcmyfcwd: recieved request for port from sw");
+                  let r = new i(e, __abx$65cc06(4));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5235,7 +5235,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("zlproabf")),
+            (this.channel = new BroadcastChannel("tcmyfcwd")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5253,24 +5253,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "zlproabf: setting localStorage zlproabf-path to",
+                  "tcmyfcwd: setting localStorage tcmyfcwd-path to",
                   e
                 ),
-                (s[__abx$13638f(5)] = e);
+                (s[__abx$65cc06(5)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s[__abx$13638f(5)];
+                let e = s[__abx$65cc06(5)];
                 if (
                   (console.debug(
-                    "zlproabf: got localStorage zlproabf-path:",
+                    "tcmyfcwd: got localStorage tcmyfcwd-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get zlproabf workerPath from localStorage."
+                    "Unable to get tcmyfcwd workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5284,7 +5284,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "zlproabf: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "tcmyfcwd: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5397,7 +5397,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("zlproabf-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("tcmyfcwd-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5501,7 +5501,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "zlproabf-remote", args: [r.port2, t] },
+                  client: { function: "tcmyfcwd-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5599,7 +5599,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("zlproabf: running v2.1.7 (build c56d286)");
+        console.debug("tcmyfcwd: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -7961,19 +7961,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$qwkxzumlRequire = function (e) {
+    (globalThis.$ohhtrxvsRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis[__abx$13638f(6)+__abx$13638f(0)+__abx$13638f(7)+__abx$13638f(3)] = function () {
+    (globalThis[__abx$65cc06(6)+__abx$65cc06(0)+__abx$65cc06(7)+__abx$65cc06(3)] = function () {
       return r(9052);
     }),
-    (globalThis.$qwkxzumlLoadClient = function () {
+    (globalThis.$ohhtrxvsLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$qwkxzumlLoadWorker = function () {
+    (globalThis.$ohhtrxvsLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$qwkxzumlVersion = {
+    (globalThis.$ohhtrxvsVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),

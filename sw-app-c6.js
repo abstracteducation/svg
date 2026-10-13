@@ -9,8 +9,8 @@ const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
 
-const { QwkxzumlServiceWorker } = $qwkxzumlLoadWorker();
-let qwkxzuml = new QwkxzumlServiceWorker();
+const { OhhtrxvsServiceWorker } = $ohhtrxvsLoadWorker();
+let ohhtrxvs = new OhhtrxvsServiceWorker();
 
 const CONFIG = {
   blocked: [
@@ -107,7 +107,7 @@ function isBlocked(hostname, pathname) {
 }
 
 function attachRequestHandler() {
-  qwkxzuml.addEventListener("request", (e) => {
+  ohhtrxvs.addEventListener("request", (e) => {
     if (isBlocked(e.url.hostname, e.url.pathname)) {
       e.response = new Response("Site Blocked", { status: 403 });
       return;
@@ -142,10 +142,10 @@ function attachRequestHandler() {
 
 attachRequestHandler();
 
-async function ensureQwkxzumlConfig() {
+async function ensureOhhtrxvsConfig() {
   for (let attempt = 0; attempt < 20; attempt++) {
-    await qwkxzuml.loadConfig();
-    if (qwkxzuml.config?.prefix && qwkxzuml.config?.files) return;
+    await ohhtrxvs.loadConfig();
+    if (ohhtrxvs.config?.prefix && ohhtrxvs.config?.files) return;
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
   throw new Error("Workspace configuration is unavailable");
@@ -157,7 +157,7 @@ async function ensureQwkxzumlConfig() {
 // build produces scripts that reference undefined `$...$prop` globals. Refuse
 // loudly instead; the page detects the mismatch and re-registers.
 function configBuildVersion() {
-  const all = qwkxzuml.config?.files?.all;
+  const all = ohhtrxvs.config?.files?.all;
   if (typeof all !== "string") return null;
   try { return new URL(all, self.registration.scope).searchParams.get("v"); } catch { return null; }
 }
@@ -219,7 +219,7 @@ function repairRelativeLeak(event) {
 
 async function handleRequest(event) {
   try {
-    await ensureQwkxzumlConfig();
+    await ensureOhhtrxvsConfig();
     if (!configMatchesWorker()) {
       return new Response(VERSION_MISMATCH_BODY, {
         status: 502,
@@ -232,8 +232,8 @@ async function handleRequest(event) {
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
 
-    if (qwkxzuml.route(target)) {
-      const response = await qwkxzuml.fetch(target);
+    if (ohhtrxvs.route(target)) {
+      const response = await ohhtrxvs.fetch(target);
       const contentType = response.headers.get("content-type") || "";
 
       const htmlDocument = contentType.includes("text/html") ||
@@ -287,7 +287,7 @@ self.addEventListener("fetch", (event) => {
     url.origin === self.location.origin &&
     (url.pathname.startsWith(prefix) ||
       url.pathname === new URL("assets/c/runtime.wasm", self.registration.scope).pathname ||
-      url.pathname === qwkxzuml.config?.files?.wasm)
+      url.pathname === ohhtrxvs.config?.files?.wasm)
   ) {
     event.respondWith(handleRequest(event));
   }
