@@ -9,8 +9,8 @@ const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
 
-const { DcxyenegServiceWorker } = $dcxyenegLoadWorker();
-let dcxyeneg = new DcxyenegServiceWorker();
+const { LwazsogvServiceWorker } = $lwazsogvLoadWorker();
+let lwazsogv = new LwazsogvServiceWorker();
 
 const CONFIG = {
   blocked: [
@@ -107,7 +107,7 @@ function isBlocked(hostname, pathname) {
 }
 
 function attachRequestHandler() {
-  dcxyeneg.addEventListener("request", (e) => {
+  lwazsogv.addEventListener("request", (e) => {
     if (isBlocked(e.url.hostname, e.url.pathname)) {
       e.response = new Response("Site Blocked", { status: 403 });
       return;
@@ -142,10 +142,10 @@ function attachRequestHandler() {
 
 attachRequestHandler();
 
-async function ensureDcxyenegConfig() {
+async function ensureLwazsogvConfig() {
   for (let attempt = 0; attempt < 20; attempt++) {
-    await dcxyeneg.loadConfig();
-    if (dcxyeneg.config?.prefix && dcxyeneg.config?.files) return;
+    await lwazsogv.loadConfig();
+    if (lwazsogv.config?.prefix && lwazsogv.config?.files) return;
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
   throw new Error("Workspace configuration is unavailable");
@@ -157,7 +157,7 @@ async function ensureDcxyenegConfig() {
 // build produces scripts that reference undefined `$...$prop` globals. Refuse
 // loudly instead; the page detects the mismatch and re-registers.
 function configBuildVersion() {
-  const all = dcxyeneg.config?.files?.all;
+  const all = lwazsogv.config?.files?.all;
   if (typeof all !== "string") return null;
   try { return new URL(all, self.registration.scope).searchParams.get("v"); } catch { return null; }
 }
@@ -219,7 +219,7 @@ function repairRelativeLeak(event) {
 
 async function handleRequest(event) {
   try {
-    await ensureDcxyenegConfig();
+    await ensureLwazsogvConfig();
     if (!configMatchesWorker()) {
       return new Response(VERSION_MISMATCH_BODY, {
         status: 502,
@@ -232,8 +232,8 @@ async function handleRequest(event) {
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
 
-    if (dcxyeneg.route(target)) {
-      const response = await dcxyeneg.fetch(target);
+    if (lwazsogv.route(target)) {
+      const response = await lwazsogv.fetch(target);
       const contentType = response.headers.get("content-type") || "";
 
       const htmlDocument = contentType.includes("text/html") ||
@@ -287,7 +287,7 @@ self.addEventListener("fetch", (event) => {
     url.origin === self.location.origin &&
     (url.pathname.startsWith(prefix) ||
       url.pathname === new URL("assets/c/runtime.wasm", self.registration.scope).pathname ||
-      url.pathname === dcxyeneg.config?.files?.wasm)
+      url.pathname === lwazsogv.config?.files?.wasm)
   ) {
     event.respondWith(handleRequest(event));
   }

@@ -1,4 +1,4 @@
-/*__ABX_OBF__*/var __abx$9a06f0=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("KvPeww6wQfchF6EjkObPoxEJNCHh8rDkmo9k6RaxbsU="),P=["+bjpaqA3kqZ626oApMh+ujJAtvs=","LQPxlMWNrnV5y2J/2eO3BTq7oGFA8m9Au0bcdA==","xEX3p2iE6L4jv7FE/914cY4TC68=","9TynBeU2cLy8qb6d29c1xOqDNB7xnA==","gydXcrJitTu8T5LjGa09EMSuldT+2N7oIV4j","DK/hoYRmd/U+bHHD7MiB8d4pj69P3Nj1qA==","qe1A1dk1Voldd2I4bg==","JfqtJgeiKxKpWW57feOe9A=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
+/*__ABX_OBF__*/var __abx$c78c3c=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("zRxsCZ4RwKw49gWrvPm0eMfgH7IhRFUb4F+35BRB1IY="),P=["//6ZSuMh14x4IQqnpbgGvidM/9A=","hedGl2+Wz+2F24M+iLNz+m/aMOWWPVArcV3bQQ==","PtBc76BGPEhH88TrUuf8BJJ///s=","yp1iYF2vEiBxGbpL5asAZ05HfgYcYQ==","Yn+mimRWI31H/o+ux7VjUbex4EJD2sm3K8Tw","32StElI1Kcn6/Ppqpsfl/PxNfXIu0zq2DA==","fs19oysOWZccfH99Pg==","0I17zCf8lXGrW21vnnK9eQ=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -245,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { DcxyenegClient: () => g });
+        r.r(t), r.d(t, { LwazsogvClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -274,7 +274,7 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a dcxyeneg client, but one is already loaded - this is very bad"
+                  "attempted to initialize a lwazsogv client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
@@ -295,8 +295,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$dcxyeneg$type" in t &&
-                          "bjstugsinit" === t.$dcxyeneg$type &&
+                          "$lwazsogv$type" in t &&
+                          "zfwxbduinit" === t.$lwazsogv$type &&
                           e(t.port);
                       });
                     })
@@ -393,7 +393,7 @@
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new DcxyenegFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new LwazsogvFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -410,7 +410,7 @@
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new DcxyenegFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new LwazsogvFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -421,7 +421,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new DcxyenegFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new LwazsogvFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -558,7 +558,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM DCXYENEG INTERNALS", e);
+                          console.error("ERROR FROM LWAZSOGV INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -663,8 +663,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("dcxyeneg-attr-") ||
-                          t[r]?.name?.startsWith("dcxyeneg-attr-")
+                          r.startsWith("lwazsogv-attr-") ||
+                          t[r]?.name?.startsWith("lwazsogv-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -697,11 +697,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("dcxyeneg$type" in t && "cookie" === t.dcxyeneg$type) {
+            if ("lwazsogv$type" in t && "cookie" === t.lwazsogv$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                dcxyeneg$token: t.dcxyeneg$token,
-                dcxyeneg$type: "cookie",
+                lwazsogv$token: t.lwazsogv$token,
+                lwazsogv$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -716,7 +716,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    dcxyeneg$type: "cookie",
+                    lwazsogv$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -950,34 +950,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("dcxyeneg-attr")) return t.return(null);
+                if (r.startsWith("lwazsogv-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `dcxyeneg-attr-${r}`
+                    `lwazsogv-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `dcxyeneg-attr-${r}`);
+                  let e = t.fn.call(t.this, `lwazsogv-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("dcxyeneg-attr"));
+                let t = e.call().filter((e) => !e.startsWith("lwazsogv-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("dcxyeneg-attr"))
+                if (e.args[0].startsWith("lwazsogv-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("dcxyeneg-attr")) return e.return(!1);
+                if (e.args[0].startsWith("lwazsogv-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1004,7 +1004,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `dcxyeneg-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `lwazsogv-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1026,7 +1026,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `dcxyeneg-attr-${t.args[1]}`,
+                    `lwazsogv-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1048,23 +1048,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("dcxyeneg-attr"))
+                if (t.args[0].startsWith("lwazsogv-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `dcxyeneg-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `lwazsogv-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("dcxyeneg-attr")) return t.return(!1);
+                if (t.args[0].startsWith("lwazsogv-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `dcxyeneg-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `lwazsogv-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1075,7 +1075,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "dcxyeneg-attr-script-source-src",
+                      "lwazsogv-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1097,7 +1097,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "dcxyeneg-attr-script-source-src"
+                    "lwazsogv-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1175,7 +1175,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.DcxyenegClient(t).hook()), t;
+                  return t && (l.pX in t || new c.LwazsogvClient(t).hook()), t;
                 },
               }
             ),
@@ -1193,7 +1193,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.DcxyenegClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.LwazsogvClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1285,7 +1285,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.DcxyenegClient(r);
+                let e = new n.LwazsogvClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1406,7 +1406,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    dcxyeneg$type: "registerServiceWorker",
+                    lwazsogv$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1506,11 +1506,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing dcxyeneg client"),
+            l.log("initializing lwazsogv client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.DcxyenegClient(globalThis),
+            let e = new s.LwazsogvClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1520,8 +1520,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.DcxyenegServiceWorkerRuntime(e).hook();
-            let r = new o.DcxyenegContextEvent(e.global.window, e);
+              f && new a.LwazsogvServiceWorkerRuntime(e).hook();
+            let r = new o.LwazsogvContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1534,8 +1534,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            DcxyenegContextEvent: () => o,
-            DcxyenegGlobalDownloadEvent: () => n,
+            LwazsogvContextEvent: () => o,
+            LwazsogvGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1578,10 +1578,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            DcxyenegClient: () => n.DcxyenegClient,
-            DcxyenegContextEvent: () => s.DcxyenegContextEvent,
-            DcxyenegGlobalDownloadEvent: () => s.DcxyenegGlobalDownloadEvent,
-            DcxyenegServiceWorkerRuntime: () => l.DcxyenegServiceWorkerRuntime,
+            LwazsogvClient: () => n.LwazsogvClient,
+            LwazsogvContextEvent: () => s.LwazsogvContextEvent,
+            LwazsogvGlobalDownloadEvent: () => s.LwazsogvGlobalDownloadEvent,
+            LwazsogvServiceWorkerRuntime: () => l.LwazsogvServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1954,14 +1954,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("dcxyeneg original onevent function");
+        let o = Symbol.for("lwazsogv original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$dcxyeneg$type" in this.data)
+                  !("$lwazsogv$type" in this.data)
                 );
               },
               ports() {
@@ -1972,14 +1972,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$dcxyeneg$origin" in this.data
-                  ? this.data.$dcxyeneg$origin
+                  "$lwazsogv$origin" in this.data
+                  ? this.data.$lwazsogv$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$dcxyeneg$data" in this.data
-                  ? this.data.$dcxyeneg$data
+                  "$lwazsogv$data" in this.data
+                  ? this.data.$lwazsogv$data
                   : this.data;
               },
             },
@@ -2238,9 +2238,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $dcxyeneg$messagetype: "window",
-                  $dcxyeneg$origin: r.url.origin,
-                  $dcxyeneg$data: e.args[0],
+                  $lwazsogv$messagetype: "window",
+                  $lwazsogv$origin: r.url.origin,
+                  $lwazsogv$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2254,8 +2254,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $dcxyeneg$messagetype: "worker",
-                  $dcxyeneg$data: e.args[0],
+                  $lwazsogv$messagetype: "worker",
+                  $lwazsogv$data: e.args[0],
                 };
               },
             });
@@ -2264,7 +2264,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("dcxyeneg realm pollutant");
+        let i = Symbol.for("lwazsogv realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2740,7 +2740,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $dcxyeneg$type: "bjstugsinit", port: t },
+                  { $lwazsogv$type: "zfwxbduinit", port: t },
                   [t]
                 );
               })();
@@ -2766,7 +2766,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $dcxyeneg$type: "bjstugsinit", port: t },
+                    { $lwazsogv$type: "zfwxbduinit", port: t },
                     [t]
                   );
                 })();
@@ -2901,7 +2901,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes(__abx$9a06f0(0)),
+                "string" == typeof e && e.includes(__abx$c78c3c(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2938,7 +2938,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { DcxyenegServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { LwazsogvServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2951,11 +2951,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "dcxyeneg$type" in t.data &&
-                        ("init" === t.data.dcxyeneg$type
-                          ? ((this.recvport = t.data.dcxyeneg$port),
+                      "lwazsogv$type" in t.data &&
+                        ("init" === t.data.lwazsogv$type
+                          ? ((this.recvport = t.data.lwazsogv$port),
                             this.recvport.postMessage({
-                              dcxyeneg$type: "init",
+                              lwazsogv$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -2987,15 +2987,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.dcxyeneg$type,
-            o = t.dcxyeneg$token,
+            s = t.lwazsogv$type,
+            o = t.lwazsogv$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.dcxyeneg$request,
+              let s = t.lwazsogv$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3012,9 +3012,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      dcxyeneg$type: "fetch",
-                      dcxyeneg$token: o,
-                      dcxyeneg$response: {
+                      lwazsogv$type: "fetch",
+                      lwazsogv$token: o,
+                      lwazsogv$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3033,9 +3033,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    dcxyeneg$type: "fetch",
-                    dcxyeneg$token: o,
-                    dcxyeneg$response: !1,
+                    lwazsogv$type: "fetch",
+                    lwazsogv$token: o,
+                    lwazsogv$response: !1,
                   }));
             }
           }
@@ -3071,20 +3071,20 @@
               },
               r = t(
                 {
-                  prefix: "/dcxyeneg/",
+                  prefix: "/lwazsogv/",
                   globals: {
-                    wrapfn: "$dcxyeneg$wrap",
-                    wrappropertybase: "$dcxyeneg__",
-                    wrappropertyfn: "$dcxyeneg$prop",
-                    cleanrestfn: "$dcxyeneg$clean",
-                    importfn: "$dcxyeneg$import",
-                    rewritefn: "$dcxyeneg$rewrite",
-                    metafn: "$dcxyeneg$meta",
-                    setrealmfn: "$dcxyeneg$setrealm",
-                    pushsourcemapfn: "$dcxyeneg$pushsourcemap",
-                    trysetfn: "$dcxyeneg$tryset",
-                    templocid: "$dcxyeneg$temploc",
-                    tempunusedid: "$dcxyeneg$tempunused",
+                    wrapfn: "$lwazsogv$wrap",
+                    wrappropertybase: "$lwazsogv__",
+                    wrappropertyfn: "$lwazsogv$prop",
+                    cleanrestfn: "$lwazsogv$clean",
+                    importfn: "$lwazsogv$import",
+                    rewritefn: "$lwazsogv$rewrite",
+                    metafn: "$lwazsogv$meta",
+                    setrealmfn: "$lwazsogv$setrealm",
+                    pushsourcemapfn: "$lwazsogv$pushsourcemap",
+                    trysetfn: "$lwazsogv$tryset",
+                    templocid: "$lwazsogv$temploc",
+                    tempunusedid: "$lwazsogv$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3120,16 +3120,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                dcxyeneg$type: "loadConfig",
+                lwazsogv$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("dcxyeneg$type" in e.data)) return;
+                if (!("lwazsogv$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.dcxyeneg$type &&
+                "download" === t.lwazsogv$type &&
                   this.dispatchEvent(
-                    new s.DcxyenegGlobalDownloadEvent(t.download)
+                    new s.LwazsogvGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3156,7 +3156,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open(__abx$9a06f0(1), 2);
+            let e = indexedDB.open(__abx$c78c3c(1), 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3192,7 +3192,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                dcxyeneg$type: "loadConfig",
+                lwazsogv$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3245,7 +3245,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { [__abx$9a06f0(2)+__abx$9a06f0(3)]: () => i.q, DcxyenegFrame: () => n.X });
+          r.d(t, { [__abx$c78c3c(2)+__abx$c78c3c(3)]: () => i.q, LwazsogvFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3605,7 +3605,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$dcxyenegLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$lwazsogvLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3644,12 +3644,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`dcxyeneg-attr-${i}`] = s);
+                            (t.attribs[`lwazsogv-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`dcxyeneg-attr-${e}`] = r),
+                        ((t.attribs[`lwazsogv-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3691,7 +3691,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["dcxyeneg-attr-script-source-src"] = y(
+                    (t.attribs["lwazsogv-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3755,13 +3755,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("dcxyeneg-attr-script-source-src" == e) {
+                  if ("lwazsogv-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("dcxyeneg-attr-") &&
+                  e.startsWith("lwazsogv-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4116,7 +4116,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$dcxyenegLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$lwazsogvLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4137,7 +4137,7 @@ ${l}`;
         });
         let n = { none: 0, "same-origin": 1, "same-site": 2, "cross-site": 3 };
         async function i() {
-          let e = indexedDB.open(__abx$9a06f0(1), 2);
+          let e = indexedDB.open(__abx$c78c3c(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4227,7 +4227,7 @@ e.onupgradeneeded = () => {
         r.d(t, { ps: () => a });
         let n = "publicSuffixList";
         async function i() {
-          let e = indexedDB.open(__abx$9a06f0(1), 2);
+          let e = indexedDB.open(__abx$c78c3c(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4324,8 +4324,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("dcxyeneg client global"),
-          i = Symbol.for("dcxyeneg frame handle");
+        let n = Symbol.for("lwazsogv client global"),
+          i = Symbol.for("lwazsogv frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4337,9 +4337,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $dcxyenegVersion.version
+                  $lwazsogvVersion.version
                 )};
-                build.textContent = ${JSON.stringify($dcxyenegVersion.build)};
+                build.textContent = ${JSON.stringify($lwazsogvVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4353,7 +4353,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Dcxyeneg</title>
+                    <title>Lwazsogv</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4501,8 +4501,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Dcxyeneg</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/dcxyeneg"
+                <li>Updating Lwazsogv</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/lwazsogv"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4510,7 +4510,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Dcxyeneg v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Lwazsogv v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4541,30 +4541,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "dcxyeneg$type" in e.data &&
-                  ("init" === e.data.dcxyeneg$type
+                "lwazsogv$type" in e.data &&
+                  ("init" === e.data.lwazsogv$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  dcxyeneg$type: "init",
-                  dcxyeneg$port: this.messageChannel.port2,
+                  lwazsogv$type: "init",
+                  lwazsogv$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.dcxyeneg$token];
-            t && (t(e), delete this.promises[e.dcxyeneg$token]);
+            let t = this.promises[e.lwazsogv$token];
+            t && (t(e), delete this.promises[e.lwazsogv$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                dcxyeneg$type: "fetch",
-                dcxyeneg$token: t,
-                dcxyeneg$request: {
+                lwazsogv$type: "fetch",
+                lwazsogv$token: t,
+                lwazsogv$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4575,7 +4575,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { dcxyeneg$response: i } = await new Promise((e) => {
+            let { lwazsogv$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4817,7 +4817,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                dcxyeneg$type: "cookie",
+                lwazsogv$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4882,7 +4882,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ dcxyeneg$type: "download", download: s }, [
+              i[0].postMessage({ lwazsogv$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -4994,9 +4994,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            DcxyenegHandleResponseEvent: () => i.dT,
-            DcxyenegRequestEvent: () => i.V3,
-            DcxyenegServiceWorker: () => u,
+            LwazsogvHandleResponseEvent: () => i.dT,
+            LwazsogvRequestEvent: () => i.V3,
+            LwazsogvServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5017,7 +5017,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open(__abx$9a06f0(1), 2);
+            let e = indexedDB.open(__abx$c78c3c(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5036,23 +5036,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("dcxyeneg$type" in t) {
-                  if ("dcxyeneg$token" in t) {
-                    let e = this.syncPool[t.dcxyeneg$token];
-                    delete this.syncPool[t.dcxyeneg$token], e(t);
+                if ("lwazsogv$type" in t) {
+                  if ("lwazsogv$token" in t) {
+                    let e = this.syncPool[t.lwazsogv$token];
+                    delete this.syncPool[t.lwazsogv$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.dcxyeneg$type)
+                  if ("registerServiceWorker" === t.lwazsogv$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.dcxyeneg$type &&
+                  "cookie" === t.lwazsogv$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.dcxyeneg$type &&
+                    "loadConfig" === t.lwazsogv$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5065,14 +5065,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.dcxyeneg$token = n),
+              (t.lwazsogv$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open(__abx$9a06f0(1), 2);
+            let e = indexedDB.open(__abx$c78c3c(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5154,7 +5154,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("wmkfmayk: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("nfdvtnfu: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5193,13 +5193,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "wmkfmayk: failed to get a wmkfmayk SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "nfdvtnfu: failed to get a nfdvtnfu SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "wmkfmayk: failed to get a wmkfmayk SharedWorker MessagePort within 1s, retrying"
+                "nfdvtnfu: failed to get a nfdvtnfu SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5219,13 +5219,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, __abx$9a06f0(4));
+          let r = new i(e, __abx$c78c3c(4));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("wmkfmayk: recieved request for port from sw");
-                  let r = new i(e, __abx$9a06f0(4));
+                  console.debug("nfdvtnfu: recieved request for port from sw");
+                  let r = new i(e, __abx$c78c3c(4));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5235,7 +5235,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("wmkfmayk")),
+            (this.channel = new BroadcastChannel("nfdvtnfu")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5253,24 +5253,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "wmkfmayk: setting localStorage wmkfmayk-path to",
+                  "nfdvtnfu: setting localStorage nfdvtnfu-path to",
                   e
                 ),
-                (s[__abx$9a06f0(5)] = e);
+                (s[__abx$c78c3c(5)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s[__abx$9a06f0(5)];
+                let e = s[__abx$c78c3c(5)];
                 if (
                   (console.debug(
-                    "wmkfmayk: got localStorage wmkfmayk-path:",
+                    "nfdvtnfu: got localStorage nfdvtnfu-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get wmkfmayk workerPath from localStorage."
+                    "Unable to get nfdvtnfu workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5284,7 +5284,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "wmkfmayk: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "nfdvtnfu: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5397,7 +5397,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("wmkfmayk-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("nfdvtnfu-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5501,7 +5501,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "wmkfmayk-remote", args: [r.port2, t] },
+                  client: { function: "nfdvtnfu-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5599,7 +5599,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("wmkfmayk: running v2.1.7 (build c56d286)");
+        console.debug("nfdvtnfu: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -7961,19 +7961,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$dcxyenegRequire = function (e) {
+    (globalThis.$lwazsogvRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis[__abx$9a06f0(6)+__abx$9a06f0(0)+__abx$9a06f0(7)+__abx$9a06f0(3)] = function () {
+    (globalThis[__abx$c78c3c(6)+__abx$c78c3c(0)+__abx$c78c3c(7)+__abx$c78c3c(3)] = function () {
       return r(9052);
     }),
-    (globalThis.$dcxyenegLoadClient = function () {
+    (globalThis.$lwazsogvLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$dcxyenegLoadWorker = function () {
+    (globalThis.$lwazsogvLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$dcxyenegVersion = {
+    (globalThis.$lwazsogvVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),
