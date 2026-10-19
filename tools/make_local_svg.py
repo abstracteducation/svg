@@ -45,7 +45,7 @@ STYLE = (
 LOADER_JS = r"""
 (function(){
 "use strict";
-var K=__KEY__,M=__MIRRORS__,ENTRY="index.svg",LAST="__lx_m",STAGGER=1200,TIMEOUT=8000;
+var K=__KEY__,M=__MIRRORS__,H=__HEAD__,ENTRY="index.svg",LAST="__lx_m",PIN="__lx_p",PIN_TTL=6e5,STAGGER=1200,TIMEOUT=8000;
 var box=document.getElementById("l"),msg=document.getElementById("m"),btn=document.getElementById("b");
 function say(t){msg.textContent=t}
 function dec(s){try{var b=atob(s),o="";for(var i=0;i<b.length;i++)o+=String.fromCharCode(b.charCodeAt(i)^K.charCodeAt(i%K.length));return o}catch(e){return""}}
@@ -64,16 +64,34 @@ live.forEach(function(x){if(x!==c)x.abort()});resolve(b)},function(){clearTimeou
 if(i<list.length)timer=setTimeout(next,STAGGER)}
 next()})}
 function show(base){store(base);
-if(/[?&]direct(=|&|$)/.test(location.search)){location.replace(base+ENTRY+location.hash);return}
+// jsDelivr sends @main files with a 7-day browser max-age; a unique query
+// always fetches the current app shell (its hashed assets still cache).
+var url=base+ENTRY+"?t="+Date.now().toString(36)+location.hash;
+if(/[?&]direct(=|&|$)/.test(location.search)){location.replace(url);return}
 var f=document.createElementNS("http://www.w3.org/1999/xhtml","iframe");
 f.setAttribute("allow","fullscreen; autoplay; clipboard-read; clipboard-write; microphone; camera; display-capture; encrypted-media; picture-in-picture; gamepad; screen-wake-lock");
 f.setAttribute("referrerpolicy","no-referrer");
-f.src=base+ENTRY+location.hash;
+f.src=url;
 box.parentNode.appendChild(f);
 setTimeout(function(){box.style.display="none"},400)}
+// jsDelivr edges disagree about what a branch (@main) points to for up to 12h,
+// so serve the newest commit by SHA instead: immutable, identical on every
+// edge. The SHA comes from the GitHub API (cached PIN_TTL); if that is blocked,
+// keep the branch URLs.
+function headSha(){
+try{var c=JSON.parse(localStorage.getItem(PIN)||"null");if(c&&/^[0-9a-f]{40}$/.test(c.s)&&Date.now()-c.t<PIN_TTL)return Promise.resolve(c.s)}catch(e){}
+var api=dec(H);if(!/^https:\/\//.test(api))return Promise.resolve("");
+var ctl=new AbortController(),tm=setTimeout(function(){ctl.abort()},4000);
+return fetch(api,{headers:{Accept:"application/vnd.github.sha"},cache:"no-store",credentials:"omit",signal:ctl.signal})
+.then(function(r){return r.ok?r.text():""}).then(function(s){s=String(s).trim();if(!/^[0-9a-f]{40}$/.test(s))return"";
+try{localStorage.setItem(PIN,JSON.stringify({s:s,t:Date.now()}))}catch(e){}return s},function(){return""})
+.finally(function(){clearTimeout(tm)})}
+function pinned(list,sha){if(!sha)return list;var out=[];
+list.forEach(function(b){var p=b.replace("@main/","@"+sha+"/");if(p!==b)out.push(p)});
+return out.concat(list)}
 function start(){box.className="";say("Connecting\u2026");
 if(!mirrors.length){fail();return}
-race(order()).then(show,fail)}
+headSha().then(function(sha){return race(pinned(order(),sha))}).then(show,fail)}
 function fail(){store(null);box.className="x";say("Couldn't reach the app from here. Check your connection, then try again.")}
 btn.addEventListener("click",start);
 start();
@@ -86,6 +104,10 @@ def encode(url: str, key: str) -> str:
     return base64.b64encode(raw).decode("ascii")
 
 
+# Answers the newest commit SHA of the published package's main branch.
+HEAD_API = "https://api.github.com/repos/abstracteducation/svg/commits/main"
+
+
 def build(mirrors: list[str], title: str) -> str:
     for m in mirrors:
         if not (m.startswith("https://") and m.endswith("/")) or not m.isascii():
@@ -95,6 +117,7 @@ def build(mirrors: list[str], title: str) -> str:
         LOADER_JS.strip()
         .replace("__KEY__", json.dumps(key))
         .replace("__MIRRORS__", json.dumps([encode(m, key) for m in mirrors]))
+        .replace("__HEAD__", json.dumps(encode(HEAD_API, key)))
     )
     if "]]>" in js or "]]>" in STYLE:
         raise SystemExit("CDATA terminator in inline code")
@@ -124,10 +147,12 @@ def main() -> None:
 
     svg = build(args.mirror or DEFAULT_MIRRORS, args.title)
     ET.fromstring(svg)  # must be well-formed XML or the browser shows a parse error
-    for m in args.mirror or DEFAULT_MIRRORS:
+    for m in [*(args.mirror or DEFAULT_MIRRORS), HEAD_API]:
         host = m.split("/")[2]
         if host in svg:
-            raise SystemExit(f"plaintext mirror host leaked into output: {host}")
+            raise SystemExit(f"plaintext host leaked into output: {host}")
+    if "abstracteducation" in svg:
+        raise SystemExit("plaintext repo name leaked into output")
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(svg, encoding="utf-8", newline="\n")
