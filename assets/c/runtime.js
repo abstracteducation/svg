@@ -1,3 +1,4 @@
+/*__ABX_OBF__*/var __abx$c8da24=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("6qLiPrZ1NyX6vRQbavtcf3uA/7vofQRlDSd73vnOBKM="),P=["Ug/hQKHFOceeIJx/yj7LJq+36YY=","zZv5f6Oe2cMHFWkGlRpSYg4onaetuGxHJxz3tA==","fbovQvYkXsjLOOAp3DMl5Eagzxw=","nUmxHaUzGmRFbMZaZ188P+/Qm/KChQ==","O7rzVgSfEL13cCyoEh027TEO2Hy26dg7FTHl","et+jg55Hvu1HXPMzb259d0r7xw2xLEj0hg==","1vZPLEEDBGbGJu8VSw==","KEElnqfSAvMM5/of4XOMeA=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -244,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { ScramjetClient: () => g });
+        r.r(t), r.d(t, { DrtjsgidClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -273,16 +274,25 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a scramjet client, but one is already loaded - this is very bad"
+                  "attempted to initialize a drtjsgid client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
+            // abulxt patch: ancestors/opener may be cross-origin (app framed by
+            // a cloak/LMS); `in` on a cross-origin WindowProxy throws.
+            const hasClient = (w) => {
+              try {
+                return !!w && n.pX in w;
+              } catch {
+                return !1;
+              }
+            };
             d.iswindow
-              ? n.pX in e.parent
+              ? hasClient(e.parent)
                 ? (this.box = e.parent[n.pX].box)
-                : n.pX in e.top
+                : hasClient(e.top)
                 ? (this.box = e.top[n.pX].box)
-                : e.opener && n.pX in e.opener
+                : hasClient(e.opener)
                 ? (this.box = e.opener[n.pX].box)
                 : (f.warn("Creating SingletonBox"),
                   (this.box = new h.SingletonBox(this)))
@@ -294,8 +304,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$scramjet$type" in t &&
-                          "baremuxinit" === t.$scramjet$type &&
+                          "$drtjsgid$type" in t &&
+                          "kkpvbxdinit" === t.$drtjsgid$type &&
                           e(t.port);
                       });
                     })
@@ -385,14 +395,21 @@
                   throw Error("topFrameName was called from a worker?");
                 let e = t.global;
                 if (e.parent.window == e.window) return null;
-                for (; e.parent.window !== e.window && e.parent.window[n.pX]; )
+                const clientOf = (w) => {
+                  try {
+                    return w[n.pX];
+                  } catch {
+                    return void 0;
+                  }
+                };
+                for (; e.parent.window !== e.window && clientOf(e.parent.window); )
                   e = e.parent.window;
                 let r = e[n.pX].descriptors.get("window.frameElement", e);
                 if (!r) return null;
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new ScramjetFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new DrtjsgidFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -402,14 +419,20 @@
                 if (!d.iswindow)
                   throw Error("parentFrameName was called from a worker?");
                 if (t.global.parent.window == t.global.window) return null;
-                let e = t.global.parent.window;
-                if (e[n.pX]) {
+                let e = t.global.parent.window,
+                  parentClient;
+                try {
+                  parentClient = e[n.pX];
+                } catch {
+                  parentClient = void 0;
+                }
+                if (parentClient) {
                   let t = e[n.pX].descriptors.get("window.frameElement", e);
                   if (!t) return null;
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new ScramjetFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new DrtjsgidFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -420,7 +443,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new ScramjetFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new DrtjsgidFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -439,7 +462,14 @@
             if (!t) {
               let e = this.global.window;
               for (; e.parent !== e; ) {
-                let t = e[n.pX].descriptors.get("window.frameElement", e);
+                let c;
+                try {
+                  c = e[n.pX];
+                } catch {
+                  return null;
+                }
+                if (!c) return null;
+                let t = c.descriptors.get("window.frameElement", e);
                 if (!t) return null;
                 if (t && t[n.zr]) return t[n.zr];
                 e = e.parent.window;
@@ -557,7 +587,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM SCRAMJET INTERNALS", e);
+                          console.error("ERROR FROM DRTJSGID INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -662,8 +692,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("scramjet-attr-") ||
-                          t[r]?.name?.startsWith("scramjet-attr-")
+                          r.startsWith("drtjsgid-attr-") ||
+                          t[r]?.name?.startsWith("drtjsgid-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -696,11 +726,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("scramjet$type" in t && "cookie" === t.scramjet$type) {
+            if ("drtjsgid$type" in t && "cookie" === t.drtjsgid$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                scramjet$token: t.scramjet$token,
-                scramjet$type: "cookie",
+                drtjsgid$token: t.drtjsgid$token,
+                drtjsgid$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -715,7 +745,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    scramjet$type: "cookie",
+                    drtjsgid$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -949,34 +979,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("scramjet-attr")) return t.return(null);
+                if (r.startsWith("drtjsgid-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `scramjet-attr-${r}`
+                    `drtjsgid-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `scramjet-attr-${r}`);
+                  let e = t.fn.call(t.this, `drtjsgid-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("scramjet-attr"));
+                let t = e.call().filter((e) => !e.startsWith("drtjsgid-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("scramjet-attr"))
+                if (e.args[0].startsWith("drtjsgid-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("scramjet-attr")) return e.return(!1);
+                if (e.args[0].startsWith("drtjsgid-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1003,7 +1033,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `scramjet-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `drtjsgid-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1025,7 +1055,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `scramjet-attr-${t.args[1]}`,
+                    `drtjsgid-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1047,23 +1077,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("scramjet-attr"))
+                if (t.args[0].startsWith("drtjsgid-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `scramjet-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `drtjsgid-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("scramjet-attr")) return t.return(!1);
+                if (t.args[0].startsWith("drtjsgid-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `scramjet-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `drtjsgid-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1074,7 +1104,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "scramjet-attr-script-source-src",
+                      "drtjsgid-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1096,7 +1126,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "scramjet-attr-script-source-src"
+                    "drtjsgid-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1174,7 +1204,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.ScramjetClient(t).hook()), t;
+                  return t && (l.pX in t || new c.DrtjsgidClient(t).hook()), t;
                 },
               }
             ),
@@ -1192,7 +1222,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.ScramjetClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.DrtjsgidClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1284,7 +1314,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.ScramjetClient(r);
+                let e = new n.DrtjsgidClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1405,7 +1435,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    scramjet$type: "registerServiceWorker",
+                    drtjsgid$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1505,11 +1535,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing scramjet client"),
+            l.log("initializing drtjsgid client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.ScramjetClient(globalThis),
+            let e = new s.DrtjsgidClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1519,8 +1549,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.ScramjetServiceWorkerRuntime(e).hook();
-            let r = new o.ScramjetContextEvent(e.global.window, e);
+              f && new a.DrtjsgidServiceWorkerRuntime(e).hook();
+            let r = new o.DrtjsgidContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1533,8 +1563,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            ScramjetContextEvent: () => o,
-            ScramjetGlobalDownloadEvent: () => n,
+            DrtjsgidContextEvent: () => o,
+            DrtjsgidGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1577,10 +1607,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            ScramjetClient: () => n.ScramjetClient,
-            ScramjetContextEvent: () => s.ScramjetContextEvent,
-            ScramjetGlobalDownloadEvent: () => s.ScramjetGlobalDownloadEvent,
-            ScramjetServiceWorkerRuntime: () => l.ScramjetServiceWorkerRuntime,
+            DrtjsgidClient: () => n.DrtjsgidClient,
+            DrtjsgidContextEvent: () => s.DrtjsgidContextEvent,
+            DrtjsgidGlobalDownloadEvent: () => s.DrtjsgidGlobalDownloadEvent,
+            DrtjsgidServiceWorkerRuntime: () => l.DrtjsgidServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1953,14 +1983,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("scramjet original onevent function");
+        let o = Symbol.for("drtjsgid original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$scramjet$type" in this.data)
+                  !("$drtjsgid$type" in this.data)
                 );
               },
               ports() {
@@ -1971,14 +2001,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$scramjet$origin" in this.data
-                  ? this.data.$scramjet$origin
+                  "$drtjsgid$origin" in this.data
+                  ? this.data.$drtjsgid$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$scramjet$data" in this.data
-                  ? this.data.$scramjet$data
+                  "$drtjsgid$data" in this.data
+                  ? this.data.$drtjsgid$data
                   : this.data;
               },
             },
@@ -2237,9 +2267,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $scramjet$messagetype: "window",
-                  $scramjet$origin: r.url.origin,
-                  $scramjet$data: e.args[0],
+                  $drtjsgid$messagetype: "window",
+                  $drtjsgid$origin: r.url.origin,
+                  $drtjsgid$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2253,8 +2283,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $scramjet$messagetype: "worker",
-                  $scramjet$data: e.args[0],
+                  $drtjsgid$messagetype: "worker",
+                  $drtjsgid$data: e.args[0],
                 };
               },
             });
@@ -2263,7 +2293,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("scramjet realm pollutant");
+        let i = Symbol.for("drtjsgid realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2739,7 +2769,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $scramjet$type: "baremuxinit", port: t },
+                  { $drtjsgid$type: "kkpvbxdinit", port: t },
                   [t]
                 );
               })();
@@ -2765,7 +2795,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $scramjet$type: "baremuxinit", port: t },
+                    { $drtjsgid$type: "kkpvbxdinit", port: t },
                     [t]
                   );
                 })();
@@ -2791,14 +2821,22 @@
             if (r === t.location) return e.locationProxy;
             if (r === t.eval) return o.indirectEval.bind(e, s);
             if (n.iswindow) {
+              // abulxt patch: stop at a cross-origin ancestor instead of throwing.
+              const proxied = (w) => {
+                try {
+                  return i.pX in w;
+                } catch {
+                  return !1;
+                }
+              };
               if (r === t.parent)
-                if (i.pX in t.parent) return t.parent;
+                if (proxied(t.parent)) return t.parent;
                 else return t;
               else if (r === t.top) {
                 let e = t;
                 for (;;) {
                   let t = e.parent.self;
-                  if (t === e || !(i.pX in t)) break;
+                  if (t === e || !proxied(t)) break;
                   e = t;
                 }
                 return e;
@@ -2900,7 +2938,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes("scramjet"),
+                "string" == typeof e && e.includes(__abx$c8da24(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2937,7 +2975,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { ScramjetServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { DrtjsgidServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2950,11 +2988,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "scramjet$type" in t.data &&
-                        ("init" === t.data.scramjet$type
-                          ? ((this.recvport = t.data.scramjet$port),
+                      "drtjsgid$type" in t.data &&
+                        ("init" === t.data.drtjsgid$type
+                          ? ((this.recvport = t.data.drtjsgid$port),
                             this.recvport.postMessage({
-                              scramjet$type: "init",
+                              drtjsgid$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -2986,15 +3024,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.scramjet$type,
-            o = t.scramjet$token,
+            s = t.drtjsgid$type,
+            o = t.drtjsgid$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.scramjet$request,
+              let s = t.drtjsgid$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3011,9 +3049,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      scramjet$type: "fetch",
-                      scramjet$token: o,
-                      scramjet$response: {
+                      drtjsgid$type: "fetch",
+                      drtjsgid$token: o,
+                      drtjsgid$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3032,9 +3070,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    scramjet$type: "fetch",
-                    scramjet$token: o,
-                    scramjet$response: !1,
+                    drtjsgid$type: "fetch",
+                    drtjsgid$token: o,
+                    drtjsgid$response: !1,
                   }));
             }
           }
@@ -3070,20 +3108,20 @@
               },
               r = t(
                 {
-                  prefix: "/scramjet/",
+                  prefix: "/drtjsgid/",
                   globals: {
-                    wrapfn: "$scramjet$wrap",
-                    wrappropertybase: "$scramjet__",
-                    wrappropertyfn: "$scramjet$prop",
-                    cleanrestfn: "$scramjet$clean",
-                    importfn: "$scramjet$import",
-                    rewritefn: "$scramjet$rewrite",
-                    metafn: "$scramjet$meta",
-                    setrealmfn: "$scramjet$setrealm",
-                    pushsourcemapfn: "$scramjet$pushsourcemap",
-                    trysetfn: "$scramjet$tryset",
-                    templocid: "$scramjet$temploc",
-                    tempunusedid: "$scramjet$tempunused",
+                    wrapfn: "$drtjsgid$wrap",
+                    wrappropertybase: "$drtjsgid__",
+                    wrappropertyfn: "$drtjsgid$prop",
+                    cleanrestfn: "$drtjsgid$clean",
+                    importfn: "$drtjsgid$import",
+                    rewritefn: "$drtjsgid$rewrite",
+                    metafn: "$drtjsgid$meta",
+                    setrealmfn: "$drtjsgid$setrealm",
+                    pushsourcemapfn: "$drtjsgid$pushsourcemap",
+                    trysetfn: "$drtjsgid$tryset",
+                    templocid: "$drtjsgid$temploc",
+                    tempunusedid: "$drtjsgid$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3119,16 +3157,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                scramjet$type: "loadConfig",
+                drtjsgid$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("scramjet$type" in e.data)) return;
+                if (!("drtjsgid$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.scramjet$type &&
+                "download" === t.drtjsgid$type &&
                   this.dispatchEvent(
-                    new s.ScramjetGlobalDownloadEvent(t.download)
+                    new s.DrtjsgidGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3155,7 +3193,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open("$abulxt-scramjet", 2);
+            let e = indexedDB.open(__abx$c8da24(1), 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3191,7 +3229,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                scramjet$type: "loadConfig",
+                drtjsgid$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3244,7 +3282,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { ScramjetController: () => i.q, ScramjetFrame: () => n.X });
+          r.d(t, { [__abx$c8da24(2)+__abx$c8da24(3)]: () => i.q, DrtjsgidFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3604,7 +3642,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$scramjetLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$drtjsgidLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3643,12 +3681,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`scramjet-attr-${i}`] = s);
+                            (t.attribs[`drtjsgid-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`scramjet-attr-${e}`] = r),
+                        ((t.attribs[`drtjsgid-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3690,7 +3728,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["scramjet-attr-script-source-src"] = y(
+                    (t.attribs["drtjsgid-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3754,13 +3792,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("scramjet-attr-script-source-src" == e) {
+                  if ("drtjsgid-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("scramjet-attr-") &&
+                  e.startsWith("drtjsgid-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4115,7 +4153,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$scramjetLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$drtjsgidLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4136,7 +4174,7 @@ ${l}`;
         });
         let n = { none: 0, "same-origin": 1, "same-site": 2, "cross-site": 3 };
         async function i() {
-          let e = indexedDB.open("$abulxt-scramjet", 2);
+          let e = indexedDB.open(__abx$c8da24(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4226,7 +4264,7 @@ e.onupgradeneeded = () => {
         r.d(t, { ps: () => a });
         let n = "publicSuffixList";
         async function i() {
-          let e = indexedDB.open("$abulxt-scramjet", 2);
+          let e = indexedDB.open(__abx$c8da24(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4323,8 +4361,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("scramjet client global"),
-          i = Symbol.for("scramjet frame handle");
+        let n = Symbol.for("drtjsgid client global"),
+          i = Symbol.for("drtjsgid frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4336,9 +4374,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $scramjetVersion.version
+                  $drtjsgidVersion.version
                 )};
-                build.textContent = ${JSON.stringify($scramjetVersion.build)};
+                build.textContent = ${JSON.stringify($drtjsgidVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4352,7 +4390,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Scramjet</title>
+                    <title>Drtjsgid</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4500,8 +4538,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Scramjet</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/scramjet"
+                <li>Updating Drtjsgid</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/drtjsgid"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4509,7 +4547,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Scramjet v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Drtjsgid v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4540,30 +4578,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "scramjet$type" in e.data &&
-                  ("init" === e.data.scramjet$type
+                "drtjsgid$type" in e.data &&
+                  ("init" === e.data.drtjsgid$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  scramjet$type: "init",
-                  scramjet$port: this.messageChannel.port2,
+                  drtjsgid$type: "init",
+                  drtjsgid$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.scramjet$token];
-            t && (t(e), delete this.promises[e.scramjet$token]);
+            let t = this.promises[e.drtjsgid$token];
+            t && (t(e), delete this.promises[e.drtjsgid$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                scramjet$type: "fetch",
-                scramjet$token: t,
-                scramjet$request: {
+                drtjsgid$type: "fetch",
+                drtjsgid$token: t,
+                drtjsgid$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4574,7 +4612,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { scramjet$response: i } = await new Promise((e) => {
+            let { drtjsgid$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4816,7 +4854,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                scramjet$type: "cookie",
+                drtjsgid$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4881,7 +4919,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ scramjet$type: "download", download: s }, [
+              i[0].postMessage({ drtjsgid$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -4993,9 +5031,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            ScramjetHandleResponseEvent: () => i.dT,
-            ScramjetRequestEvent: () => i.V3,
-            ScramjetServiceWorker: () => u,
+            DrtjsgidHandleResponseEvent: () => i.dT,
+            DrtjsgidRequestEvent: () => i.V3,
+            DrtjsgidServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5016,7 +5054,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open("$abulxt-scramjet", 2);
+            let e = indexedDB.open(__abx$c8da24(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5035,23 +5073,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("scramjet$type" in t) {
-                  if ("scramjet$token" in t) {
-                    let e = this.syncPool[t.scramjet$token];
-                    delete this.syncPool[t.scramjet$token], e(t);
+                if ("drtjsgid$type" in t) {
+                  if ("drtjsgid$token" in t) {
+                    let e = this.syncPool[t.drtjsgid$token];
+                    delete this.syncPool[t.drtjsgid$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.scramjet$type)
+                  if ("registerServiceWorker" === t.drtjsgid$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.scramjet$type &&
+                  "cookie" === t.drtjsgid$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.scramjet$type &&
+                    "loadConfig" === t.drtjsgid$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5064,14 +5102,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.scramjet$token = n),
+              (t.drtjsgid$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open("$abulxt-scramjet", 2);
+            let e = indexedDB.open(__abx$c8da24(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5153,7 +5191,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("bare-mux: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("vxvcatrx: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5192,13 +5230,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "bare-mux: failed to get a bare-mux SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "vxvcatrx: failed to get a vxvcatrx SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "bare-mux: failed to get a bare-mux SharedWorker MessagePort within 1s, retrying"
+                "vxvcatrx: failed to get a vxvcatrx SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5218,13 +5256,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, "bare-mux-worker");
+          let r = new i(e, __abx$c8da24(4));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("bare-mux: recieved request for port from sw");
-                  let r = new i(e, "bare-mux-worker");
+                  console.debug("vxvcatrx: recieved request for port from sw");
+                  let r = new i(e, __abx$c8da24(4));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5234,7 +5272,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("bare-mux")),
+            (this.channel = new BroadcastChannel("vxvcatrx")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5252,24 +5290,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "bare-mux: setting localStorage bare-mux-path to",
+                  "vxvcatrx: setting localStorage vxvcatrx-path to",
                   e
                 ),
-                (s["bare-mux-path"] = e);
+                (s[__abx$c8da24(5)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s["bare-mux-path"];
+                let e = s[__abx$c8da24(5)];
                 if (
                   (console.debug(
-                    "bare-mux: got localStorage bare-mux-path:",
+                    "vxvcatrx: got localStorage vxvcatrx-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get bare-mux workerPath from localStorage."
+                    "Unable to get vxvcatrx workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5283,7 +5321,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "bare-mux: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "vxvcatrx: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5396,7 +5434,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("bare-mux-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("vxvcatrx-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5500,7 +5538,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "bare-mux-remote", args: [r.port2, t] },
+                  client: { function: "vxvcatrx-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5598,7 +5636,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("bare-mux: running v2.1.7 (build c56d286)");
+        console.debug("vxvcatrx: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -7960,19 +7998,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$scramjetRequire = function (e) {
+    (globalThis.$drtjsgidRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis.$scramjetLoadController = function () {
+    (globalThis[__abx$c8da24(6)+__abx$c8da24(0)+__abx$c8da24(7)+__abx$c8da24(3)] = function () {
       return r(9052);
     }),
-    (globalThis.$scramjetLoadClient = function () {
+    (globalThis.$drtjsgidLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$scramjetLoadWorker = function () {
+    (globalThis.$drtjsgidLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$scramjetVersion = {
+    (globalThis.$drtjsgidVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),

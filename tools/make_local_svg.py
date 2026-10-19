@@ -1,27 +1,4 @@
 #!/usr/bin/env python3
-"""Build a single-file, locally runnable SVG loader for the jsDelivr cloak.
-
-The output is one small .svg file that can be opened straight from disk
-(file://) or hosted anywhere. It does not embed the app; it finds a mirror of
-the published package (github.com/abstracteducation/svg) that answers, then
-shows that mirror's index.svg full-window in an iframe.
-
-How it works:
-  * SVG root -> <foreignObject> -> XHTML document. Browsers run <script> inside
-    an SVG opened as a top-level document, so the file behaves like a page.
-  * Mirror base URLs are XOR'd with a per-build random key and base64-encoded,
-    so no host name appears in plaintext in the file.
-  * Mirrors are probed with a staggered race (a new probe starts every
-    STAGGER ms, or immediately when one fails); the first mirror that answers
-    wins and the rest are aborted. The winner is remembered in localStorage and
-    tried first next time.
-  * `?direct` in the URL navigates the whole tab to the mirror instead of
-    framing it.
-
-Usage:
-  python svg/scripts/make_local_svg.py [--out svg/local/abulxt.svg]
-      [--mirror URL ...] [--title TEXT]
-"""
 
 from __future__ import annotations
 
@@ -140,7 +117,7 @@ def build(mirrors: list[str], title: str) -> str:
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--out", type=Path, default=ROOT / "svg" / "local" / "abulxt.svg")
+    p.add_argument("--out", type=Path, default=ROOT / "svg" / "local" / "index.svg")
     p.add_argument("--mirror", action="append", help="mirror base URL (repeatable; replaces the defaults)")
     p.add_argument("--title", default="Notes")
     args = p.parse_args()
