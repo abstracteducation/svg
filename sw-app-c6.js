@@ -9,8 +9,8 @@ const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
 
-const { DrtjsgidServiceWorker } = $drtjsgidLoadWorker();
-let drtjsgid = new DrtjsgidServiceWorker();
+const { KybcogpgServiceWorker } = $kybcogpgLoadWorker();
+let kybcogpg = new KybcogpgServiceWorker();
 
 const CONFIG = {
   blocked: [
@@ -107,7 +107,7 @@ function isBlocked(hostname, pathname) {
 }
 
 function attachRequestHandler() {
-  drtjsgid.addEventListener("request", (e) => {
+  kybcogpg.addEventListener("request", (e) => {
     if (isBlocked(e.url.hostname, e.url.pathname)) {
       e.response = new Response("Site Blocked", { status: 403 });
       return;
@@ -142,10 +142,10 @@ function attachRequestHandler() {
 
 attachRequestHandler();
 
-async function ensureDrtjsgidConfig() {
+async function ensureKybcogpgConfig() {
   for (let attempt = 0; attempt < 20; attempt++) {
-    await drtjsgid.loadConfig();
-    if (drtjsgid.config?.prefix && drtjsgid.config?.files) return;
+    await kybcogpg.loadConfig();
+    if (kybcogpg.config?.prefix && kybcogpg.config?.files) return;
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
   throw new Error("Workspace configuration is unavailable");
@@ -157,7 +157,7 @@ async function ensureDrtjsgidConfig() {
 // build produces scripts that reference undefined `$...$prop` globals. Refuse
 // loudly instead; the page detects the mismatch and re-registers.
 function configBuildVersion() {
-  const all = drtjsgid.config?.files?.all;
+  const all = kybcogpg.config?.files?.all;
   if (typeof all !== "string") return null;
   try { return new URL(all, self.registration.scope).searchParams.get("v"); } catch { return null; }
 }
@@ -219,7 +219,7 @@ function repairRelativeLeak(event) {
 
 async function handleRequest(event) {
   try {
-    await ensureDrtjsgidConfig();
+    await ensureKybcogpgConfig();
     if (!configMatchesWorker()) {
       return new Response(VERSION_MISMATCH_BODY, {
         status: 502,
@@ -232,8 +232,8 @@ async function handleRequest(event) {
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
 
-    if (drtjsgid.route(target)) {
-      const response = await drtjsgid.fetch(target);
+    if (kybcogpg.route(target)) {
+      const response = await kybcogpg.fetch(target);
       const contentType = response.headers.get("content-type") || "";
 
       const htmlDocument = contentType.includes("text/html") ||
@@ -287,7 +287,7 @@ self.addEventListener("fetch", (event) => {
     url.origin === self.location.origin &&
     (url.pathname.startsWith(prefix) ||
       url.pathname === new URL("assets/c/runtime.wasm", self.registration.scope).pathname ||
-      url.pathname === drtjsgid.config?.files?.wasm)
+      url.pathname === kybcogpg.config?.files?.wasm)
   ) {
     event.respondWith(handleRequest(event));
   }

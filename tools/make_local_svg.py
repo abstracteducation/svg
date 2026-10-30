@@ -108,7 +108,7 @@ def encode(url: str, key: str) -> str:
 HEAD_API = "https://api.github.com/repos/abstracteducation/svg/commits/main"
 
 
-def build(mirrors: list[str], title: str) -> str:
+def build(mirrors: list[str], title: str, fmt: str = "svg") -> str:
     for m in mirrors:
         if not (m.startswith("https://") and m.endswith("/")) or not m.isascii():
             raise SystemExit(f"mirror must be an ASCII https:// URL ending in '/': {m!r}")
@@ -122,6 +122,24 @@ def build(mirrors: list[str], title: str) -> str:
     if "]]>" in js or "]]>" in STYLE:
         raise SystemExit("CDATA terminator in inline code")
     title_xml = title.replace("&", "&amp;").replace("<", "&lt;")
+    if fmt == "html":
+        # Same loader as a plain HTML page. It still frames the package's
+        # index.svg: jsDelivr serves .html as text/plain, so it can't be framed.
+        if "</script" in js.lower():
+            raise SystemExit("script terminator in inline code")
+        return (
+            "<!doctype html>\n"
+            '<html lang="en"><head>'
+            '<meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+            f'<link rel="icon" type="image/svg+xml" href="{ICON}">'
+            f"<title>{title_xml}</title>"
+            f"<style>{STYLE}</style>"
+            "</head><body>"
+            '<div id="l"><div id="s"></div><p id="m"></p><button id="b" type="button">Try again</button></div>'
+            f"<script>{js}</script>"
+            "</body></html>\n"
+        )
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">'
         '<foreignObject width="100%" height="100%">'
@@ -143,10 +161,13 @@ def main() -> None:
     p.add_argument("--out", type=Path, default=ROOT / "svg" / "local" / "index.svg")
     p.add_argument("--mirror", action="append", help="mirror base URL (repeatable; replaces the defaults)")
     p.add_argument("--title", default="Notes")
+    p.add_argument("--format", choices=("svg", "html"), help="output type (default: from --out extension)")
     args = p.parse_args()
+    fmt = args.format or ("html" if args.out.suffix.lower() in (".html", ".htm") else "svg")
 
-    svg = build(args.mirror or DEFAULT_MIRRORS, args.title)
-    ET.fromstring(svg)  # must be well-formed XML or the browser shows a parse error
+    svg = build(args.mirror or DEFAULT_MIRRORS, args.title, fmt)
+    if fmt == "svg":
+        ET.fromstring(svg)  # must be well-formed XML or the browser shows a parse error
     for m in [*(args.mirror or DEFAULT_MIRRORS), HEAD_API]:
         host = m.split("/")[2]
         if host in svg:
@@ -155,7 +176,8 @@ def main() -> None:
         raise SystemExit("plaintext repo name leaked into output")
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(svg, encoding="utf-8", newline="\n")
+    with args.out.open("w", encoding="utf-8", newline="\n") as fh:
+        fh.write(svg)
     print(f"wrote {args.out} ({len(svg.encode())} bytes, {len(args.mirror or DEFAULT_MIRRORS)} mirrors)")
 
 

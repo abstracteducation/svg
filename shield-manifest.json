@@ -1,474 +1,1400 @@
 {
   "shieldVersion": 1,
-  "generatedAt": "2026-10-19T16:08:33.340Z",
+  "generatedAt": "2026-10-30T20:41:18.065Z",
   "mode": "compile",
-  "seed": 3835380496,
-  "layoutFingerprint": "b56f4974",
+  "seed": 2143210224,
+  "layoutFingerprint": "8b5f18b6",
   "loaderStatus": "compile: loader active; entry + VM frontier run as bytecode",
   "bootViaLoader": true,
-  "entry": "s_11nj44v",
+  "entry": "s_2fbt7u",
   "counts": {
-    "total": 35,
-    "vm": 35,
-    "native": 0
+    "total": 119,
+    "vm": 36,
+    "native": 83
   },
   "modules": {
-    "s_11nj44v": {
-      "file": "assets/s_11nj44v.js",
+    "s_2fbt7u": {
+      "file": "assets/s_2fbt7u.js",
       "kind": "vm"
     },
-    "s_k9djpb": {
-      "file": "assets/s_k9djpb.js",
+    "s_13a5lel": {
+      "file": "assets/-lQuI1ai.js",
+      "kind": "native"
+    },
+    "s_tmt35d": {
+      "file": "assets/5Dl0Wc4X.js",
+      "kind": "native"
+    },
+    "s_1enk31a": {
+      "file": "assets/8PY9rcRK.js",
+      "kind": "native"
+    },
+    "s_1vep3iq": {
+      "file": "assets/8irVFfvY2.js",
+      "kind": "native"
+    },
+    "s_kwxvl3": {
+      "file": "assets/s_kwxvl3.js",
       "kind": "vm"
     },
-    "s_7tk40d": {
-      "file": "assets/s_7tk40d.js",
+    "s_1s6ozyh": {
+      "file": "assets/s_1s6ozyh.js",
       "kind": "vm"
     },
-    "s_1azib6s": {
-      "file": "assets/s_1azib6s.js",
+    "s_1jh0ph5": {
+      "file": "assets/9CIiGTD02.js",
+      "kind": "native"
+    },
+    "s_18ne7q": {
+      "file": "assets/Aam5Crd1.js",
+      "kind": "native"
+    },
+    "s_gl8uuh": {
+      "file": "assets/B12hiDBU.js",
+      "kind": "native"
+    },
+    "s_w4w0qv": {
+      "file": "assets/s_w4w0qv.js",
       "kind": "vm"
     },
-    "s_wkztzk": {
-      "file": "assets/s_wkztzk.js",
+    "s_47ywth": {
+      "file": "assets/B9rxwatl.js",
+      "kind": "native"
+    },
+    "s_146knzc": {
+      "file": "assets/BAfDOjHJ.js",
+      "kind": "native"
+    },
+    "s_12ijyyz": {
+      "file": "assets/BCDPGCyU2.js",
+      "kind": "native"
+    },
+    "s_14clkq2": {
+      "file": "assets/BE4S4p7W2.js",
+      "kind": "native"
+    },
+    "s_dl0hiz": {
+      "file": "assets/BEkg9rKF.js",
+      "kind": "native"
+    },
+    "s_s6bfx7": {
+      "file": "assets/s_s6bfx7.js",
       "kind": "vm"
     },
-    "s_r4htpg": {
-      "file": "assets/s_r4htpg.js",
+    "s_1ciwpw7": {
+      "file": "assets/BG-IjnDB2.js",
+      "kind": "native"
+    },
+    "s_1izju77": {
+      "file": "assets/s_1izju77.js",
       "kind": "vm"
     },
-    "s_3mmjsh": {
-      "file": "assets/s_3mmjsh.js",
+    "s_cw0ev8": {
+      "file": "assets/s_cw0ev8.js",
       "kind": "vm"
     },
-    "s_1hovj4g": {
-      "file": "assets/s_1hovj4g.js",
+    "s_1rrdc5n": {
+      "file": "assets/BJQ9HzHg.js",
+      "kind": "native"
+    },
+    "s_1hjp65y": {
+      "file": "assets/s_1hjp65y.js",
       "kind": "vm"
     },
-    "s_t0spdj": {
-      "file": "assets/s_t0spdj.js",
+    "s_xsvpdy": {
+      "file": "assets/BKTDHP8s2.js",
+      "kind": "native"
+    },
+    "s_44sfek": {
+      "file": "assets/BKUq7F792.js",
+      "kind": "native"
+    },
+    "s_1se1puf": {
+      "file": "assets/s_1se1puf.js",
       "kind": "vm"
     },
-    "s_jv2fms": {
-      "file": "assets/s_jv2fms.js",
+    "s_w8h512": {
+      "file": "assets/BLB8W_t0.js",
+      "kind": "native"
+    },
+    "s_accof": {
+      "file": "assets/BM6uvbRQ.js",
+      "kind": "native"
+    },
+    "s_1eyu9hb": {
+      "file": "assets/s_1eyu9hb.js",
       "kind": "vm"
     },
-    "s_obhus2": {
-      "file": "assets/s_obhus2.js",
+    "s_15rf7s5": {
+      "file": "assets/BR-iL3xZ2.js",
+      "kind": "native"
+    },
+    "s_1gvx7d": {
+      "file": "assets/s_1gvx7d.js",
       "kind": "vm"
     },
-    "s_19pwf6h": {
-      "file": "assets/s_19pwf6h.js",
+    "s_9bizx": {
+      "file": "assets/BRXrK47M2.js",
+      "kind": "native"
+    },
+    "s_wcafg": {
+      "file": "assets/BT-xVFx1.js",
+      "kind": "native"
+    },
+    "s_1attwhg": {
+      "file": "assets/BWjGszs6.js",
+      "kind": "native"
+    },
+    "s_kb7ny3": {
+      "file": "assets/BWtUIRAA.js",
+      "kind": "native"
+    },
+    "s_1ck6tle": {
+      "file": "assets/BYVmZmUv.js",
+      "kind": "native"
+    },
+    "s_5pjul8": {
+      "file": "assets/s_5pjul8.js",
       "kind": "vm"
     },
-    "s_1jzx0m6": {
-      "file": "assets/s_1jzx0m6.js",
+    "s_q9o73a": {
+      "file": "assets/BbmzTCbF.js",
+      "kind": "native"
+    },
+    "s_jjmn84": {
+      "file": "assets/Bi9ObN2A2.js",
+      "kind": "native"
+    },
+    "s_1av0ned": {
+      "file": "assets/BihN36HS.js",
+      "kind": "native"
+    },
+    "s_1mfexet": {
+      "file": "assets/Bk9_d80N2.js",
+      "kind": "native"
+    },
+    "s_h5ofdd": {
+      "file": "assets/s_h5ofdd.js",
       "kind": "vm"
     },
-    "s_nl43ch": {
-      "file": "assets/s_nl43ch.js",
+    "s_n15eg6": {
+      "file": "assets/Bq88pJxc2.js",
+      "kind": "native"
+    },
+    "s_bdhmt9": {
+      "file": "assets/s_bdhmt9.js",
       "kind": "vm"
     },
-    "s_1t1bi0p": {
-      "file": "assets/s_1t1bi0p.js",
+    "s_fjg7rf": {
+      "file": "assets/BtCWIdCc2.js",
+      "kind": "native"
+    },
+    "s_1b75qty": {
+      "file": "assets/Bv6hnigZ.js",
+      "kind": "native"
+    },
+    "s_9a25wi": {
+      "file": "assets/s_9a25wi.js",
       "kind": "vm"
     },
-    "s_fmvhjf": {
-      "file": "assets/s_fmvhjf.js",
+    "s_tokkgz": {
+      "file": "assets/s_tokkgz.js",
       "kind": "vm"
     },
-    "s_12dbwul": {
-      "file": "assets/s_12dbwul.js",
+    "s_1gqc20b": {
+      "file": "assets/C1W8bBbv2.js",
+      "kind": "native"
+    },
+    "s_1txee6": {
+      "file": "assets/C2GnepyR2.js",
+      "kind": "native"
+    },
+    "s_s88cwe": {
+      "file": "assets/s_s88cwe.js",
       "kind": "vm"
     },
-    "s_1smxj2l": {
-      "file": "assets/s_1smxj2l.js",
+    "s_1vaa1j": {
+      "file": "assets/s_1vaa1j.js",
       "kind": "vm"
     },
-    "s_2b0n36": {
-      "file": "assets/s_2b0n36.js",
+    "s_tkzm8c": {
+      "file": "assets/s_tkzm8c.js",
       "kind": "vm"
     },
-    "s_13jvbcd": {
-      "file": "assets/s_13jvbcd.js",
+    "s_1k8addp": {
+      "file": "assets/s_1k8addp.js",
       "kind": "vm"
     },
-    "s_1qcob2h": {
-      "file": "assets/s_1qcob2h.js",
+    "s_1s24x26": {
+      "file": "assets/s_1s24x26.js",
       "kind": "vm"
     },
-    "s_4vwxqm": {
-      "file": "assets/s_4vwxqm.js",
+    "s_1ef5out": {
+      "file": "assets/CDcOKs9W.js",
+      "kind": "native"
+    },
+    "s_1x8r673": {
+      "file": "assets/s_1x8r673.js",
       "kind": "vm"
     },
-    "s_fwaqe8": {
-      "file": "assets/s_fwaqe8.js",
+    "s_c64nyn": {
+      "file": "assets/CF3FHeko.js",
+      "kind": "native"
+    },
+    "s_zz12aq": {
+      "file": "assets/CFcZed7p.js",
+      "kind": "native"
+    },
+    "s_17ihtcm": {
+      "file": "assets/s_17ihtcm.js",
       "kind": "vm"
     },
-    "s_1cxb1ur": {
-      "file": "assets/s_1cxb1ur.js",
+    "s_b7622i": {
+      "file": "assets/s_b7622i.js",
       "kind": "vm"
     },
-    "s_1wer1h6": {
-      "file": "assets/s_1wer1h6.js",
+    "s_whsrdv": {
+      "file": "assets/CIAnpOCp.js",
+      "kind": "native"
+    },
+    "s_1n1kkln": {
+      "file": "assets/CL0vdGW6.js",
+      "kind": "native"
+    },
+    "s_12c4tq4": {
+      "file": "assets/s_12c4tq4.js",
       "kind": "vm"
     },
-    "s_14kghcy": {
-      "file": "assets/s_14kghcy.js",
+    "s_6snpvw": {
+      "file": "assets/CMLSb3s_2.js",
+      "kind": "native"
+    },
+    "s_unrce4": {
+      "file": "assets/CNYuHSFD2.js",
+      "kind": "native"
+    },
+    "s_l5km8f": {
+      "file": "assets/CPi5ul-L.js",
+      "kind": "native"
+    },
+    "s_12dc9b7": {
+      "file": "assets/CSIuuWvE.js",
+      "kind": "native"
+    },
+    "s_m14l2s": {
+      "file": "assets/CTLoIWea2.js",
+      "kind": "native"
+    },
+    "s_bohh9t": {
+      "file": "assets/s_bohh9t.js",
       "kind": "vm"
     },
-    "s_1xmxn3j": {
-      "file": "assets/s_1xmxn3j.js",
+    "s_142sqhd": {
+      "file": "assets/s_142sqhd.js",
       "kind": "vm"
     },
-    "s_13i3phw": {
-      "file": "assets/s_13i3phw.js",
+    "s_vn40fs": {
+      "file": "assets/s_vn40fs.js",
       "kind": "vm"
     },
-    "s_10aypr1": {
-      "file": "assets/s_10aypr1.js",
+    "s_io79cw": {
+      "file": "assets/CXFV2-Fh.js",
+      "kind": "native"
+    },
+    "s_v6h5r3": {
+      "file": "assets/CYzBsG5V.js",
+      "kind": "native"
+    },
+    "s_3eleib": {
+      "file": "assets/CZTsZYs32.js",
+      "kind": "native"
+    },
+    "s_1qghfkf": {
+      "file": "assets/CaJzKEyF2.js",
+      "kind": "native"
+    },
+    "s_zhinsr": {
+      "file": "assets/CbFDSzJ-2.js",
+      "kind": "native"
+    },
+    "s_ynd8ds": {
+      "file": "assets/CjGgBwga.js",
+      "kind": "native"
+    },
+    "s_1g1kyt9": {
+      "file": "assets/ClXX9xHw.js",
+      "kind": "native"
+    },
+    "s_ag43ji": {
+      "file": "assets/ClxaxTsK2.js",
+      "kind": "native"
+    },
+    "s_1j50152": {
+      "file": "assets/CnB7T7-p.js",
+      "kind": "native"
+    },
+    "s_1yavx1n": {
+      "file": "assets/Cr-9EY3i.js",
+      "kind": "native"
+    },
+    "s_1tju3em": {
+      "file": "assets/s_1tju3em.js",
       "kind": "vm"
     },
-    "s_1y6hrif": {
-      "file": "assets/s_1y6hrif.js",
+    "s_1udlndk": {
+      "file": "assets/CvDw6USR.js",
+      "kind": "native"
+    },
+    "s_9x3f98": {
+      "file": "assets/D4ji77Qj.js",
+      "kind": "native"
+    },
+    "s_1lvn8cr": {
+      "file": "assets/s_1lvn8cr.js",
       "kind": "vm"
     },
-    "s_vajkrn": {
-      "file": "assets/s_vajkrn.js",
+    "s_1kar3a0": {
+      "file": "assets/DBBwIoEP2.js",
+      "kind": "native"
+    },
+    "s_xkk605": {
+      "file": "assets/DDarweVx2.js",
+      "kind": "native"
+    },
+    "s_ok4smd": {
+      "file": "assets/s_ok4smd.js",
       "kind": "vm"
     },
-    "s_15d4xpb": {
-      "file": "assets/s_15d4xpb.js",
+    "s_cbqhoe": {
+      "file": "assets/DK2j0BN1.js",
+      "kind": "native"
+    },
+    "s_e82wt2": {
+      "file": "assets/DMWlsFli2.js",
+      "kind": "native"
+    },
+    "s_qagps1": {
+      "file": "assets/DXZxg-J-.js",
+      "kind": "native"
+    },
+    "s_4ysjs2": {
+      "file": "assets/D_4OLQjE2.js",
+      "kind": "native"
+    },
+    "s_objv98": {
+      "file": "assets/DfaKsCb22.js",
+      "kind": "native"
+    },
+    "s_k6sjl5": {
+      "file": "assets/DjbQEVGZ2.js",
+      "kind": "native"
+    },
+    "s_185m97a": {
+      "file": "assets/s_185m97a.js",
       "kind": "vm"
     },
-    "s_5yv5rw": {
-      "file": "assets/s_5yv5rw.js",
+    "s_10to3vk": {
+      "file": "assets/DpGFKUOn.js",
+      "kind": "native"
+    },
+    "s_hv9uq1": {
+      "file": "assets/DpRfrvKn2.js",
+      "kind": "native"
+    },
+    "s_16w2l7o": {
+      "file": "assets/DpTn0jsQ.js",
+      "kind": "native"
+    },
+    "s_1tkkex7": {
+      "file": "assets/DxP-Y_3m2.js",
+      "kind": "native"
+    },
+    "s_1lcxeac": {
+      "file": "assets/s_1lcxeac.js",
       "kind": "vm"
     },
-    "s_1age21y": {
-      "file": "assets/s_1age21y.js",
+    "s_s03p3m": {
+      "file": "assets/LNt1nIIU.js",
+      "kind": "native"
+    },
+    "s_1gc5m99": {
+      "file": "assets/M4_Wq7th.js",
+      "kind": "native"
+    },
+    "s_y6gq6u": {
+      "file": "assets/Mkj5rnLi.js",
+      "kind": "native"
+    },
+    "s_w3dvnm": {
+      "file": "assets/QMZbsmnR2.js",
+      "kind": "native"
+    },
+    "s_acefzr": {
+      "file": "assets/WxYPVeKk.js",
+      "kind": "native"
+    },
+    "s_1t6bakp": {
+      "file": "assets/s_1t6bakp.js",
       "kind": "vm"
     },
-    "s_gznogf": {
-      "file": "assets/s_gznogf.js",
+    "s_b5umjm": {
+      "file": "assets/bs7ms8lz.js",
+      "kind": "native"
+    },
+    "s_18acsjn": {
+      "file": "assets/cwrhPacw.js",
+      "kind": "native"
+    },
+    "s_1o0znj0": {
+      "file": "assets/doleivQD.js",
+      "kind": "native"
+    },
+    "s_ih2hp8": {
+      "file": "assets/hqKn6kiH.js",
+      "kind": "native"
+    },
+    "s_243l19": {
+      "file": "assets/jIJngRUz.js",
+      "kind": "native"
+    },
+    "s_czro4y": {
+      "file": "assets/jfMzLHC6.js",
+      "kind": "native"
+    },
+    "s_3okxks": {
+      "file": "assets/jsnqInwR2.js",
+      "kind": "native"
+    },
+    "s_1kske4n": {
+      "file": "assets/s_1kske4n.js",
       "kind": "vm"
+    },
+    "s_1em5yxq": {
+      "file": "assets/nLnKz2K4.js",
+      "kind": "native"
+    },
+    "s_1bk6793": {
+      "file": "assets/oF8hPnq32.js",
+      "kind": "native"
+    },
+    "s_1imdxpe": {
+      "file": "assets/qn35M0x4.js",
+      "kind": "native"
+    },
+    "s_6q5ynv": {
+      "file": "assets/s_6q5ynv.js",
+      "kind": "vm"
+    },
+    "s_10t5te3": {
+      "file": "assets/uHS8k_D3.js",
+      "kind": "native"
     }
   },
   "chunks": [
     {
-      "rawBytes": 100245,
+      "rawBytes": 88043,
       "isEntry": true,
       "decision": "vm",
-      "id": "s_11nj44v",
-      "functions": 592,
-      "consts": 2427,
-      "encryptedBytes": 267760
+      "id": "s_2fbt7u",
+      "functions": 457,
+      "consts": 2274,
+      "encryptedBytes": 200003
     },
     {
-      "rawBytes": 1291,
+      "rawBytes": 14140,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_k9djpb",
-      "functions": 9,
-      "consts": 55,
-      "encryptedBytes": 9232
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_13a5lel"
     },
     {
-      "rawBytes": 5523,
+      "rawBytes": 51978,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_7tk40d",
-      "functions": 8,
-      "consts": 216,
-      "encryptedBytes": 12541
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_tmt35d"
     },
     {
-      "rawBytes": 3601,
+      "rawBytes": 19397,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_1azib6s",
-      "functions": 32,
-      "consts": 102,
-      "encryptedBytes": 14533
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1enk31a"
     },
     {
-      "rawBytes": 19879,
+      "rawBytes": 6833,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_wkztzk",
-      "functions": 68,
-      "consts": 502,
-      "encryptedBytes": 45669
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1vep3iq"
     },
     {
-      "rawBytes": 1084,
+      "rawBytes": 46589,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_r4htpg",
-      "functions": 10,
+      "id": "s_kwxvl3",
+      "functions": 43,
+      "consts": 618,
+      "encryptedBytes": 76174
+    },
+    {
+      "rawBytes": 20508,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1s6ozyh",
+      "functions": 116,
+      "consts": 1037,
+      "encryptedBytes": 55921
+    },
+    {
+      "rawBytes": 26913,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1jh0ph5"
+    },
+    {
+      "rawBytes": 14923,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_18ne7q"
+    },
+    {
+      "rawBytes": 11397,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_gl8uuh"
+    },
+    {
+      "rawBytes": 4554,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_w4w0qv",
+      "functions": 35,
+      "consts": 171,
+      "encryptedBytes": 17258
+    },
+    {
+      "rawBytes": 13286,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_47ywth"
+    },
+    {
+      "rawBytes": 15448,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_146knzc"
+    },
+    {
+      "rawBytes": 17789,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_12ijyyz"
+    },
+    {
+      "rawBytes": 13628,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_14clkq2"
+    },
+    {
+      "rawBytes": 11756,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_dl0hiz"
+    },
+    {
+      "rawBytes": 638,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_s6bfx7",
+      "functions": 6,
       "consts": 32,
-      "encryptedBytes": 8020
+      "encryptedBytes": 7174
     },
     {
-      "rawBytes": 6762,
+      "rawBytes": 13673,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_3mmjsh",
-      "functions": 39,
-      "consts": 184,
-      "encryptedBytes": 29958
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1ciwpw7"
     },
     {
-      "rawBytes": 60,
+      "rawBytes": 17461,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1hovj4g",
-      "functions": 1,
-      "consts": 2,
-      "encryptedBytes": 5254
+      "id": "s_1izju77",
+      "functions": 54,
+      "consts": 397,
+      "encryptedBytes": 41859
     },
     {
-      "rawBytes": 36132,
+      "rawBytes": 3280,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_t0spdj",
-      "functions": 123,
-      "consts": 713,
-      "encryptedBytes": 80827
-    },
-    {
-      "rawBytes": 218906,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_jv2fms",
-      "functions": 877,
-      "consts": 3304,
-      "encryptedBytes": 545169
-    },
-    {
-      "rawBytes": 1992,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_obhus2",
-      "functions": 3,
-      "consts": 84,
-      "encryptedBytes": 9302
-    },
-    {
-      "rawBytes": 326780,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_19pwf6h",
-      "functions": 133,
-      "consts": 3181,
-      "encryptedBytes": 427712
-    },
-    {
-      "rawBytes": 698011,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1jzx0m6",
-      "functions": 423,
-      "consts": 7281,
-      "encryptedBytes": 871762
-    },
-    {
-      "rawBytes": 696,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_nl43ch",
-      "functions": 3,
-      "consts": 40,
-      "encryptedBytes": 7800
-    },
-    {
-      "rawBytes": 53719,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1t1bi0p",
-      "functions": 373,
-      "consts": 1066,
-      "encryptedBytes": 137253
-    },
-    {
-      "rawBytes": 6412,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_fmvhjf",
+      "id": "s_cw0ev8",
       "functions": 15,
-      "consts": 209,
-      "encryptedBytes": 20072
+      "consts": 97,
+      "encryptedBytes": 13672
     },
     {
-      "rawBytes": 482,
+      "rawBytes": 20156,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_12dbwul",
-      "functions": 4,
-      "consts": 24,
-      "encryptedBytes": 7007
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1rrdc5n"
     },
     {
-      "rawBytes": 14573,
+      "rawBytes": 113218,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1smxj2l",
-      "functions": 42,
-      "consts": 318,
-      "encryptedBytes": 33360
+      "id": "s_1hjp65y",
+      "functions": 645,
+      "consts": 2840,
+      "encryptedBytes": 274729
+    },
+    {
+      "rawBytes": 12554,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_xsvpdy"
+    },
+    {
+      "rawBytes": 53100,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_44sfek"
     },
     {
       "rawBytes": 272025,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_2b0n36",
+      "id": "s_1se1puf",
       "functions": 1714,
       "consts": 5597,
-      "encryptedBytes": 696781
+      "encryptedBytes": 674014
     },
     {
-      "rawBytes": 30974,
+      "rawBytes": 1084,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_13jvbcd",
-      "functions": 21,
-      "consts": 894,
-      "encryptedBytes": 62567
+      "decision": "native",
+      "reason": "imported by a native chunk (@no-vm frontier)",
+      "id": "s_w8h512"
     },
     {
-      "rawBytes": 121448,
+      "rawBytes": 22509,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_1qcob2h",
-      "functions": 768,
-      "consts": 2299,
-      "encryptedBytes": 290644
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_accof"
     },
     {
-      "rawBytes": 6371,
+      "rawBytes": 1385,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_4vwxqm",
-      "functions": 69,
-      "consts": 211,
-      "encryptedBytes": 22326
+      "id": "s_1eyu9hb",
+      "functions": 7,
+      "consts": 87,
+      "encryptedBytes": 7876
     },
     {
-      "rawBytes": 1052550,
+      "rawBytes": 14194,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_fwaqe8",
-      "functions": 2226,
-      "consts": 19269,
-      "encryptedBytes": 1977471
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_15rf7s5"
     },
     {
-      "rawBytes": 5502,
+      "rawBytes": 38466,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1cxb1ur",
+      "id": "s_1gvx7d",
+      "functions": 166,
+      "consts": 730,
+      "encryptedBytes": 90059
+    },
+    {
+      "rawBytes": 16613,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_9bizx"
+    },
+    {
+      "rawBytes": 17870,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "excluded by plugin options (worker / polyfill / runtime glue)",
+      "id": "s_wcafg"
+    },
+    {
+      "rawBytes": 13005,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1attwhg"
+    },
+    {
+      "rawBytes": 11063,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_kb7ny3"
+    },
+    {
+      "rawBytes": 13303,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1ck6tle"
+    },
+    {
+      "rawBytes": 12868,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_5pjul8",
+      "functions": 23,
+      "consts": 295,
+      "encryptedBytes": 28505
+    },
+    {
+      "rawBytes": 218906,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_q9o73a"
+    },
+    {
+      "rawBytes": 12000,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_jjmn84"
+    },
+    {
+      "rawBytes": 13668,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1av0ned"
+    },
+    {
+      "rawBytes": 13858,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1mfexet"
+    },
+    {
+      "rawBytes": 696,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_h5ofdd",
+      "functions": 3,
+      "consts": 40,
+      "encryptedBytes": 7735
+    },
+    {
+      "rawBytes": 6505,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_n15eg6"
+    },
+    {
+      "rawBytes": 1902,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_bdhmt9",
+      "functions": 22,
+      "consts": 69,
+      "encryptedBytes": 10794
+    },
+    {
+      "rawBytes": 11065,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_fjg7rf"
+    },
+    {
+      "rawBytes": 11225,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1b75qty"
+    },
+    {
+      "rawBytes": 6342,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_9a25wi",
+      "functions": 62,
+      "consts": 182,
+      "encryptedBytes": 22592
+    },
+    {
+      "rawBytes": 1331,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_tokkgz",
+      "functions": 9,
+      "consts": 55,
+      "encryptedBytes": 9241
+    },
+    {
+      "rawBytes": 22620,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1gqc20b"
+    },
+    {
+      "rawBytes": 5340,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_1txee6"
+    },
+    {
+      "rawBytes": 2082,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_s88cwe",
+      "functions": 16,
+      "consts": 91,
+      "encryptedBytes": 10503
+    },
+    {
+      "rawBytes": 12097,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1vaa1j",
+      "functions": 64,
+      "consts": 375,
+      "encryptedBytes": 32809
+    },
+    {
+      "rawBytes": 5476,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_tkzm8c",
       "functions": 39,
       "consts": 197,
-      "encryptedBytes": 19948
+      "encryptedBytes": 19681
     },
     {
-      "rawBytes": 30394,
+      "rawBytes": 1702,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_1wer1h6",
-      "functions": 126,
-      "consts": 618,
-      "encryptedBytes": 74636
+      "id": "s_1k8addp",
+      "functions": 15,
+      "consts": 66,
+      "encryptedBytes": 9432
     },
     {
-      "rawBytes": 2576,
+      "rawBytes": 61,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_14kghcy",
-      "functions": 27,
-      "consts": 93,
-      "encryptedBytes": 12388
+      "id": "s_1s24x26",
+      "functions": 1,
+      "consts": 2,
+      "encryptedBytes": 5248
     },
     {
-      "rawBytes": 3606,
+      "rawBytes": 15501,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_1xmxn3j",
-      "functions": 9,
-      "consts": 113,
-      "encryptedBytes": 13977
-    },
-    {
-      "rawBytes": 14617,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_13i3phw",
-      "functions": 8,
-      "consts": 122,
-      "encryptedBytes": 24571
-    },
-    {
-      "rawBytes": 12720,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_10aypr1",
-      "functions": 85,
-      "consts": 333,
-      "encryptedBytes": 34224
-    },
-    {
-      "rawBytes": 3690,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_1y6hrif",
-      "functions": 17,
-      "consts": 107,
-      "encryptedBytes": 15332
-    },
-    {
-      "rawBytes": 4551,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_vajkrn",
-      "functions": 35,
-      "consts": 171,
-      "encryptedBytes": 17377
-    },
-    {
-      "rawBytes": 1955,
-      "isEntry": false,
-      "decision": "vm",
-      "id": "s_15d4xpb",
-      "functions": 16,
-      "consts": 75,
-      "encryptedBytes": 9689
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1ef5out"
     },
     {
       "rawBytes": 1626,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_5yv5rw",
+      "id": "s_1x8r673",
       "functions": 13,
       "consts": 88,
-      "encryptedBytes": 9168
+      "encryptedBytes": 9125
     },
     {
-      "rawBytes": 683739,
+      "rawBytes": 144521,
       "isEntry": false,
-      "decision": "vm",
-      "id": "s_1age21y",
-      "functions": 2643,
-      "consts": 20050,
-      "encryptedBytes": 1438654
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_c64nyn"
     },
     {
-      "rawBytes": 2056,
+      "rawBytes": 36966,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_zz12aq"
+    },
+    {
+      "rawBytes": 153007,
       "isEntry": false,
       "decision": "vm",
-      "id": "s_gznogf",
-      "functions": 16,
-      "consts": 91,
-      "encryptedBytes": 10554
+      "id": "s_17ihtcm",
+      "functions": 1043,
+      "consts": 2901,
+      "encryptedBytes": 364135
+    },
+    {
+      "rawBytes": 22395,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_b7622i",
+      "functions": 67,
+      "consts": 433,
+      "encryptedBytes": 42585
+    },
+    {
+      "rawBytes": 10588,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_whsrdv"
+    },
+    {
+      "rawBytes": 12230,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1n1kkln"
+    },
+    {
+      "rawBytes": 121312,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_12c4tq4",
+      "functions": 767,
+      "consts": 2295,
+      "encryptedBytes": 284049
+    },
+    {
+      "rawBytes": 19026,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_6snpvw"
+    },
+    {
+      "rawBytes": 24314,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_unrce4"
+    },
+    {
+      "rawBytes": 19920,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_l5km8f"
+    },
+    {
+      "rawBytes": 9789,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_12dc9b7"
+    },
+    {
+      "rawBytes": 13605,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_m14l2s"
+    },
+    {
+      "rawBytes": 326755,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_bohh9t",
+      "functions": 133,
+      "consts": 3181,
+      "encryptedBytes": 428423
+    },
+    {
+      "rawBytes": 24717,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_142sqhd",
+      "functions": 98,
+      "consts": 606,
+      "encryptedBytes": 54046
+    },
+    {
+      "rawBytes": 2063,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_vn40fs",
+      "functions": 3,
+      "consts": 112,
+      "encryptedBytes": 8207
+    },
+    {
+      "rawBytes": 22321,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_io79cw"
+    },
+    {
+      "rawBytes": 19578,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_v6h5r3"
+    },
+    {
+      "rawBytes": 10823,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_3eleib"
+    },
+    {
+      "rawBytes": 16093,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1qghfkf"
+    },
+    {
+      "rawBytes": 20753,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_zhinsr"
+    },
+    {
+      "rawBytes": 1213,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_ynd8ds"
+    },
+    {
+      "rawBytes": 23066,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1g1kyt9"
+    },
+    {
+      "rawBytes": 18127,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_ag43ji"
+    },
+    {
+      "rawBytes": 17518,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1j50152"
+    },
+    {
+      "rawBytes": 33740,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1yavx1n"
+    },
+    {
+      "rawBytes": 47755,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1tju3em",
+      "functions": 185,
+      "consts": 919,
+      "encryptedBytes": 105612
+    },
+    {
+      "rawBytes": 12424,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1udlndk"
+    },
+    {
+      "rawBytes": 15754,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_9x3f98"
+    },
+    {
+      "rawBytes": 2576,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1lvn8cr",
+      "functions": 27,
+      "consts": 93,
+      "encryptedBytes": 12223
+    },
+    {
+      "rawBytes": 24779,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1kar3a0"
+    },
+    {
+      "rawBytes": 3445,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_xkk605"
+    },
+    {
+      "rawBytes": 33820,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_ok4smd",
+      "functions": 38,
+      "consts": 529,
+      "encryptedBytes": 59203
+    },
+    {
+      "rawBytes": 11215,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_cbqhoe"
+    },
+    {
+      "rawBytes": 14723,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_e82wt2"
+    },
+    {
+      "rawBytes": 15890,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_qagps1"
+    },
+    {
+      "rawBytes": 13953,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_4ysjs2"
+    },
+    {
+      "rawBytes": 19565,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_objv98"
+    },
+    {
+      "rawBytes": 14467,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_k6sjl5"
+    },
+    {
+      "rawBytes": 1530,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_185m97a",
+      "functions": 10,
+      "consts": 54,
+      "encryptedBytes": 9201
+    },
+    {
+      "rawBytes": 18587,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_10to3vk"
+    },
+    {
+      "rawBytes": 10197,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_hv9uq1"
+    },
+    {
+      "rawBytes": 11967,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_16w2l7o"
+    },
+    {
+      "rawBytes": 53013,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1tkkex7"
+    },
+    {
+      "rawBytes": 17991,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1lcxeac",
+      "functions": 11,
+      "consts": 155,
+      "encryptedBytes": 28588
+    },
+    {
+      "rawBytes": 22270,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_s03p3m"
+    },
+    {
+      "rawBytes": 496125,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1gc5m99"
+    },
+    {
+      "rawBytes": 15109,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_y6gq6u"
+    },
+    {
+      "rawBytes": 8950,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_w3dvnm"
+    },
+    {
+      "rawBytes": 16411,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_acefzr"
+    },
+    {
+      "rawBytes": 483,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1t6bakp",
+      "functions": 4,
+      "consts": 24,
+      "encryptedBytes": 6981
+    },
+    {
+      "rawBytes": 1208,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "imported by a native chunk (@no-vm frontier)",
+      "id": "s_b5umjm"
+    },
+    {
+      "rawBytes": 7142,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_18acsjn"
+    },
+    {
+      "rawBytes": 25223,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1o0znj0"
+    },
+    {
+      "rawBytes": 20218,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_ih2hp8"
+    },
+    {
+      "rawBytes": 340345,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_243l19"
+    },
+    {
+      "rawBytes": 1052550,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_czro4y"
+    },
+    {
+      "rawBytes": 20506,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "tagged templates not supported",
+      "id": "s_3okxks"
+    },
+    {
+      "rawBytes": 1990,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_1kske4n",
+      "functions": 3,
+      "consts": 84,
+      "encryptedBytes": 9285
+    },
+    {
+      "rawBytes": 18958,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1em5yxq"
+    },
+    {
+      "rawBytes": 12054,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1bk6793"
+    },
+    {
+      "rawBytes": 12752,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_1imdxpe"
+    },
+    {
+      "rawBytes": 14621,
+      "isEntry": false,
+      "decision": "vm",
+      "id": "s_6q5ynv",
+      "functions": 42,
+      "consts": 318,
+      "encryptedBytes": 32875
+    },
+    {
+      "rawBytes": 18860,
+      "isEntry": false,
+      "decision": "native",
+      "reason": "third-party only (nativeVendorChunks)",
+      "id": "s_10t5te3"
     }
   ]
 }

@@ -1,4 +1,4 @@
-/*__ABX_OBF__*/var __abx$c8da24=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("6qLiPrZ1NyX6vRQbavtcf3uA/7vofQRlDSd73vnOBKM="),P=["Ug/hQKHFOceeIJx/yj7LJq+36YY=","zZv5f6Oe2cMHFWkGlRpSYg4onaetuGxHJxz3tA==","fbovQvYkXsjLOOAp3DMl5Eagzxw=","nUmxHaUzGmRFbMZaZ188P+/Qm/KChQ==","O7rzVgSfEL13cCyoEh027TEO2Hy26dg7FTHl","et+jg55Hvu1HXPMzb259d0r7xw2xLEj0hg==","1vZPLEEDBGbGJu8VSw==","KEElnqfSAvMM5/of4XOMeA=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
+/*__ABX_OBF__*/var __abx$a88fd9=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("2H8Q8BVOyIcY6rhk39fCyysv1IcN3qxLfU9cZ/Gm5q4="),P=["JGCNxcibP7NvbW6yz3+SrJp37rE=","LpGbHQrwo/l0daWgk06m0UFuUbJsXa+WY8KBjg==","K4yPlgyYYTpYsQj4VnRORO9UGN0=","OcXx5DRx7kRRN+r/6jCUBTHvF5bPUA==","o1+xLN4h7YSRLR0M3elGmD4wa9r9Tzq5Wdrk","zs9rkS41fVAQDMo2SEpLcRci3u3rAa/0Jg==","Vc9lZ87cfmripb9Pwg==","J92pPJ0zRuz1XcTARpYkrw=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -245,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { DrtjsgidClient: () => g });
+        r.r(t), r.d(t, { KybcogpgClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -274,7 +274,7 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a drtjsgid client, but one is already loaded - this is very bad"
+                  "attempted to initialize a kybcogpg client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
@@ -304,8 +304,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$drtjsgid$type" in t &&
-                          "kkpvbxdinit" === t.$drtjsgid$type &&
+                          "$kybcogpg$type" in t &&
+                          "cvgsomginit" === t.$kybcogpg$type &&
                           e(t.port);
                       });
                     })
@@ -409,7 +409,7 @@
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new DrtjsgidFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new KybcogpgFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -432,7 +432,7 @@
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new DrtjsgidFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new KybcogpgFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -443,7 +443,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new DrtjsgidFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new KybcogpgFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -587,7 +587,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM DRTJSGID INTERNALS", e);
+                          console.error("ERROR FROM KYBCOGPG INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -692,8 +692,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("drtjsgid-attr-") ||
-                          t[r]?.name?.startsWith("drtjsgid-attr-")
+                          r.startsWith("kybcogpg-attr-") ||
+                          t[r]?.name?.startsWith("kybcogpg-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -726,11 +726,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("drtjsgid$type" in t && "cookie" === t.drtjsgid$type) {
+            if ("kybcogpg$type" in t && "cookie" === t.kybcogpg$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                drtjsgid$token: t.drtjsgid$token,
-                drtjsgid$type: "cookie",
+                kybcogpg$token: t.kybcogpg$token,
+                kybcogpg$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -745,7 +745,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    drtjsgid$type: "cookie",
+                    kybcogpg$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -979,34 +979,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("drtjsgid-attr")) return t.return(null);
+                if (r.startsWith("kybcogpg-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `drtjsgid-attr-${r}`
+                    `kybcogpg-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `drtjsgid-attr-${r}`);
+                  let e = t.fn.call(t.this, `kybcogpg-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("drtjsgid-attr"));
+                let t = e.call().filter((e) => !e.startsWith("kybcogpg-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("drtjsgid-attr"))
+                if (e.args[0].startsWith("kybcogpg-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("drtjsgid-attr")) return e.return(!1);
+                if (e.args[0].startsWith("kybcogpg-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1033,7 +1033,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `drtjsgid-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `kybcogpg-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1055,7 +1055,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `drtjsgid-attr-${t.args[1]}`,
+                    `kybcogpg-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1077,23 +1077,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("drtjsgid-attr"))
+                if (t.args[0].startsWith("kybcogpg-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `drtjsgid-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `kybcogpg-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("drtjsgid-attr")) return t.return(!1);
+                if (t.args[0].startsWith("kybcogpg-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `drtjsgid-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `kybcogpg-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1104,7 +1104,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "drtjsgid-attr-script-source-src",
+                      "kybcogpg-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1126,7 +1126,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "drtjsgid-attr-script-source-src"
+                    "kybcogpg-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1204,7 +1204,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.DrtjsgidClient(t).hook()), t;
+                  return t && (l.pX in t || new c.KybcogpgClient(t).hook()), t;
                 },
               }
             ),
@@ -1222,7 +1222,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.DrtjsgidClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.KybcogpgClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1314,7 +1314,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.DrtjsgidClient(r);
+                let e = new n.KybcogpgClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1435,7 +1435,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    drtjsgid$type: "registerServiceWorker",
+                    kybcogpg$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1535,11 +1535,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing drtjsgid client"),
+            l.log("initializing kybcogpg client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.DrtjsgidClient(globalThis),
+            let e = new s.KybcogpgClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1549,8 +1549,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.DrtjsgidServiceWorkerRuntime(e).hook();
-            let r = new o.DrtjsgidContextEvent(e.global.window, e);
+              f && new a.KybcogpgServiceWorkerRuntime(e).hook();
+            let r = new o.KybcogpgContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1563,8 +1563,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            DrtjsgidContextEvent: () => o,
-            DrtjsgidGlobalDownloadEvent: () => n,
+            KybcogpgContextEvent: () => o,
+            KybcogpgGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1607,10 +1607,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            DrtjsgidClient: () => n.DrtjsgidClient,
-            DrtjsgidContextEvent: () => s.DrtjsgidContextEvent,
-            DrtjsgidGlobalDownloadEvent: () => s.DrtjsgidGlobalDownloadEvent,
-            DrtjsgidServiceWorkerRuntime: () => l.DrtjsgidServiceWorkerRuntime,
+            KybcogpgClient: () => n.KybcogpgClient,
+            KybcogpgContextEvent: () => s.KybcogpgContextEvent,
+            KybcogpgGlobalDownloadEvent: () => s.KybcogpgGlobalDownloadEvent,
+            KybcogpgServiceWorkerRuntime: () => l.KybcogpgServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1983,14 +1983,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("drtjsgid original onevent function");
+        let o = Symbol.for("kybcogpg original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$drtjsgid$type" in this.data)
+                  !("$kybcogpg$type" in this.data)
                 );
               },
               ports() {
@@ -2001,14 +2001,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$drtjsgid$origin" in this.data
-                  ? this.data.$drtjsgid$origin
+                  "$kybcogpg$origin" in this.data
+                  ? this.data.$kybcogpg$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$drtjsgid$data" in this.data
-                  ? this.data.$drtjsgid$data
+                  "$kybcogpg$data" in this.data
+                  ? this.data.$kybcogpg$data
                   : this.data;
               },
             },
@@ -2267,9 +2267,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $drtjsgid$messagetype: "window",
-                  $drtjsgid$origin: r.url.origin,
-                  $drtjsgid$data: e.args[0],
+                  $kybcogpg$messagetype: "window",
+                  $kybcogpg$origin: r.url.origin,
+                  $kybcogpg$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2283,8 +2283,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $drtjsgid$messagetype: "worker",
-                  $drtjsgid$data: e.args[0],
+                  $kybcogpg$messagetype: "worker",
+                  $kybcogpg$data: e.args[0],
                 };
               },
             });
@@ -2293,7 +2293,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("drtjsgid realm pollutant");
+        let i = Symbol.for("kybcogpg realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2769,7 +2769,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $drtjsgid$type: "kkpvbxdinit", port: t },
+                  { $kybcogpg$type: "cvgsomginit", port: t },
                   [t]
                 );
               })();
@@ -2795,7 +2795,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $drtjsgid$type: "kkpvbxdinit", port: t },
+                    { $kybcogpg$type: "cvgsomginit", port: t },
                     [t]
                   );
                 })();
@@ -2938,7 +2938,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes(__abx$c8da24(0)),
+                "string" == typeof e && e.includes(__abx$a88fd9(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2975,7 +2975,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { DrtjsgidServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { KybcogpgServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2988,11 +2988,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "drtjsgid$type" in t.data &&
-                        ("init" === t.data.drtjsgid$type
-                          ? ((this.recvport = t.data.drtjsgid$port),
+                      "kybcogpg$type" in t.data &&
+                        ("init" === t.data.kybcogpg$type
+                          ? ((this.recvport = t.data.kybcogpg$port),
                             this.recvport.postMessage({
-                              drtjsgid$type: "init",
+                              kybcogpg$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -3024,15 +3024,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.drtjsgid$type,
-            o = t.drtjsgid$token,
+            s = t.kybcogpg$type,
+            o = t.kybcogpg$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.drtjsgid$request,
+              let s = t.kybcogpg$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3049,9 +3049,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      drtjsgid$type: "fetch",
-                      drtjsgid$token: o,
-                      drtjsgid$response: {
+                      kybcogpg$type: "fetch",
+                      kybcogpg$token: o,
+                      kybcogpg$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3070,9 +3070,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    drtjsgid$type: "fetch",
-                    drtjsgid$token: o,
-                    drtjsgid$response: !1,
+                    kybcogpg$type: "fetch",
+                    kybcogpg$token: o,
+                    kybcogpg$response: !1,
                   }));
             }
           }
@@ -3108,20 +3108,20 @@
               },
               r = t(
                 {
-                  prefix: "/drtjsgid/",
+                  prefix: "/kybcogpg/",
                   globals: {
-                    wrapfn: "$drtjsgid$wrap",
-                    wrappropertybase: "$drtjsgid__",
-                    wrappropertyfn: "$drtjsgid$prop",
-                    cleanrestfn: "$drtjsgid$clean",
-                    importfn: "$drtjsgid$import",
-                    rewritefn: "$drtjsgid$rewrite",
-                    metafn: "$drtjsgid$meta",
-                    setrealmfn: "$drtjsgid$setrealm",
-                    pushsourcemapfn: "$drtjsgid$pushsourcemap",
-                    trysetfn: "$drtjsgid$tryset",
-                    templocid: "$drtjsgid$temploc",
-                    tempunusedid: "$drtjsgid$tempunused",
+                    wrapfn: "$kybcogpg$wrap",
+                    wrappropertybase: "$kybcogpg__",
+                    wrappropertyfn: "$kybcogpg$prop",
+                    cleanrestfn: "$kybcogpg$clean",
+                    importfn: "$kybcogpg$import",
+                    rewritefn: "$kybcogpg$rewrite",
+                    metafn: "$kybcogpg$meta",
+                    setrealmfn: "$kybcogpg$setrealm",
+                    pushsourcemapfn: "$kybcogpg$pushsourcemap",
+                    trysetfn: "$kybcogpg$tryset",
+                    templocid: "$kybcogpg$temploc",
+                    tempunusedid: "$kybcogpg$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3157,16 +3157,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                drtjsgid$type: "loadConfig",
+                kybcogpg$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("drtjsgid$type" in e.data)) return;
+                if (!("kybcogpg$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.drtjsgid$type &&
+                "download" === t.kybcogpg$type &&
                   this.dispatchEvent(
-                    new s.DrtjsgidGlobalDownloadEvent(t.download)
+                    new s.KybcogpgGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3193,7 +3193,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open(__abx$c8da24(1), 2);
+            let e = indexedDB.open(__abx$a88fd9(1), 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3229,7 +3229,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                drtjsgid$type: "loadConfig",
+                kybcogpg$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3282,7 +3282,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { [__abx$c8da24(2)+__abx$c8da24(3)]: () => i.q, DrtjsgidFrame: () => n.X });
+          r.d(t, { [__abx$a88fd9(2)+__abx$a88fd9(3)]: () => i.q, KybcogpgFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3642,7 +3642,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$drtjsgidLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$kybcogpgLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3681,12 +3681,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`drtjsgid-attr-${i}`] = s);
+                            (t.attribs[`kybcogpg-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`drtjsgid-attr-${e}`] = r),
+                        ((t.attribs[`kybcogpg-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3728,7 +3728,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["drtjsgid-attr-script-source-src"] = y(
+                    (t.attribs["kybcogpg-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3792,13 +3792,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("drtjsgid-attr-script-source-src" == e) {
+                  if ("kybcogpg-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("drtjsgid-attr-") &&
+                  e.startsWith("kybcogpg-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4080,21 +4080,42 @@ ${l}`;
             await fetch(s.$W.files.wasm).then((e) => e.arrayBuffer())
           );
         }
+        // abulxt patch: every proxied realm decodes the ~400 KB rewriter here.
+        // Uint8Array.from(str, cb) runs a callback per byte (~75 ms on the
+        // main thread per frame); native fromBase64 or a plain loop is ~1 ms.
         self.WASM &&
-          (n = Uint8Array.from(atob(self.WASM), (e) => e.charCodeAt(0)));
+          (n =
+            "function" == typeof Uint8Array.fromBase64
+              ? Uint8Array.fromBase64(self.WASM)
+              : (() => {
+                  let e = atob(self.WASM),
+                    t = new Uint8Array(e.length);
+                  for (let r = 0; r < e.length; r++) t[r] = e.charCodeAt(r);
+                  return t;
+                })());
         let h = new TextDecoder(),
           p = "\0asm".split("").map((e) => e.charCodeAt(0)),
-          f = [];
+          f = [],
+          // abulxt patch: compile the rewriter module once. initSync (QR)
+          // ignores its argument after the first call, but the argument was
+          // a fresh synchronous WebAssembly.Module(...) compile on every
+          // rewrite (every script, innerHTML, eval) on the page's main thread.
+          compiled = null,
+          compiledFrom = null;
         function g(e) {
           let t;
           if (!(n instanceof Uint8Array))
             throw Error("rewriter wasm not found (was it fetched correctly?)");
-          if (![...n.slice(0, 4)].every((e, t) => e === p[t]))
-            throw Error(
-              "rewriter wasm does not have wasm magic (was it fetched correctly?)\nrewriter wasm contents: " +
-                h.decode(n)
-            );
-          (0, i.QR)({ module: new WebAssembly.Module(n) });
+          if (compiledFrom !== n) {
+            if (![...n.slice(0, 4)].every((e, t) => e === p[t]))
+              throw Error(
+                "rewriter wasm does not have wasm magic (was it fetched correctly?)\nrewriter wasm contents: " +
+                  h.decode(n)
+              );
+            compiled = new WebAssembly.Module(n);
+            compiledFrom = n;
+          }
+          (0, i.QR)({ module: compiled });
           let r = f.findIndex((e) => !e.inUse),
             d = f.length;
           return (
@@ -4153,7 +4174,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$drtjsgidLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$kybcogpgLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4173,8 +4194,13 @@ ${l}`;
           rj: () => l,
         });
         let n = { none: 0, "same-origin": 1, "same-site": 2, "cross-site": 3 };
-        async function i() {
-          let e = indexedDB.open(__abx$c8da24(1), 2);
+        // abulxt patch: one shared connection. This ran indexedDB.open() on
+        // every redirect/referrer/suffix lookup (several per request) and
+        // never closed the result, so connections piled up for the tab's life.
+        let iDb = null;
+        function i() {
+          if (iDb) return iDb;
+          let e = indexedDB.open(__abx$a88fd9(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4183,9 +4209,16 @@ e.onupgradeneeded = () => {
   db.objectStoreNames.contains("referrerPolicies") || db.createObjectStore("referrerPolicies");
   db.objectStoreNames.contains("publicSuffixList") || db.createObjectStore("publicSuffixList");
 };
-          return new Promise((t, r) => {
-            (e.onerror = () => r(e.error)), (e.onsuccess = () => t(e.result));
-          });
+          return (iDb = new Promise((t, r) => {
+            (e.onerror = () => { iDb = null; r(e.error); }),
+              (e.onsuccess = () => {
+                let db = e.result;
+                // Let a schema upgrade or wipe proceed, then reopen lazily.
+                (db.onversionchange = () => { db.close(); iDb = null; }),
+                  (db.onclose = () => { iDb = null; }),
+                  t(db);
+              });
+          }));
         }
         async function s(e) {
           let t = (await i())
@@ -4263,8 +4296,13 @@ e.onupgradeneeded = () => {
       8228: function (e, t, r) {
         r.d(t, { ps: () => a });
         let n = "publicSuffixList";
-        async function i() {
-          let e = indexedDB.open(__abx$c8da24(1), 2);
+        // abulxt patch: one shared connection. This ran indexedDB.open() on
+        // every redirect/referrer/suffix lookup (several per request) and
+        // never closed the result, so connections piled up for the tab's life.
+        let iDb = null;
+        function i() {
+          if (iDb) return iDb;
+          let e = indexedDB.open(__abx$a88fd9(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4273,9 +4311,16 @@ e.onupgradeneeded = () => {
   db.objectStoreNames.contains("referrerPolicies") || db.createObjectStore("referrerPolicies");
   db.objectStoreNames.contains("publicSuffixList") || db.createObjectStore("publicSuffixList");
 };
-          return new Promise((t, r) => {
-            (e.onerror = () => r(e.error)), (e.onsuccess = () => t(e.result));
-          });
+          return (iDb = new Promise((t, r) => {
+            (e.onerror = () => { iDb = null; r(e.error); }),
+              (e.onsuccess = () => {
+                let db = e.result;
+                // Let a schema upgrade or wipe proceed, then reopen lazily.
+                (db.onversionchange = () => { db.close(); iDb = null; }),
+                  (db.onclose = () => { iDb = null; }),
+                  t(db);
+              });
+          }));
         }
         async function s() {
           let e = (await i()).transaction(n, "readonly").objectStore(n);
@@ -4361,8 +4406,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("drtjsgid client global"),
-          i = Symbol.for("drtjsgid frame handle");
+        let n = Symbol.for("kybcogpg client global"),
+          i = Symbol.for("kybcogpg frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4374,9 +4419,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $drtjsgidVersion.version
+                  $kybcogpgVersion.version
                 )};
-                build.textContent = ${JSON.stringify($drtjsgidVersion.build)};
+                build.textContent = ${JSON.stringify($kybcogpgVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4390,7 +4435,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Drtjsgid</title>
+                    <title>Kybcogpg</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4538,8 +4583,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Drtjsgid</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/drtjsgid"
+                <li>Updating Kybcogpg</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/kybcogpg"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4547,7 +4592,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Drtjsgid v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Kybcogpg v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4578,30 +4623,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "drtjsgid$type" in e.data &&
-                  ("init" === e.data.drtjsgid$type
+                "kybcogpg$type" in e.data &&
+                  ("init" === e.data.kybcogpg$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  drtjsgid$type: "init",
-                  drtjsgid$port: this.messageChannel.port2,
+                  kybcogpg$type: "init",
+                  kybcogpg$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.drtjsgid$token];
-            t && (t(e), delete this.promises[e.drtjsgid$token]);
+            let t = this.promises[e.kybcogpg$token];
+            t && (t(e), delete this.promises[e.kybcogpg$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                drtjsgid$type: "fetch",
-                drtjsgid$token: t,
-                drtjsgid$request: {
+                kybcogpg$type: "fetch",
+                kybcogpg$token: t,
+                kybcogpg$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4612,7 +4657,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { drtjsgid$response: i } = await new Promise((e) => {
+            let { kybcogpg$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4854,7 +4899,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                drtjsgid$type: "cookie",
+                kybcogpg$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4919,7 +4964,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ drtjsgid$type: "download", download: s }, [
+              i[0].postMessage({ kybcogpg$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -4937,8 +4982,13 @@ self.WASM = '${r}';`),
             "text/event-stream" === x.accept &&
               (x["content-type"] = "text/event-stream"),
             delete x["permissions-policy"],
-            crossOriginIsolated &&
-              [
+            // abulxt patch: stamp COEP even when this worker is not itself
+            // crossOriginIsolated. Isolation comes from the worker script's own
+            // response headers, which a CDN or cloak host may not send, while the
+            // shell embedding the proxied frame is still COEP. Without a COEP the
+            // frame is blocked (ERR_BLOCKED_BY_RESPONSE). "credentialless" is
+            // the lenient value for that case and satisfies a COEP parent.
+            [
                 "document",
                 "iframe",
                 "worker",
@@ -4946,7 +4996,9 @@ self.WASM = '${r}';`),
                 "style",
                 "script",
               ].includes(n) &&
-              ((x["Cross-Origin-Embedder-Policy"] = "require-corp"),
+              ((x["Cross-Origin-Embedder-Policy"] = crossOriginIsolated
+                ? "require-corp"
+                : "credentialless"),
               (x["Cross-Origin-Opener-Policy"] = "same-origin"));
           let E = new w(y, x, l.status, l.statusText, n, e, l, h);
           return (
@@ -5031,9 +5083,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            DrtjsgidHandleResponseEvent: () => i.dT,
-            DrtjsgidRequestEvent: () => i.V3,
-            DrtjsgidServiceWorker: () => u,
+            KybcogpgHandleResponseEvent: () => i.dT,
+            KybcogpgRequestEvent: () => i.V3,
+            KybcogpgServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5054,7 +5106,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open(__abx$c8da24(1), 2);
+            let e = indexedDB.open(__abx$a88fd9(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5073,23 +5125,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("drtjsgid$type" in t) {
-                  if ("drtjsgid$token" in t) {
-                    let e = this.syncPool[t.drtjsgid$token];
-                    delete this.syncPool[t.drtjsgid$token], e(t);
+                if ("kybcogpg$type" in t) {
+                  if ("kybcogpg$token" in t) {
+                    let e = this.syncPool[t.kybcogpg$token];
+                    delete this.syncPool[t.kybcogpg$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.drtjsgid$type)
+                  if ("registerServiceWorker" === t.kybcogpg$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.drtjsgid$type &&
+                  "cookie" === t.kybcogpg$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.drtjsgid$type &&
+                    "loadConfig" === t.kybcogpg$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5102,14 +5154,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.drtjsgid$token = n),
+              (t.kybcogpg$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open(__abx$c8da24(1), 2);
+            let e = indexedDB.open(__abx$a88fd9(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5191,7 +5243,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("vxvcatrx: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("pvzlmomg: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5230,13 +5282,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "vxvcatrx: failed to get a vxvcatrx SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "pvzlmomg: failed to get a pvzlmomg SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "vxvcatrx: failed to get a vxvcatrx SharedWorker MessagePort within 1s, retrying"
+                "pvzlmomg: failed to get a pvzlmomg SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5256,13 +5308,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, __abx$c8da24(4));
+          let r = new i(e, __abx$a88fd9(4));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("vxvcatrx: recieved request for port from sw");
-                  let r = new i(e, __abx$c8da24(4));
+                  console.debug("pvzlmomg: recieved request for port from sw");
+                  let r = new i(e, __abx$a88fd9(4));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5272,7 +5324,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("vxvcatrx")),
+            (this.channel = new BroadcastChannel("pvzlmomg")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5290,24 +5342,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "vxvcatrx: setting localStorage vxvcatrx-path to",
+                  "pvzlmomg: setting localStorage pvzlmomg-path to",
                   e
                 ),
-                (s[__abx$c8da24(5)] = e);
+                (s[__abx$a88fd9(5)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s[__abx$c8da24(5)];
+                let e = s[__abx$a88fd9(5)];
                 if (
                   (console.debug(
-                    "vxvcatrx: got localStorage vxvcatrx-path:",
+                    "pvzlmomg: got localStorage pvzlmomg-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get vxvcatrx workerPath from localStorage."
+                    "Unable to get pvzlmomg workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5321,7 +5373,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "vxvcatrx: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "pvzlmomg: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5434,7 +5486,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("vxvcatrx-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("pvzlmomg-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5538,7 +5590,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "vxvcatrx-remote", args: [r.port2, t] },
+                  client: { function: "pvzlmomg-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5636,7 +5688,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("vxvcatrx: running v2.1.7 (build c56d286)");
+        console.debug("pvzlmomg: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -7998,19 +8050,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$drtjsgidRequire = function (e) {
+    (globalThis.$kybcogpgRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis[__abx$c8da24(6)+__abx$c8da24(0)+__abx$c8da24(7)+__abx$c8da24(3)] = function () {
+    (globalThis[__abx$a88fd9(6)+__abx$a88fd9(0)+__abx$a88fd9(7)+__abx$a88fd9(3)] = function () {
       return r(9052);
     }),
-    (globalThis.$drtjsgidLoadClient = function () {
+    (globalThis.$kybcogpgLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$drtjsgidLoadWorker = function () {
+    (globalThis.$kybcogpgLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$drtjsgidVersion = {
+    (globalThis.$kybcogpgVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),
