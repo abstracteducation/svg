@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><foreignObject width="100%" height="100%"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23111%22%2F%3E%3Cpath%20d%3D%22M9%2023L16%209L23%2023%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E" /><title>Notes</title><style><![CDATA[html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;color:#9a9a9a;font:500 13px system-ui,-apple-system,Segoe UI,sans-serif}foreignObject{overflow:visible}#l{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}#s{width:28px;height:28px;border:3px solid #333;border-top-color:#fff;border-radius:50%;animation:r .8s linear infinite}@keyframes r{to{transform:rotate(360deg)}}#b{display:none;padding:7px 14px;border:1px solid #444;border-radius:8px;background:#151515;color:#eee;font:inherit;cursor:pointer}#l.x #s{display:none}#l.x #b{display:block}iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000}]]></style></head><body><div id="l"><div id="s"></div><p id="m"></p><button id="b" type="button">Try again</button></div><script>/*<![CDATA[*/(function(){
+"use strict";
+var K="f2ea9a74127a1e62be9f50f2",M=["DkYREUpbGBtSVllPWxZSVw4MTxQbXgNGSVUNTlgDREBDU1QVVAFDUQMRUAlbHxVEAXIIAFAPGA=="],H="DkYREUpbGBtQQl5PVgxCWhcHFwVaXUlAA0IKEhYAVUdFQFYCRQBSRwEETQ9aXklBEFVKAlYMWl1FQRgMUAxY",ENTRY="index.svg",LAST="__lx_m",PIN="__lx_p",PIN_TTL=6e5,STAGGER=1200,TIMEOUT=8000;
+var box=document.getElementById("l"),msg=document.getElementById("m"),btn=document.getElementById("b");
+function say(t){msg.textContent=t}
+function dec(s){try{var b=atob(s),o="";for(var i=0;i<b.length;i++)o+=String.fromCharCode(b.charCodeAt(i)^K.charCodeAt(i%K.length));return o}catch(e){return""}}
+var mirrors=M.map(dec).filter(function(u){return /^https:\/\/[^\/]+\/.*\/$/.test(u)});
+function store(v){try{if(v==null)localStorage.removeItem(LAST);else localStorage.setItem(LAST,v)}catch(e){}}
+function order(){var l=mirrors.slice(),last=null;try{last=localStorage.getItem(LAST)}catch(e){}
+var i=l.indexOf(last);if(i>0){l.splice(i,1);l.unshift(last)}return l}
+function probe(base,signal){return fetch(base+ENTRY,{cache:"no-store",credentials:"omit",mode:"cors",signal:signal}).then(function(r){if(!r.ok)throw new Error(String(r.status));return r.text()}).then(function(t){if(t.indexOf("<foreignObject")<0)throw new Error("not the app");return base})}
+function race(list){return new Promise(function(resolve,reject){
+var i=0,live=[],done=false,timer=0;
+function settleFail(){if(done)return;if(i<list.length)next();else if(!live.length){done=true;reject(new Error("no mirror"))}}
+function next(){clearTimeout(timer);if(done||i>=list.length)return;
+var base=list[i++],c=new AbortController(),t=setTimeout(function(){c.abort()},TIMEOUT);live.push(c);
+probe(base,c.signal).then(function(b){clearTimeout(t);if(done)return;done=true;clearTimeout(timer);
+live.forEach(function(x){if(x!==c)x.abort()});resolve(b)},function(){clearTimeout(t);live.splice(live.indexOf(c),1);settleFail()});
+if(i<list.length)timer=setTimeout(next,STAGGER)}
+next()})}
+function show(base){store(base);
+// jsDelivr sends @main files with a 7-day browser max-age; a unique query
+// always fetches the current app shell (its hashed assets still cache).
+var url=base+ENTRY+"?t="+Date.now().toString(36)+location.hash;
+if(/[?&]direct(=|&|$)/.test(location.search)){location.replace(url);return}
+var f=document.createElementNS("http://www.w3.org/1999/xhtml","iframe");
+f.setAttribute("allow","fullscreen; autoplay; clipboard-read; clipboard-write; microphone; camera; display-capture; encrypted-media; picture-in-picture; gamepad; screen-wake-lock");
+f.setAttribute("referrerpolicy","no-referrer");
+f.src=url;
+box.parentNode.appendChild(f);
+setTimeout(function(){box.style.display="none"},400)}
+// jsDelivr edges disagree about what a branch (@main) points to for up to 12h,
+// so serve the newest commit by SHA instead: immutable, identical on every
+// edge. The SHA comes from the GitHub API (cached PIN_TTL); if that is blocked,
+// keep the branch URLs.
+function headSha(){
+try{var c=JSON.parse(localStorage.getItem(PIN)||"null");if(c&&/^[0-9a-f]{40}$/.test(c.s)&&Date.now()-c.t<PIN_TTL)return Promise.resolve(c.s)}catch(e){}
+var api=dec(H);if(!/^https:\/\//.test(api))return Promise.resolve("");
+var ctl=new AbortController(),tm=setTimeout(function(){ctl.abort()},4000);
+return fetch(api,{headers:{Accept:"application/vnd.github.sha"},cache:"no-store",credentials:"omit",signal:ctl.signal})
+.then(function(r){return r.ok?r.text():""}).then(function(s){s=String(s).trim();if(!/^[0-9a-f]{40}$/.test(s))return"";
+try{localStorage.setItem(PIN,JSON.stringify({s:s,t:Date.now()}))}catch(e){}return s},function(){return""})
+.finally(function(){clearTimeout(tm)})}
+function pinned(list,sha){if(!sha)return list;var out=[];
+list.forEach(function(b){var p=b.replace("@main/","@"+sha+"/");if(p!==b)out.push(p)});
+return out.concat(list)}
+function start(){box.className="";say("Connecting\u2026");
+if(!mirrors.length){fail();return}
+headSha().then(function(sha){return race(pinned(order(),sha))}).then(show,fail)}
+function fail(){store(null);box.className="x";say("Couldn't reach the app from here. Check your connection, then try again.")}
+btn.addEventListener("click",start);
+start();
+})();/*]]>*/</script></body></html></foreignObject></svg>
