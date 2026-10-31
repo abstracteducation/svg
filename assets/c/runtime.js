@@ -1,4 +1,4 @@
-/*__ABX_OBF__*/var __abx$a88fd9=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("2H8Q8BVOyIcY6rhk39fCyysv1IcN3qxLfU9cZ/Gm5q4="),P=["JGCNxcibP7NvbW6yz3+SrJp37rE=","LpGbHQrwo/l0daWgk06m0UFuUbJsXa+WY8KBjg==","K4yPlgyYYTpYsQj4VnRORO9UGN0=","OcXx5DRx7kRRN+r/6jCUBTHvF5bPUA==","o1+xLN4h7YSRLR0M3elGmD4wa9r9Tzq5Wdrk","zs9rkS41fVAQDMo2SEpLcRci3u3rAa/0Jg==","Vc9lZ87cfmripb9Pwg==","J92pPJ0zRuz1XcTARpYkrw=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
+/*__ABX_OBF__*/var __abx$ef5bed=(function(){function U(s){var b=atob(s),a=new Uint8Array(b.length),i=0;for(;i<b.length;i++)a[i]=b.charCodeAt(i);return a}function R(a,b){return((a<<b)|(a>>>(32-b)))>>>0}function CC(k,n,d){var K=new Uint32Array(8),N=new Uint32Array(3),o=new Uint8Array(d.length),S=new Uint32Array(16),W=new Uint32Array(16),ct=0,i,off,r,bl=new Uint8Array(64),v,nn;function Q(a,b,c,e){W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],16);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],12);W[a]=(W[a]+W[b])>>>0;W[e]=R(W[e]^W[a],8);W[c]=(W[c]+W[e])>>>0;W[b]=R(W[b]^W[c],7)}for(i=0;i<8;i++)K[i]=(k[i*4]|(k[i*4+1]<<8)|(k[i*4+2]<<16)|(k[i*4+3]<<24))>>>0;for(i=0;i<3;i++)N[i]=(n[i*4]|(n[i*4+1]<<8)|(n[i*4+2]<<16)|(n[i*4+3]<<24))>>>0;for(off=0;off<d.length;off+=64){S[0]=0x61707865;S[1]=0x3320646e;S[2]=0x79622d32;S[3]=0x6b206574;S[4]=K[0];S[5]=K[1];S[6]=K[2];S[7]=K[3];S[8]=K[4];S[9]=K[5];S[10]=K[6];S[11]=K[7];S[12]=ct>>>0;S[13]=N[0];S[14]=N[1];S[15]=N[2];for(i=0;i<16;i++)W[i]=S[i];for(r=0;r<10;r++){Q(0,4,8,12);Q(1,5,9,13);Q(2,6,10,14);Q(3,7,11,15);Q(0,5,10,15);Q(1,6,11,12);Q(2,7,8,13);Q(3,4,9,14)}for(i=0;i<16;i++){v=(W[i]+S[i])>>>0;bl[i*4]=v&255;bl[i*4+1]=(v>>>8)&255;bl[i*4+2]=(v>>>16)&255;bl[i*4+3]=(v>>>24)&255}nn=Math.min(64,d.length-off);for(i=0;i<nn;i++)o[off+i]=d[off+i]^bl[i];ct++}return o}var K=U("5KEK5PzAelaZbYgMAMw8SA8yDMN+s0ImcVw2xR2aRVA="),P=["chS8mQxsbkBenJiZfD1zbfQOZuI=","T72JWMx13KbvWlLktBNqPw0Ti6GFeJwZm/5+MA==","nf91lwTJUcrVcjCP/GnloNoa7Cg=","/DRXoCCyylwh+5RwX1ac0NVoOWf7ug==","OsVxxoWVQMQ/TDNkEaqkVfxTjWLOuJASWf00","gnTHv6whYo0IgtRFvU4EHjfLB2LVR4ssEA==","gPT2obJJ7cv+zIScuw==","4jFp3+245Wni2N5v9q4Xlg=="],C=[],TD=new TextDecoder();return function(i){if(C[i]!==void 0)return C[i];var raw=U(P[i]),n=raw.subarray(0,12),c=raw.subarray(12);return C[i]=TD.decode(CC(K,n,c))}})();
 (() => {
   var e = {
       4322: function (e) {
@@ -245,7 +245,7 @@
         (t.keys = () => []), (t.resolve = t), (t.id = 409), (e.exports = t);
       },
       336: function (e, t, r) {
-        r.r(t), r.d(t, { KybcogpgClient: () => g });
+        r.r(t), r.d(t, { OkoihivbClient: () => g });
         var n = r(2794),
           i = r(94),
           s = r(3696),
@@ -274,7 +274,7 @@
             if (((this.global = e), n.pX in e))
               throw (
                 (console.error(
-                  "attempted to initialize a kybcogpg client, but one is already loaded - this is very bad"
+                  "attempted to initialize a okoihivb client, but one is already loaded - this is very bad"
                 ),
                 Error())
               );
@@ -304,8 +304,8 @@
                     new Promise((e) => {
                       addEventListener("message", ({ data: t }) => {
                         "object" == typeof t &&
-                          "$kybcogpg$type" in t &&
-                          "cvgsomginit" === t.$kybcogpg$type &&
+                          "$okoihivb$type" in t &&
+                          "zabnkhlinit" === t.$okoihivb$type &&
                           e(t.port);
                       });
                     })
@@ -409,7 +409,7 @@
                 if (!r.name)
                   return (
                     console.error(
-                      "YOU NEED TO USE `new KybcogpgFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                      "YOU NEED TO USE `new OkoihivbFrame()`! DIRECT IFRAMES WILL NOT WORK"
                     ),
                     null
                   );
@@ -432,7 +432,7 @@
                   if (!t.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new KybcogpgFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new OkoihivbFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -443,7 +443,7 @@
                   if (!e.name)
                     return (
                       console.error(
-                        "YOU NEED TO USE `new KybcogpgFrame()`! DIRECT IFRAMES WILL NOT WORK"
+                        "YOU NEED TO USE `new OkoihivbFrame()`! DIRECT IFRAMES WILL NOT WORK"
                       ),
                       null
                     );
@@ -587,7 +587,7 @@
                     if (e instanceof Error)
                       if (e.stack instanceof Object)
                         (e.stack = e.stack.stack),
-                          console.error("ERROR FROM KYBCOGPG INTERNALS", e);
+                          console.error("ERROR FROM OKOIHIVB INTERNALS", e);
                       else throw e;
                     else throw e;
                   }
@@ -692,8 +692,8 @@
                     "symbol" == typeof r
                       ? Reflect.has(e, r)
                       : !(
-                          r.startsWith("kybcogpg-attr-") ||
-                          t[r]?.name?.startsWith("kybcogpg-attr-")
+                          r.startsWith("okoihivb-attr-") ||
+                          t[r]?.name?.startsWith("okoihivb-attr-")
                         ) && Reflect.has(e, r),
                 });
               return r;
@@ -726,11 +726,11 @@
       9116: function (e, t, r) {
         function n(e, t) {
           e.serviceWorker.addEventListener("message", ({ data: t }) => {
-            if ("kybcogpg$type" in t && "cookie" === t.kybcogpg$type) {
+            if ("okoihivb$type" in t && "cookie" === t.okoihivb$type) {
               e.cookieStore.setCookies([t.cookie], new URL(t.url));
               let r = {
-                kybcogpg$token: t.kybcogpg$token,
-                kybcogpg$type: "cookie",
+                okoihivb$token: t.okoihivb$token,
+                okoihivb$type: "cookie",
               };
               e.serviceWorker.controller.postMessage(r);
             }
@@ -745,7 +745,7 @@
                 );
                 n &&
                   e.natives.call("ServiceWorker.prototype.postMessage", n, {
-                    kybcogpg$type: "cookie",
+                    okoihivb$type: "cookie",
                     cookie: r,
                     url: e.url.href,
                   });
@@ -979,34 +979,34 @@
             e.Proxy("Element.prototype.getAttribute", {
               apply(t) {
                 let [r] = t.args;
-                if (r.startsWith("kybcogpg-attr")) return t.return(null);
+                if (r.startsWith("okoihivb-attr")) return t.return(null);
                 if (
                   e.natives.call(
                     "Element.prototype.hasAttribute",
                     t.this,
-                    `kybcogpg-attr-${r}`
+                    `okoihivb-attr-${r}`
                   )
                 ) {
-                  let e = t.fn.call(t.this, `kybcogpg-attr-${r}`);
+                  let e = t.fn.call(t.this, `okoihivb-attr-${r}`);
                   return null === e ? t.return("") : t.return(e);
                 }
               },
             }),
             e.Proxy("Element.prototype.getAttributeNames", {
               apply(e) {
-                let t = e.call().filter((e) => !e.startsWith("kybcogpg-attr"));
+                let t = e.call().filter((e) => !e.startsWith("okoihivb-attr"));
                 e.return(t);
               },
             }),
             e.Proxy("Element.prototype.getAttributeNode", {
               apply(e) {
-                if (e.args[0].startsWith("kybcogpg-attr"))
+                if (e.args[0].startsWith("okoihivb-attr"))
                   return e.return(null);
               },
             }),
             e.Proxy("Element.prototype.hasAttribute", {
               apply(e) {
-                if (e.args[0].startsWith("kybcogpg-attr")) return e.return(!1);
+                if (e.args[0].startsWith("okoihivb-attr")) return e.return(!1);
               },
             }),
             e.Proxy("Element.prototype.setAttribute", {
@@ -1033,7 +1033,7 @@
                     return;
                   }
                   (t.args[1] = n),
-                    t.fn.call(t.this, `kybcogpg-attr-${t.args[0]}`, i);
+                    t.fn.call(t.this, `okoihivb-attr-${t.args[0]}`, i);
                 }
               },
             }),
@@ -1055,7 +1055,7 @@
                   e.natives.call(
                     "Element.prototype.setAttribute",
                     t.this,
-                    `kybcogpg-attr-${t.args[1]}`,
+                    `okoihivb-attr-${t.args[1]}`,
                     s
                   ));
               },
@@ -1077,23 +1077,23 @@
             }),
             e.Proxy("Element.prototype.removeAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("kybcogpg-attr"))
+                if (t.args[0].startsWith("okoihivb-attr"))
                   return t.return(void 0);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `kybcogpg-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `okoihivb-attr-${t.args[0]}`);
               },
             }),
             e.Proxy("Element.prototype.toggleAttribute", {
               apply(t) {
-                if (t.args[0].startsWith("kybcogpg-attr")) return t.return(!1);
+                if (t.args[0].startsWith("okoihivb-attr")) return t.return(!1);
                 e.natives.call(
                   "Element.prototype.hasAttribute",
                   t.this,
                   t.args[0]
-                ) && t.fn.call(t.this, `kybcogpg-attr-${t.args[0]}`);
+                ) && t.fn.call(t.this, `okoihivb-attr-${t.args[0]}`);
               },
             }),
             e.Trap("Element.prototype.innerHTML", {
@@ -1104,7 +1104,7 @@
                     e.natives.call(
                       "Element.prototype.setAttribute",
                       r.this,
-                      "kybcogpg-attr-script-source-src",
+                      "okoihivb-attr-script-source-src",
                       btoa(
                         Array.from(u.encode(a), (e) =>
                           String.fromCodePoint(e)
@@ -1126,7 +1126,7 @@
                   let t = e.natives.call(
                     "Element.prototype.getAttribute",
                     r.this,
-                    "kybcogpg-attr-script-source-src"
+                    "okoihivb-attr-script-source-src"
                   );
                   return t ? atob(t) : r.get();
                 }
@@ -1204,7 +1204,7 @@
               {
                 get(e) {
                   let t = e.get();
-                  return t && (l.pX in t || new c.KybcogpgClient(t).hook()), t;
+                  return t && (l.pX in t || new c.OkoihivbClient(t).hook()), t;
                 },
               }
             ),
@@ -1222,7 +1222,7 @@
                     t.this
                   );
                   return r
-                    ? (l.pX in r || new c.KybcogpgClient(r).hook(), r.document)
+                    ? (l.pX in r || new c.OkoihivbClient(r).hook(), r.document)
                     : r;
                 },
               }
@@ -1314,7 +1314,7 @@
               if (!r) return t.return(r);
               if (i.pX in r) return t.return(r[i.pX].global);
               {
-                let e = new n.KybcogpgClient(r);
+                let e = new n.OkoihivbClient(r);
                 return e.hook(), t.return(e.global);
               }
             },
@@ -1435,7 +1435,7 @@
                   "ServiceWorker.prototype.postMessage",
                   l,
                   {
-                    kybcogpg$type: "registerServiceWorker",
+                    okoihivb$type: "registerServiceWorker",
                     port: o,
                     origin: e.url.origin,
                   },
@@ -1535,11 +1535,11 @@
         function g(e) {
           if (
             ((0, n.Nk)(e),
-            l.log("initializing kybcogpg client"),
+            l.log("initializing okoihivb client"),
             !(i.pX in globalThis))
           ) {
             (0, n.Ec)();
-            let e = new s.KybcogpgClient(globalThis),
+            let e = new s.OkoihivbClient(globalThis),
               t = globalThis.frameElement;
             t &&
               !t.name &&
@@ -1549,8 +1549,8 @@
                 .join("")}`),
               globalThis.COOKIE && e.loadcookies(globalThis.COOKIE),
               e.hook(),
-              f && new a.KybcogpgServiceWorkerRuntime(e).hook();
-            let r = new o.KybcogpgContextEvent(e.global.window, e);
+              f && new a.OkoihivbServiceWorkerRuntime(e).hook();
+            let r = new o.OkoihivbContextEvent(e.global.window, e);
             e.frame?.dispatchEvent(r);
             let i = new o.UrlChangeEvent(e.url.href);
             e.isSubframe || e.frame?.dispatchEvent(i);
@@ -1563,8 +1563,8 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => i,
-            KybcogpgContextEvent: () => o,
-            KybcogpgGlobalDownloadEvent: () => n,
+            OkoihivbContextEvent: () => o,
+            OkoihivbGlobalDownloadEvent: () => n,
             UrlChangeEvent: () => s,
           });
         class n extends Event {
@@ -1607,10 +1607,10 @@
         r.r(t),
           r.d(t, {
             NavigateEvent: () => s.NavigateEvent,
-            KybcogpgClient: () => n.KybcogpgClient,
-            KybcogpgContextEvent: () => s.KybcogpgContextEvent,
-            KybcogpgGlobalDownloadEvent: () => s.KybcogpgGlobalDownloadEvent,
-            KybcogpgServiceWorkerRuntime: () => l.KybcogpgServiceWorkerRuntime,
+            OkoihivbClient: () => n.OkoihivbClient,
+            OkoihivbContextEvent: () => s.OkoihivbContextEvent,
+            OkoihivbGlobalDownloadEvent: () => s.OkoihivbGlobalDownloadEvent,
+            OkoihivbServiceWorkerRuntime: () => l.OkoihivbServiceWorkerRuntime,
             UrlChangeEvent: () => s.UrlChangeEvent,
             createLocationProxy: () => a.createLocationProxy,
             getOwnPropertyDescriptorHandler: () =>
@@ -1983,14 +1983,14 @@
         var n = r(1323),
           i = r(1472),
           s = r(94);
-        let o = Symbol.for("kybcogpg original onevent function");
+        let o = Symbol.for("okoihivb original onevent function");
         function a(e, t) {
           let r = {
             message: {
               _init() {
                 return (
                   "object" != typeof this.data ||
-                  !("$kybcogpg$type" in this.data)
+                  !("$okoihivb$type" in this.data)
                 );
               },
               ports() {
@@ -2001,14 +2001,14 @@
               },
               origin() {
                 return "object" == typeof this.data &&
-                  "$kybcogpg$origin" in this.data
-                  ? this.data.$kybcogpg$origin
+                  "$okoihivb$origin" in this.data
+                  ? this.data.$okoihivb$origin
                   : e.url.origin;
               },
               data() {
                 return "object" == typeof this.data &&
-                  "$kybcogpg$data" in this.data
-                  ? this.data.$kybcogpg$data
+                  "$okoihivb$data" in this.data
+                  ? this.data.$okoihivb$data
                   : this.data;
               },
             },
@@ -2267,9 +2267,9 @@
                   r = t("return globalThis")()[i.pX],
                   n = t("...args", "this(...args)");
                 (e.args[0] = {
-                  $kybcogpg$messagetype: "window",
-                  $kybcogpg$origin: r.url.origin,
-                  $kybcogpg$data: e.args[0],
+                  $okoihivb$messagetype: "window",
+                  $okoihivb$origin: r.url.origin,
+                  $okoihivb$data: e.args[0],
                 }),
                   "string" == typeof e.args[1] && (e.args[1] = "*"),
                   "object" == typeof e.args[1] &&
@@ -2283,8 +2283,8 @@
             e.Proxy(t, {
               apply(e) {
                 e.args[0] = {
-                  $kybcogpg$messagetype: "worker",
-                  $kybcogpg$data: e.args[0],
+                  $okoihivb$messagetype: "worker",
+                  $okoihivb$data: e.args[0],
                 };
               },
             });
@@ -2293,7 +2293,7 @@
       1914: function (e, t, r) {
         r.r(t), r.d(t, { POLLUTANT: () => i, default: () => s });
         var n = r(37);
-        let i = Symbol.for("kybcogpg realm pollutant");
+        let i = Symbol.for("okoihivb realm pollutant");
         function s(e, t) {
           Object.defineProperty(t.Object.prototype, n.$W.globals.setrealmfn, {
             value(e) {
@@ -2769,7 +2769,7 @@
                 e.natives.call(
                   "Worker.prototype.postMessage",
                   r,
-                  { $kybcogpg$type: "cvgsomginit", port: t },
+                  { $okoihivb$type: "zabnkhlinit", port: t },
                   [t]
                 );
               })();
@@ -2795,7 +2795,7 @@
                   e.natives.call(
                     "MessagePort.prototype.postMessage",
                     r.port,
-                    { $kybcogpg$type: "cvgsomginit", port: t },
+                    { $okoihivb$type: "zabnkhlinit", port: t },
                     [t]
                   );
                 })();
@@ -2938,7 +2938,7 @@
               return (
                 location,
                 n.iswindow && t.top,
-                "string" == typeof e && e.includes(__abx$a88fd9(0)),
+                "string" == typeof e && e.includes(__abx$ef5bed(0)),
                 "string" == typeof e && e.includes(location.origin),
                 e
               );
@@ -2975,7 +2975,7 @@
         }
       },
       8409: function (e, t, r) {
-        r.r(t), r.d(t, { KybcogpgServiceWorkerRuntime: () => s });
+        r.r(t), r.d(t, { OkoihivbServiceWorkerRuntime: () => s });
         var n = r(1472),
           i = r(8665).A;
         class s {
@@ -2988,11 +2988,11 @@
                 i.log("sw", "connected"),
                   r.addEventListener("message", (t) => {
                     console.log("sw", t.data),
-                      "kybcogpg$type" in t.data &&
-                        ("init" === t.data.kybcogpg$type
-                          ? ((this.recvport = t.data.kybcogpg$port),
+                      "okoihivb$type" in t.data &&
+                        ("init" === t.data.okoihivb$type
+                          ? ((this.recvport = t.data.okoihivb$port),
                             this.recvport.postMessage({
-                              kybcogpg$type: "init",
+                              okoihivb$type: "init",
                             }))
                           : o.call(this, e, t.data));
                   }),
@@ -3024,15 +3024,15 @@
         }
         function o(e, t) {
           let r = this.recvport,
-            s = t.kybcogpg$type,
-            o = t.kybcogpg$token,
+            s = t.okoihivb$type,
+            o = t.okoihivb$token,
             a = e.eventcallbacks.get(self);
           if ("fetch" === s) {
             i.log("ee", t);
             let s = a.filter((e) => "fetch" === e.event);
             if (!s) return;
             for (let a of s) {
-              let s = t.kybcogpg$request,
+              let s = t.okoihivb$request,
                 l = new e.natives.Request((0, n.v2)(s.url), {
                   body: s.body,
                   headers: new Headers(s.headers),
@@ -3049,9 +3049,9 @@
                 (u = !0),
                   (async () => {
                     let t = {
-                      kybcogpg$type: "fetch",
-                      kybcogpg$token: o,
-                      kybcogpg$response: {
+                      okoihivb$type: "fetch",
+                      okoihivb$token: o,
+                      okoihivb$response: {
                         body: (e = await e).body,
                         headers: Array.from(e.headers.entries()),
                         status: e.status,
@@ -3070,9 +3070,9 @@
                 u ||
                   (console.log("sw", "no response"),
                   r.postMessage({
-                    kybcogpg$type: "fetch",
-                    kybcogpg$token: o,
-                    kybcogpg$response: !1,
+                    okoihivb$type: "fetch",
+                    okoihivb$token: o,
+                    okoihivb$response: !1,
                   }));
             }
           }
@@ -3108,20 +3108,20 @@
               },
               r = t(
                 {
-                  prefix: "/kybcogpg/",
+                  prefix: "/okoihivb/",
                   globals: {
-                    wrapfn: "$kybcogpg$wrap",
-                    wrappropertybase: "$kybcogpg__",
-                    wrappropertyfn: "$kybcogpg$prop",
-                    cleanrestfn: "$kybcogpg$clean",
-                    importfn: "$kybcogpg$import",
-                    rewritefn: "$kybcogpg$rewrite",
-                    metafn: "$kybcogpg$meta",
-                    setrealmfn: "$kybcogpg$setrealm",
-                    pushsourcemapfn: "$kybcogpg$pushsourcemap",
-                    trysetfn: "$kybcogpg$tryset",
-                    templocid: "$kybcogpg$temploc",
-                    tempunusedid: "$kybcogpg$tempunused",
+                    wrapfn: "$okoihivb$wrap",
+                    wrappropertybase: "$okoihivb__",
+                    wrappropertyfn: "$okoihivb$prop",
+                    cleanrestfn: "$okoihivb$clean",
+                    importfn: "$okoihivb$import",
+                    rewritefn: "$okoihivb$rewrite",
+                    metafn: "$okoihivb$meta",
+                    setrealmfn: "$okoihivb$setrealm",
+                    pushsourcemapfn: "$okoihivb$pushsourcemap",
+                    trysetfn: "$okoihivb$tryset",
+                    templocid: "$okoihivb$temploc",
+                    tempunusedid: "$okoihivb$tempunused",
                   },
                   files: {
                     wasm: "/history.wasm.wasm",
@@ -3157,16 +3157,16 @@
             (0, n.Ec)(),
               await this.openIDB(),
               navigator.serviceWorker.controller?.postMessage({
-                kybcogpg$type: "loadConfig",
+                okoihivb$type: "loadConfig",
                 config: n.$W,
               }),
               o.log("config loaded"),
               navigator.serviceWorker.addEventListener("message", (e) => {
-                if (!("kybcogpg$type" in e.data)) return;
+                if (!("okoihivb$type" in e.data)) return;
                 let t = e.data;
-                "download" === t.kybcogpg$type &&
+                "download" === t.okoihivb$type &&
                   this.dispatchEvent(
-                    new s.KybcogpgGlobalDownloadEvent(t.download)
+                    new s.OkoihivbGlobalDownloadEvent(t.download)
                   );
               });
           }
@@ -3193,7 +3193,7 @@
             return (0, n.P_)(e.slice(t.length));
           }
           async openIDB() {
-            let e = indexedDB.open(__abx$a88fd9(1), 2);
+            let e = indexedDB.open(__abx$ef5bed(1), 2);
             return new Promise((t, r) => {
               (e.onsuccess = async () => {
                 (this.db = e.result), await this.#e(), t(e.result);
@@ -3229,7 +3229,7 @@
               (0, n.Ec)(),
               await this.#e(),
               navigator.serviceWorker.controller?.postMessage({
-                kybcogpg$type: "loadConfig",
+                okoihivb$type: "loadConfig",
                 config: n.$W,
               });
           }
@@ -3282,7 +3282,7 @@
       },
       9052: function (e, t, r) {
         r.r(t),
-          r.d(t, { [__abx$a88fd9(2)+__abx$a88fd9(3)]: () => i.q, KybcogpgFrame: () => n.X });
+          r.d(t, { [__abx$ef5bed(2)+__abx$ef5bed(3)]: () => i.q, OkoihivbFrame: () => n.X });
         var n = r(4869),
           i = r(3402);
       },
@@ -3642,7 +3642,7 @@
           let r = JSON.stringify(e.dump()),
             n = `
 		self.COOKIE = ${r};
-		$kybcogpgLoadClient().loadAndHook(${JSON.stringify(c.$W)});
+		$okoihivbLoadClient().loadAndHook(${JSON.stringify(c.$W)});
 		if ("document" in self && document?.currentScript) {
 			document.currentScript.remove();
 		}
@@ -3681,12 +3681,12 @@
                           let s = t.attribs[i],
                             o = e.fn(s, n, r);
                           null === o ? delete t.attribs[i] : (t.attribs[i] = o),
-                            (t.attribs[`kybcogpg-attr-${i}`] = s);
+                            (t.attribs[`okoihivb-attr-${i}`] = s);
                         }
                       }
                     for (let [e, r] of Object.entries(t.attribs))
                       b.includes(e) &&
-                        ((t.attribs[`kybcogpg-attr-${e}`] = r),
+                        ((t.attribs[`okoihivb-attr-${e}`] = r),
                         (t.attribs[e] = (0, l.o)(
                           r,
                           `(inline ${e} on element)`,
@@ -3728,7 +3728,7 @@
                   ) {
                     let e = t.children[0].data,
                       r = "module" === t.attribs.type;
-                    (t.attribs["kybcogpg-attr-script-source-src"] = y(
+                    (t.attribs["okoihivb-attr-script-source-src"] = y(
                       p.encode(e)
                     )),
                       (e = e.replace(/<!--[\s\S]*?-->/g, "")),
@@ -3792,13 +3792,13 @@
             !(function e(t) {
               if ("attribs" in t)
                 for (let e in t.attribs) {
-                  if ("kybcogpg-attr-script-source-src" == e) {
+                  if ("okoihivb-attr-script-source-src" == e) {
                     t.children[0] &&
                       "data" in t.children[0] &&
                       (t.children[0].data = atob(t.attribs[e]));
                     continue;
                   }
-                  e.startsWith("kybcogpg-attr-") &&
+                  e.startsWith("okoihivb-attr-") &&
                     ((t.attribs[e.slice(14)] = t.attribs[e]),
                     delete t.attribs[e]);
                 }
@@ -4174,7 +4174,7 @@ ${l}`;
             };
           l("wasm"),
             l("all"),
-            (o += `$kybcogpgLoadClient().loadAndHook(${JSON.stringify(
+            (o += `$okoihivbLoadClient().loadAndHook(${JSON.stringify(
               n.$W
             )});`);
           let c = (0, i.o)(e, r, s, a);
@@ -4200,7 +4200,7 @@ ${l}`;
         let iDb = null;
         function i() {
           if (iDb) return iDb;
-          let e = indexedDB.open(__abx$a88fd9(1), 2);
+          let e = indexedDB.open(__abx$ef5bed(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4302,7 +4302,7 @@ e.onupgradeneeded = () => {
         let iDb = null;
         function i() {
           if (iDb) return iDb;
-          let e = indexedDB.open(__abx$a88fd9(1), 2);
+          let e = indexedDB.open(__abx$ef5bed(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -4406,8 +4406,8 @@ e.onupgradeneeded = () => {
       },
       2794: function (e, t, r) {
         r.d(t, { pX: () => n, zr: () => i });
-        let n = Symbol.for("kybcogpg client global"),
-          i = Symbol.for("kybcogpg frame handle");
+        let n = Symbol.for("okoihivb client global"),
+          i = Symbol.for("okoihivb frame handle");
       },
       5956: function (e, t, r) {
         function n(e, t) {
@@ -4419,9 +4419,9 @@ e.onupgradeneeded = () => {
                 )};
                 reload.addEventListener("click", () => location.reload());
                 version.textContent = ${JSON.stringify(
-                  $kybcogpgVersion.version
+                  $okoihivbVersion.version
                 )};
-                build.textContent = ${JSON.stringify($kybcogpgVersion.build)};
+                build.textContent = ${JSON.stringify($okoihivbVersion.build)};
 
                 document.getElementById('copy-button').addEventListener('click', async () => {
                     const text = document.getElementById('errorTrace').value;
@@ -4435,7 +4435,7 @@ e.onupgradeneeded = () => {
             <html>
                 <head>
                     <meta charset="utf-8" />
-                    <title>Kybcogpg</title>
+                    <title>Okoihivb</title>
                     <link rel="stylesheet" href="/assets/css/font.css">
                 </head>
                 <body>
@@ -4583,8 +4583,8 @@ a {
             <p>If you're the owner of <b id="hostname"></b>, try:</p>
             <ul>
                 <li>Restarting your server</li>
-                <li>Updating Kybcogpg</li>
-                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/kybcogpg"
+                <li>Updating Okoihivb</li>
+                <li>Troubleshooting the error on the <a href="https://github.com/MercuryWorkshop/okoihivb"
                         target="_blank">GitHub repository</a></li>
             </ul>
         </div>
@@ -4592,7 +4592,7 @@ a {
     <br>
     <button id="reload" class="primary">Reload</button>
 </div>
-<p id="version-wrapper"><i>Kybcogpg v<span id="version"></span> (build <span id="build"></span>)</i></p>
+<p id="version-wrapper"><i>Okoihivb v<span id="version"></span> (build <span id="build"></span>)</i></p>
                     <script src="${
                       "data:application/javascript," + encodeURIComponent(r)
                     }"></script>
@@ -4623,30 +4623,30 @@ a {
             (this.handle = e),
               (this.origin = t),
               this.messageChannel.port1.addEventListener("message", (e) => {
-                "kybcogpg$type" in e.data &&
-                  ("init" === e.data.kybcogpg$type
+                "okoihivb$type" in e.data &&
+                  ("init" === e.data.okoihivb$type
                     ? (this.connected = !0)
                     : this.handleMessage(e.data));
               }),
               this.messageChannel.port1.start(),
               this.handle.postMessage(
                 {
-                  kybcogpg$type: "init",
-                  kybcogpg$port: this.messageChannel.port2,
+                  okoihivb$type: "init",
+                  okoihivb$port: this.messageChannel.port2,
                 },
                 [this.messageChannel.port2]
               );
           }
           handleMessage(e) {
-            let t = this.promises[e.kybcogpg$token];
-            t && (t(e), delete this.promises[e.kybcogpg$token]);
+            let t = this.promises[e.okoihivb$token];
+            t && (t(e), delete this.promises[e.okoihivb$token]);
           }
           async fetch(e) {
             let t = this.syncToken++,
               r = {
-                kybcogpg$type: "fetch",
-                kybcogpg$token: t,
-                kybcogpg$request: {
+                okoihivb$type: "fetch",
+                okoihivb$token: t,
+                okoihivb$request: {
                   url: e.url,
                   body: e.body,
                   headers: Array.from(e.headers.entries()),
@@ -4657,7 +4657,7 @@ a {
               },
               n = e.body ? [e.body] : [];
             this.handle.postMessage(r, n);
-            let { kybcogpg$response: i } = await new Promise((e) => {
+            let { okoihivb$response: i } = await new Promise((e) => {
               this.promises[t] = e;
             });
             return (
@@ -4899,7 +4899,7 @@ self.WASM = '${r}';`),
           for (let t in v)
             if (h) {
               let r = f.dispatch(h, {
-                kybcogpg$type: "cookie",
+                okoihivb$type: "cookie",
                 cookie: t,
                 url: e.href,
               });
@@ -4964,7 +4964,7 @@ self.WASM = '${r}';`),
                 body: l.body,
                 length: Number(n),
               };
-              i[0].postMessage({ kybcogpg$type: "download", download: s }, [
+              i[0].postMessage({ okoihivb$type: "download", download: s }, [
                 l.body,
               ]),
                 await new Promise(() => {});
@@ -5083,9 +5083,9 @@ self.WASM = '${r}';`),
         r.r(t),
           r.d(t, {
             FakeServiceWorker: () => n.H,
-            KybcogpgHandleResponseEvent: () => i.dT,
-            KybcogpgRequestEvent: () => i.V3,
-            KybcogpgServiceWorker: () => u,
+            OkoihivbHandleResponseEvent: () => i.dT,
+            OkoihivbRequestEvent: () => i.V3,
+            OkoihivbServiceWorker: () => u,
             errorTemplate: () => c.B,
             handleFetch: () => i.Pf,
             renderError: () => c.v,
@@ -5106,7 +5106,7 @@ self.WASM = '${r}';`),
           serviceWorkers = [];
           constructor() {
             super(), (this.client = new s.Ay());
-            let e = indexedDB.open(__abx$a88fd9(1), 2);
+            let e = indexedDB.open(__abx$ef5bed(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5125,23 +5125,23 @@ e.onupgradeneeded = () => {
               };
             }),
               addEventListener("message", async ({ data: t }) => {
-                if ("kybcogpg$type" in t) {
-                  if ("kybcogpg$token" in t) {
-                    let e = this.syncPool[t.kybcogpg$token];
-                    delete this.syncPool[t.kybcogpg$token], e(t);
+                if ("okoihivb$type" in t) {
+                  if ("okoihivb$token" in t) {
+                    let e = this.syncPool[t.okoihivb$token];
+                    delete this.syncPool[t.okoihivb$token], e(t);
                     return;
                   }
-                  if ("registerServiceWorker" === t.kybcogpg$type)
+                  if ("registerServiceWorker" === t.okoihivb$type)
                     return void this.serviceWorkers.push(
                       new n.H(t.port, t.origin)
                     );
-                  "cookie" === t.kybcogpg$type &&
+                  "cookie" === t.okoihivb$type &&
                     (this.cookieStore.setCookies([t.cookie], new URL(t.url)),
                     e.result
                       .transaction("cookies", "readwrite")
                       .objectStore("cookies")
                       .put(JSON.parse(this.cookieStore.dump()), "cookies")),
-                    "loadConfig" === t.kybcogpg$type &&
+                    "loadConfig" === t.okoihivb$type &&
                       ((this.config = t.config),
                       (0, l.Nk)(t.config),
                       await (0, o.n$)());
@@ -5154,14 +5154,14 @@ e.onupgradeneeded = () => {
               i = new Promise((e) => (r = e));
             return (
               (this.syncPool[n] = r),
-              (t.kybcogpg$token = n),
+              (t.okoihivb$token = n),
               e.postMessage(t),
               await i
             );
           }
           async loadConfig() {
             if (this.config) return;
-            let e = indexedDB.open(__abx$a88fd9(1), 2);
+            let e = indexedDB.open(__abx$ef5bed(1), 2);
 e.onupgradeneeded = () => {
   let db = e.result;
   db.objectStoreNames.contains("config") || db.createObjectStore("config");
@@ -5243,7 +5243,7 @@ e.onupgradeneeded = () => {
             });
             if (e.length) return e;
             if (cDemand && ++r > 10)
-              throw Error("pvzlmomg: no window client to ask for a SharedWorker MessagePort.");
+              throw Error("wuaccfok: no window client to ask for a SharedWorker MessagePort.");
             await new Promise((e) => {
               let t = cDemand
                 ? setTimeout(() => {
@@ -5282,13 +5282,13 @@ e.onupgradeneeded = () => {
             if (e instanceof AggregateError)
               throw (
                 (console.error(
-                  "pvzlmomg: failed to get a pvzlmomg SharedWorker MessagePort as all clients returned an invalid MessagePort."
+                  "wuaccfok: failed to get a wuaccfok SharedWorker MessagePort as all clients returned an invalid MessagePort."
                 ),
                 Error("All clients returned an invalid MessagePort."))
               );
             return (
               console.warn(
-                "pvzlmomg: failed to get a pvzlmomg SharedWorker MessagePort within 1s, retrying"
+                "wuaccfok: failed to get a wuaccfok SharedWorker MessagePort within 1s, retrying"
               ),
               await cAcquire()
             );
@@ -5308,13 +5308,13 @@ e.onupgradeneeded = () => {
           );
         }
         function d(e, t) {
-          let r = new i(e, __abx$a88fd9(4));
+          let r = new i(e, __abx$ef5bed(4));
           return (
             t &&
               o.addEventListener("message", (t) => {
                 if ("getPort" === t.data.type && t.data.port) {
-                  console.debug("pvzlmomg: recieved request for port from sw");
-                  let r = new i(e, __abx$a88fd9(4));
+                  console.debug("wuaccfok: recieved request for port from sw");
+                  let r = new i(e, __abx$ef5bed(4));
                   a.call(t.data.port, r.port, [r.port]);
                 }
               }),
@@ -5324,7 +5324,7 @@ e.onupgradeneeded = () => {
         let h = null;
         class p {
           constructor(e) {
-            (this.channel = new BroadcastChannel("pvzlmomg")),
+            (this.channel = new BroadcastChannel("wuaccfok")),
               e instanceof MessagePort || e instanceof Promise
                 ? (this.port = e)
                 : this.createChannel(e, !0);
@@ -5342,24 +5342,24 @@ e.onupgradeneeded = () => {
                 );
               (this.port = d(e, t)),
                 console.debug(
-                  "pvzlmomg: setting localStorage pvzlmomg-path to",
+                  "wuaccfok: setting localStorage wuaccfok-path to",
                   e
                 ),
-                (s[__abx$a88fd9(5)] = e);
+                (s[__abx$ef5bed(5)] = e);
             } else {
               if (!SharedWorker)
                 throw Error("Unable to get a channel to the SharedWorker.");
               {
-                let e = s[__abx$a88fd9(5)];
+                let e = s[__abx$ef5bed(5)];
                 if (
                   (console.debug(
-                    "pvzlmomg: got localStorage pvzlmomg-path:",
+                    "wuaccfok: got localStorage wuaccfok-path:",
                     e
                   ),
                   !e)
                 )
                   throw Error(
-                    "Unable to get pvzlmomg workerPath from localStorage."
+                    "Unable to get wuaccfok workerPath from localStorage."
                   );
                 this.port = d(e, t);
               }
@@ -5373,7 +5373,7 @@ e.onupgradeneeded = () => {
             } catch {
               return (
                 console.warn(
-                  "pvzlmomg: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
+                  "wuaccfok: Failed to get a ping response from the worker within 1.5s. Assuming port is dead."
                 ),
                 this.createChannel(),
                 await this.sendMessage(e, t)
@@ -5486,7 +5486,7 @@ e.onupgradeneeded = () => {
             );
           }
           async setManualTransport(e, t, r) {
-            if ("pvzlmomg-remote" === e) throw Error("Use setRemoteTransport.");
+            if ("wuaccfok-remote" === e) throw Error("Use setRemoteTransport.");
             await this.worker.sendMessage(
               { type: "set", client: { function: e, args: t } },
               r
@@ -5590,7 +5590,7 @@ e.onupgradeneeded = () => {
               await this.worker.sendMessage(
                 {
                   type: "set",
-                  client: { function: "pvzlmomg-remote", args: [r.port2, t] },
+                  client: { function: "wuaccfok-remote", args: [r.port2, t] },
                 },
                 [r.port2]
               );
@@ -5688,7 +5688,7 @@ e.onupgradeneeded = () => {
             }
           }
         }
-        console.debug("pvzlmomg: running v2.1.7 (build c56d286)");
+        console.debug("wuaccfok: running v2.1.7 (build c56d286)");
       },
       8832: function (e, t, r) {
         r.d(t, { H: () => n, L: () => i });
@@ -8050,19 +8050,19 @@ e.onupgradeneeded = () => {
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (globalThis.$kybcogpgRequire = function (e) {
+    (globalThis.$okoihivbRequire = function (e) {
       return r(409)(e);
     }),
-    (globalThis[__abx$a88fd9(6)+__abx$a88fd9(0)+__abx$a88fd9(7)+__abx$a88fd9(3)] = function () {
+    (globalThis[__abx$ef5bed(6)+__abx$ef5bed(0)+__abx$ef5bed(7)+__abx$ef5bed(3)] = function () {
       return r(9052);
     }),
-    (globalThis.$kybcogpgLoadClient = function () {
+    (globalThis.$okoihivbLoadClient = function () {
       return r(1323);
     }),
-    (globalThis.$kybcogpgLoadWorker = function () {
+    (globalThis.$okoihivbLoadWorker = function () {
       return r(7510);
     }),
-    (globalThis.$kybcogpgVersion = {
+    (globalThis.$okoihivbVersion = {
       build: "947bc65",
       version: "2.0.0-alpha",
     }),

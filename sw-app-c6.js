@@ -9,8 +9,8 @@ const __SW_VERSION = new URL(self.location.href).searchParams.get("v") || "dev";
 
 importScripts(new URL(`assets/c/runtime.js?v=${__SW_VERSION}`, self.registration.scope).href);
 
-const { KybcogpgServiceWorker } = $kybcogpgLoadWorker();
-let kybcogpg = new KybcogpgServiceWorker();
+const { OkoihivbServiceWorker } = $okoihivbLoadWorker();
+let okoihivb = new OkoihivbServiceWorker();
 
 const CONFIG = {
   blocked: [
@@ -107,7 +107,7 @@ function isBlocked(hostname, pathname) {
 }
 
 function attachRequestHandler() {
-  kybcogpg.addEventListener("request", (e) => {
+  okoihivb.addEventListener("request", (e) => {
     if (isBlocked(e.url.hostname, e.url.pathname)) {
       e.response = new Response("Site Blocked", { status: 403 });
       return;
@@ -142,10 +142,10 @@ function attachRequestHandler() {
 
 attachRequestHandler();
 
-async function ensureKybcogpgConfig() {
+async function ensureOkoihivbConfig() {
   for (let attempt = 0; attempt < 20; attempt++) {
-    await kybcogpg.loadConfig();
-    if (kybcogpg.config?.prefix && kybcogpg.config?.files) return;
+    await okoihivb.loadConfig();
+    if (okoihivb.config?.prefix && okoihivb.config?.files) return;
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
   throw new Error("Workspace configuration is unavailable");
@@ -157,7 +157,7 @@ async function ensureKybcogpgConfig() {
 // build produces scripts that reference undefined `$...$prop` globals. Refuse
 // loudly instead; the page detects the mismatch and re-registers.
 function configBuildVersion() {
-  const all = kybcogpg.config?.files?.all;
+  const all = okoihivb.config?.files?.all;
   if (typeof all !== "string") return null;
   try { return new URL(all, self.registration.scope).searchParams.get("v"); } catch { return null; }
 }
@@ -219,7 +219,7 @@ function repairRelativeLeak(event) {
 
 async function handleRequest(event) {
   try {
-    await ensureKybcogpgConfig();
+    await ensureOkoihivbConfig();
     if (!configMatchesWorker()) {
       return new Response(VERSION_MISMATCH_BODY, {
         status: 502,
@@ -232,8 +232,8 @@ async function handleRequest(event) {
     const request = repaired || event.request;
     const target = repaired ? { request, clientId: event.clientId } : event;
 
-    if (kybcogpg.route(target)) {
-      const response = await kybcogpg.fetch(target);
+    if (okoihivb.route(target)) {
+      const response = await okoihivb.fetch(target);
       const contentType = response.headers.get("content-type") || "";
 
       const htmlDocument = contentType.includes("text/html") ||
@@ -287,7 +287,7 @@ self.addEventListener("fetch", (event) => {
     url.origin === self.location.origin &&
     (url.pathname.startsWith(prefix) ||
       url.pathname === new URL("assets/c/runtime.wasm", self.registration.scope).pathname ||
-      url.pathname === kybcogpg.config?.files?.wasm)
+      url.pathname === okoihivb.config?.files?.wasm)
   ) {
     event.respondWith(handleRequest(event));
   }
